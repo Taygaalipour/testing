@@ -3,475 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://s28.picofile.com/file/8466542442/logo.png">
+    <link rel="apple-touch-icon" href="https://s28.picofile.com/file/8466542442/logo.png">
+
+
     <title>
-        صفحه مشخصات
+        Searching page
     </title>
     <style>
+
       @import url('https://fonts.googleapis.com/css2?family=Lalezar&family=Noto+Naskh+Arabic:wght@500&family=Ubuntu:wght@300&family=Vazirmatn:wght@200;400&display=swap');
+
         *{
             margin: 0px;
-            font-family: 'vazirmatn';
             direction: rtl;
-        }
-        ::selection{
-          background-color: orange;
-          color: purple;
-          
+            font-family: 'vazirmatn';
         }
 
-        @media screen and (min-width:1310px) {
-                header{
-                    width: 100%;
-                    background-color: black;
-                    height: 70px;
-                }
-                nav a{
-                    text-decoration: none;
-                    color: white;
-                    margin: 20px;
-                    position: relative;
-                    top: 20px;
-                }
-                nav a:hover{
-                    color: blue;
-                    transition: 0.365s;
-                }
-                #dayere{
-                    background-image: linear-gradient(90deg,lightblue,darkblue);
-                    border-radius: 7.55px;
-                    width: 70%;
-                    height: 100px;
-                    margin-top: 20px;
-                    margin-right: 15%;
-                    margin-left: 15%;
-                    font-size: 20px;
-                    cursor: pointer;
-
-                }
-                img{
-                    width: 100px;
-                    height: 100px;
-                    float: left;
-                    margin-top: 0px;
-                    border-radius: 7.5px;
-                }
-                a{
-                text-decoration: none;
-                    color:orange;
-                    position: relative;
-                }
-                #vma{
-                position: relative;
-                top: 27.5px;
-                right: 27.5px;
-                }
-                #myNav{
-                    display: none;
-                }
-                #hamburger{
-                    display: none;
-                }
-                #rs{
-                    color: white;
-                    width: 50px;
-                    height: 50px;
-                    background-color: white;
-                }
-                .container {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    }
-
-    footer {
-    background-color: orange;
-    padding: 15px;
-    text-align: center;
-    position: fixed;
-    bottom: 10px;
-    left: 20%;
-    right: 20%;
-    width: auto;
-    border-radius: 50px;
-    height: auto;
-    }
-
-    .icon-container {
-    display: flex;
-    justify-content: center;
-    }
-    footer img{
-        width: 60px;
-        height: 60px;
-        position: relative;
-        margin-left: 2vh;
-        margin-right: 2vh;
-        border-radius: 50%;
-    }
-
-    
-    .icon-container a {
-    margin: 0 10px;
-    color: #333;
-    font-size: 20px;
-    text-decoration: none;
-    }
-
-    p {
-    margin-top: 10px;
-    font-size: 14px;
-    color: #777;
-    }
-    #myImage1:active{
-    background-color: white;
-    transition: 0.15s;
-    }
-    #myImage3:active{
-    background-color: white;
-    transition: 0.15s;
-    }
-    #kmbvpabb{
-    text-align: center;
-    margin-top: 29px;
-    }
-            #mnfe{
-                margin-left: 20%;
-                margin-right: 20%;
-                width: 60%;
-                height: 430px;
-                margin-top: 10px;
-                background-color: aquamarine;
-                float: right;
-                border-radius: 25px;
-            }
-            #aks{
-                width: 300px;
-                height: 300px;
-                float: left;
-                border-radius: 25px;
-            }
-            h3{
-                margin-right: 25px;
-                margin-top: 13px;
-                color: black;
-            }
-            #kamalsaz{
-                display: none;
-            }
-        }
-
-        @media screen and (max-width:1310px) {
-            header{
-                background-color: black;
-                width: 100%;
-                height: 70px;
-                color: white;
-            }
-            #myDiv{
-                display: none;
-            }
-            #dayere{
-                background-image: linear-gradient(90deg,lightblue,darkblue);
-                border-radius: 7.5px;
-                width: 90%;
-                height: 100px;
+        @media screen and (min-width:1000px) {
+            form{
+                width: 50%;
+                margin-right: 25%;
+                margin-left: 25%;
+                height: 60px;
+                background-color: whitesmoke;
                 margin-top: 20px;
-                margin-right: 5%;
-                margin-left: 5%;
-                font-size: 12.5px;
-                cursor: pointer;
-        }
-            img{
-                width: 100px;
-                height: 100px;
-                float: left;
-                margin-top: 0px;
-                border-radius: 7.5px;
-        }
-            a{
-                text-decoration: none;
-                color:orange;
-                position: relative;
-            }
-            #vma{
-              position: relative;
-              top: 37.5px;
-              right: 27.5px;
-              font-size: 90%;
-            }
-            nav a{
-                display: none;
-            }
-        
-      .overlay {
-                height: 100%;
-                width: 0;
-                position: fixed;
-                z-index: 1;
-                top: 0;
-                left: 0;
-                background-color: rgb(0,0,0);
-                background-color: rgba(0,0,0, 0.9);
-                overflow-x: hidden;
-                transition: 0.5s;
-}
+                border-radius: 25px;
 
-.overlay-content {
-                position: relative;
-                top: 25%;
-                width: 100%;
-                text-align: center;
+            }
+            input[type='search']{
+                width: 500px;
+                height: 40px;
+                border-radius: 25px;
+                border: 0.5px solid rgb(226, 226, 226);
                 margin-top: 10px;
-}
+                padding: 10px 20px;
+            }
+            input:focus{
+                outline: 0px;
+                border: 1px solid orange;
 
-.overlay a {
-                padding: 10px;
-                text-decoration: none;
-                font-size: 20px;
-                color: #818181;
-                display: block;
-                transition: 0.3s;
-}
-
-.overlay a:hover, .overlay a:focus {
-                color: blue;
-}
-
-.overlay .closebtn {
-  position: absolute;
-  top: 10px;
-  right: 45px;
-  font-size: 60px;
-}
-.container {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-footer {
-  background-color: orange;
-  padding: 15px;
-  text-align: center;
-  position: fixed;
-  bottom: 10px;
-  left: 2%;
-  right: 2%;
-  width: auto;
-  border-radius: 50px;
-  height: auto;
-}
-
-.icon-container {
-  display: flex;
-  justify-content: center;
-}
-footer img{
-    width: 60px;
-    height: 60px;
-    position: relative;
-    margin-left: 15px;
-    margin-right: 15px;
-    border-radius: 50%;
-}
-
-@media screen and (max-height: 450px) {
-  .overlay a {font-size: 20px}
-  .overlay .closebtn {
-  font-size: 40px;
-  top: 15px;
-  right: 35px;
-  }
-}
-
-#hamburger{
-  float: left;
-  font-size:50px;
-  cursor:pointer;
-  margin-left: 10px;
-}
-
-#kmbvpabb{
-  text-align: center;
-  font-size: 20px;
-  margin-top: 35px;
-}
-#mnfe{
-                margin-left: 5%;
-                margin-right: 5%;
-                width: 90%;
-                height: 70%;
-                margin-top: 2%;
-                margin-bottom: 28%;
+            }
+            #find{
+                width: 100px;
+                height: 35px;
                 background-color: aquamarine;
-                border-radius: 20px;
-            }
-
-            h3{
-                margin-right: 10px;
-                margin-top: 17.5px;
-                color: black;
-                font-size: 15px;
-                margin-left: 10px
-            }
-            #bl{
-                position: relative;
-                float: left;
-                top: 175px;
-                left: -140px;
-                color: rgb(173, 173, 173);
-                
-            }
-            #aks{
-                width: 200px;
-                height: 200px;
-                float: left;
+                border: none;
                 border-radius: 10px;
-                border: 1px solid rgb(173, 173, 173);
-                background-color: black;
+                margin-right: 25px;
+            }
+            #find:focus{
+                background-color: rgb(0, 179, 119);
+                border: 0.5px solid rgb(185, 185, 185)د;
 
             }
-            #modaks{
-                background-color: black;
+            hr{
+                margin-top: 20px;
+                width: 80%;
+                margin-left: 10%;
+                margin-right: 10%;
             }
-            #kamalsaz{
-    float: right;
-    position: relative;
-    top: 15px;
-    left: -15px;
-}
+
+        }
+
+        @media screen and (max-width:1000px) {
+            form{
+                width: 90%;
+                margin-right: 5%;
+                margin-left: 5%;
+                height: 60px;
+                background-color: whitesmoke;
+                margin-top: 20px;
+                border-radius: 25px;
+
+            }
+            input[type='search']{
+                width: 70%;
+                margin-left: 25%;
+                margin-right: 5%;
+                height: 40px;
+                border-radius: 25px;
+                border: 0.5px solid rgb(226, 226, 226);
+                margin-top: 10px;
+                padding: 10px 20px;
+                float: right;
+            }
+            input:focus{
+                outline: 0px;
+                border: 1px solid orange;
+
+            }
+            #find{
+                width: 60px;
+                height: 40px;
+                background-color: aquamarine;
+                border: none;
+                border-radius: 10px;
+                float: left;
+                position: relative;
+                top: -40px;
+                margin-left: 20px;
+                right: 10px;
+    
+            }
+            #find:focus{
+                background-color: rgb(0, 179, 119);
+                border: 0.5px solid rgb(185, 185, 185)د;
+
+            }
+            hr{
+                margin-top: 20px;
+                width: 80%;
+                margin-left: 10%;
+                margin-right: 10%;
+            }
         }
     </style>
-
-
-
-
-
-    <script>
-
-function openNav() {
-  document.getElementById("myNav").style.width = "100%";
-}
-
-function closeNav() {
-  document.getElementById("myNav").style.width = "0%";
-}
-
-
-
-      // فراخوانی سرویس ip-api.com برای دریافت اطلاعات مکان جغرافیایی کاربر
-function getGeoLocation(callback) {
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'http://ip-api.com/json');
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-            var response = JSON.parse(xhr.responseText);
-            callback(response);
-        }
-    };
-    xhr.send();
-}
-
-// بررسی آیا مکان جغرافیایی کاربر داخل ایران است یا خیر
-function isUserInIran(callback) {
-    getGeoLocation(function(response) {
-        var country = response.countryCode;
-        callback(country === 'IR');
-    });
-}
-
-// اجرای تابع بررسی برای تصمیم‌گیری درباره دسترسی کاربر به وبسایت
-isUserInIran(function(isInIran) {
-    if (!isInIran) {
-        // اگر کاربر خارج از ایران است، اقدام به محدود کردن دسترسی کنید
-
-        alert("تنها کاربرانی که در داخل ایران حضور دارند میتوانند اقدام به ورود به سایت کنند! لطفا اگر فیلترشکن شما فعال است آن را غیر فعال کنید" , "color: red;");
-        window.location.href = "https://example.com/access-denied"; // آدرس صفحه دسترسی ممنوع
-    } else {
-        // اگر کاربر در داخل ایران است، به وبسایت اجازه ورود بدهید
-    }
-});
-
-
-
-
-    </script>
 </head>
 <body>
 
-<center>
+    <center>
 
-<header>
+    <form action="emd.php" method="post" enctype="multipart/form-data">
+        <input type="search" placeholder="لطفا نام خانوادگی صاحب مغازه را وارد کنید:" name="lname">
+        <button type="submit" id="find">پیدا کن</button>
+    </form>
 
+    <hr>
 
-<nav>
-
-    <a href="abrobadi.php">ابر و بادی</a>
-    <a href="li.php">لی</a>
-    <a href="katan.php">کتان</a>
-    <a href="nakh_panbeh.php">نخ پنبه</a>
-    <a href="lenin.php">لنین</a>
-    <a href="satan.php">ساتن</a>
-    <a href="kerep.php">کرپ</a>
-    <a href="nakhi.php">نخی</a>
-    <a href="astar.php">استر</a>
-    <a href="viskoz.php">ویسکوز</a>
-    <a href="mantoyi.php">مانتویی</a>
-    <a href="kot_shalvari.php">کت شلواری</a>
-    <a href="toor.php">تور</a>
-    <a href="majlesi.php">مجلسی</a>
-    <a href="harir.php">حریر</a>
-    <a href="mazerati.php">مازراتی</a>
-
-</nav>
-
-    <div id="myNav" class="overlay">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <div class="overlay-content">
-    <a href="abrobadi.php">ابر و بادی</a>
-    <a href="li.php">لی</a>
-    <a href="katan.php">کتان</a>
-    <a href="nakh_panbeh.php">نخ پنبه</a>
-    <a href="lenin.php">لنین</a>
-    <a href="satan.php">ساتن</a>
-    <a href="kerep.php">کرپ</a>
-    <a href="nakhi.php">نخی</a>
-    <a href="astar.php">استر</a>
-    <a href="viskoz.php">ویسکوز</a>
-    <a href="mantoyi.php">مانتویی</a>
-    <a href="kot_shalvari.php">کت شلواری</a>
-    <a href="toor.php">تور</a>
-    <a href="majlesi.php">مجلسی</a>
-    <a href="harir.php">حریر</a>
-    <a href="mazerati.php">مازراتی</a>
-    <br>
-    <br>
-      </div>
-    </div>
-
-    <span id="hamburger" onclick="openNav()">&#9776;</span>
-
-    <div id="kamalsaz">
-    <h1>Bazar-ghaem.ir</h1>
-    </div>
-
-
-</header>
 </center>
-
-
-<div id='mnfe'><div id='modaks'><img src='converted/logo.png' alt='عکس' id='aks'></div><h3>نام پارچه : ابر و بادی</h3><h3>رنگ پارچه : ابی</h3><h3>ضخامت پارچه : 400گرم</h3><h3>متراژ هر طاقه : 220 </h3><h3>قیمت هر  یارد  : 27000  تومان</h3><h3> شماره تلفن صاحب جنس : 09371097225</h3><h3>شماره تلفن دفتر : 02155692685</h3><h3>آدرس دفتر : بازار بزرگ خیابان عباس آباد کوچه حمام جال کوچه زیبا پاساژ قائم طبقه اول پلاک 124</h3><h3>توضیحات : پارچه مازراتی سفارش چین جنس درجه یک موجودی فقط 200 طاقه</h3></div>
-<footer>
-      <div class="icon-container">
-      <a href="Gallery.php"><i class="icon"><img src="images/homeicon.png" alt="" id="myImage1"></i></a>
-      <a href="#"><i class="icon"><img src="images/searchicon.png" alt="" id="myImage2"></i></a>
-        <a href="Send Page.html"><i class="icon"><img src="images/plus.png" alt="" id="myImage3"></i></a>
-        <a href="#"><i class="icon"><img src="images/chaticon.png" alt="" id="myImage4"></i></a>
-        <a href="#"><i class="icon"><img src="images/profileicon.png" alt="" id="myImage5"></i></a>
-
-      </div>
-    </footer>
-
     
 </body>
 </html>
