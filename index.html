@@ -1,341 +1,340 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="images/3994420_draw_edit_new_pen_write_icon.png">
-    <link rel="apple-touch-icon" href="images/3994420_draw_edit_new_pen_write_icon.png">
-    <title>
-        Shop saver
-    </title>
-    <style>
-         @import url('https://fonts.googleapis.com/css2?family=Lalezar&family=Noto+Naskh+Arabic:wght@500&family=Ubuntu:wght@300&family=Vazirmatn:wght@200;400&display=swap');
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="images/3994420_draw_edit_new_pen_write_icon.png">
+        <link rel="apple-touch-icon" href="images/3994420_draw_edit_new_pen_write_icon.png">
+        <title>
+            Shop saver
+        </title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Lalezar&family=Noto+Naskh+Arabic:wght@500&family=Ubuntu:wght@300&family=Vazirmatn:wght@200;400&display=swap');
 
-        *{
-            margin: 0px;
-            direction: rtl;
-            font-family: 'vazirmatn';
-        }
-        @media screen and (min-width:700px) {
-            body {
-                background-image: url(images/IMG_20230810_133842.jpg);
-                margin: 0;
-                padding: 0;
-                background-repeat: no-repeat;
-                background-size: 100% 100%;
-                background-attachment: fixed;
+            *{
+                margin: 0px;
+                direction: rtl;
+                font-family: 'vazirmatn';
             }
-            header{
-                width: 100%;
-                height: 70px;
-                background-color: black;
-            }
-            header h1{
-                color: white;
-                text-align: center;
-                position: relative;
-                top: 10px;
-            }
-            form{
-                width: 50%;
-                margin-left: 25%;
-                margin-right: 25%;
-                height: 600px;
-                background-color: aquamarine;
-                border-radius: 20px;
-            }
-            .blab{
-                float: right;
-                margin-right: 20px;
-                position: relative;
-                top:20px;
-                margin-top: 10px;
-                cursor: pointer;
-            }
-            .colb{
-                position: relative;
-                margin-left: 20px;
-                top: 20px;
-                margin-top: 10px;
-                width: 180px;
-                height: 25px;
-                padding: 5px 15px;
-                border-radius: 5px;
-                border: 1px solid rgb(192, 192, 192);
-                cursor: pointer;
-            }
-            .colb:focus{
-                outline: 0px;
-                border: 1px solid orange;
-                box-shadow: 1px 1px 10px black;
-                width: 265px;
-            }
-            .colb:hover{
-                background-color: whitesmoke;
-                transition: 0.365s;
-            }
-            .selt{
-                position: relative;
-                margin-left: 20px;
-                top: 20px;
-                margin-top: 10px;
-                width: 212px;
-                height: 35px;
-                border: 1px solid rgb(192, 192, 192);
-                cursor: pointer;
-                text-align: center;
-                border-radius: 5px;
+            @media screen and (min-width:700px) {
+                body {
+                    background-image: url(images/IMG_20230810_133842.jpg);
+                    margin: 0;
+                    padding: 0;
+                    background-repeat: no-repeat;
+                    background-size: 100% 100%;
+                    background-attachment: fixed;
+                }
+                header{
+                    width: 100%;
+                    height: 70px;
+                    background-color: black;
+                }
+                header h1{
+                    color: white;
+                    text-align: center;
+                    position: relative;
+                    top: 10px;
+                }
+                form{
+                    width: 50%;
+                    margin-left: 25%;
+                    margin-right: 25%;
+                    height: 600px;
+                    background-color: aquamarine;
+                    border-radius: 20px;
+                }
+                .blab{
+                    float: right;
+                    margin-right: 20px;
+                    position: relative;
+                    top:20px;
+                    margin-top: 10px;
+                    cursor: pointer;
+                }
+                .colb{
+                    position: relative;
+                    margin-left: 20px;
+                    top: 20px;
+                    margin-top: 10px;
+                    width: 180px;
+                    height: 25px;
+                    padding: 5px 15px;
+                    border-radius: 5px;
+                    border: 1px solid rgb(192, 192, 192);
+                    cursor: pointer;
+                }
+                .colb:focus{
+                    outline: 0px;
+                    border: 1px solid orange;
+                    box-shadow: 1px 1px 10px black;
+                    width: 265px;
+                }
+                .colb:hover{
+                    background-color: whitesmoke;
+                    transition: 0.365s;
+                }
+                .selt{
+                    position: relative;
+                    margin-left: 20px;
+                    top: 20px;
+                    margin-top: 10px;
+                    width: 212px;
+                    height: 35px;
+                    border: 1px solid rgb(192, 192, 192);
+                    cursor: pointer;
+                    text-align: center;
+                    border-radius: 5px;
 
-            }
-            .selt:focus{
-                outline: 0px;
-                width: 300px;
-                transition: 0.365s;
-                box-shadow: 1px 1px 10px black;
-                border: 1px solid orange;
-            }
-            .selt:hover{
-                background-color: whitesmoke;
-                transition: 0.365s;
-            }
-            button[type='submit']{
-                width: 100px;
-                height: 35px;
-                background-color: orange;
-                border: none;
-                border-radius: 5px;
-                position: relative;
-                top: 10px;
-            }
-            button[type='submit']:hover{
-                width: 200px;
-                transition: 0.365s;
-                background-color: rgb(241, 64, 93);
-            }
-            footer{
-                width: 100%;
-                height: 70px;
-                background-color: black;
-            }
-            footer h1{
-                color: white;
-                text-align: center;
-                position: relative;
-                top: 10px;
-            }
-            
-            
-        } 
-        @media screen and (max-width:700px) {
-            body {
-                background-image: url(images/IMG_20230810_133924.jpg);
-                margin: 0;
-                padding: 0;
-                background-repeat: no-repeat;
-                background-size: 100% 100%;
-                background-attachment: fixed;
-            }
-            header{
-                width: 100%;
-                height: 70px;
-                background-color: black;
-            }
-            header h1{
-                color: white;
-                text-align: center;
-                position: relative;
-                top: 14px;
-                font-size: 25px;
-            }
-            form{
-                width: 92%;
-                margin-left: 4%;
-                margin-right: 4%;
-                height: 925px;
-                background-color: aquamarine;
-                border-radius: 20px;
-            }
-            .blab{
-                float: right;
-                margin-right: 5px;
-                position: relative;
-                top:20px;
-                margin-top: 10px;
-                cursor: pointer;
-            }
-            .colb{
-                position: relative;
-                margin-left: 20px;
-                top: 20px;
-                margin-top: 10px;
-                width: 180px;
-                height: 25px;
-                padding: 5px 15px;
-                border-radius: 5px;
-                border: 1px solid rgb(192, 192, 192);
-                cursor: pointer;
-            }
-            .colb:focus{
-                outline: 0px;
-                border: 1px solid orange;
-                box-shadow: 1px 1px 10px black;
-                width: 265px;
-            }
-            .colb:hover{
-                background-color: whitesmoke;
-                transition: 0.365s;
-            }
-            .selt{
-                position: relative;
-                margin-left: 20px;
-                top: 20px;
-                margin-top: 10px;
-                width: 212px;
-                height: 35px;
-                border: 1px solid rgb(192, 192, 192);
-                cursor: pointer;
-                text-align: center;
-                border-radius: 5px;
+                }
+                .selt:focus{
+                    outline: 0px;
+                    width: 300px;
+                    transition: 0.365s;
+                    box-shadow: 1px 1px 10px black;
+                    border: 1px solid orange;
+                }
+                .selt:hover{
+                    background-color: whitesmoke;
+                    transition: 0.365s;
+                }
+                button[type='submit']{
+                    width: 100px;
+                    height: 35px;
+                    background-color: orange;
+                    border: none;
+                    border-radius: 5px;
+                    position: relative;
+                    top: 10px;
+                }
+                button[type='submit']:hover{
+                    width: 200px;
+                    transition: 0.365s;
+                    background-color: rgb(241, 64, 93);
+                }
+                footer{
+                    width: 100%;
+                    height: 70px;
+                    background-color: black;
+                }
+                footer h1{
+                    color: white;
+                    text-align: center;
+                    position: relative;
+                    top: 10px;
+                }
+                
+                
+            } 
+            @media screen and (max-width:700px) {
+                body {
+                    background-image: url(images/IMG_20230810_133924.jpg);
+                    margin: 0;
+                    padding: 0;
+                    background-repeat: no-repeat;
+                    background-size: 100% 100%;
+                    background-attachment: fixed;
+                }
+                header{
+                    width: 100%;
+                    height: 70px;
+                    background-color: black;
+                }
+                header h1{
+                    color: white;
+                    text-align: center;
+                    position: relative;
+                    top: 14px;
+                    font-size: 25px;
+                }
+                form{
+                    width: 92%;
+                    margin-left: 4%;
+                    margin-right: 4%;
+                    height: 925px;
+                    background-color: aquamarine;
+                    border-radius: 20px;
+                }
+                .blab{
+                    float: right;
+                    margin-right: 5px;
+                    position: relative;
+                    top:20px;
+                    margin-top: 10px;
+                    cursor: pointer;
+                }
+                .colb{
+                    position: relative;
+                    margin-left: 20px;
+                    top: 20px;
+                    margin-top: 10px;
+                    width: 180px;
+                    height: 25px;
+                    padding: 5px 15px;
+                    border-radius: 5px;
+                    border: 1px solid rgb(192, 192, 192);
+                    cursor: pointer;
+                }
+                .colb:focus{
+                    outline: 0px;
+                    border: 1px solid orange;
+                    box-shadow: 1px 1px 10px black;
+                    width: 265px;
+                }
+                .colb:hover{
+                    background-color: whitesmoke;
+                    transition: 0.365s;
+                }
+                .selt{
+                    position: relative;
+                    margin-left: 20px;
+                    top: 20px;
+                    margin-top: 10px;
+                    width: 212px;
+                    height: 35px;
+                    border: 1px solid rgb(192, 192, 192);
+                    cursor: pointer;
+                    text-align: center;
+                    border-radius: 5px;
 
-            }
-            .selt:focus{
-                outline: 0px;
-                width: 300px;
-                transition: 0.365s;
-                box-shadow: 1px 1px 10px black;
-                border: 1px solid orange;
-            }
-            .selt:hover{
-                background-color: whitesmoke;
-                transition: 0.365s;
-            }
-            button[type='submit']{
-                width: 100px;
-                height: 35px;
-                background-color: orange;
-                border: none;
-                border-radius: 5px;
-                position: relative;
-                top: 10px;
-            }
-            button[type='submit']:hover{
-                width: 200px;
-                transition: 0.365s;
-                background-color: rgb(241, 64, 93);
-            }
-            footer{
-                width: 100%;
-                height: 70px;
-                background-color: black;
-                position: absolute;
-            }
-            footer h1{
-                color: white;
-                text-align: center;
-                position: relative;
-                top: 14px;
-                font-size: 25px;
-            }
-            
-        }          
-    </style>
-</head>
-<body>
-    <header>
-        <h1>صفحه ثبت مغازه بازار قائم</h1>
-    </header>
-    <br>
-    <br>
-    <main>
-    <form action="verfying.php" method="post" enctype="multipart/form-data">
-        <center>
-        <label for="first_name" class="blab">نام شما:</label>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="text" placeholder="مثلا: امیرحسین" class="colb" id="first_name" name="first_name" required maxlength="100">
+                }
+                .selt:focus{
+                    outline: 0px;
+                    width: 300px;
+                    transition: 0.365s;
+                    box-shadow: 1px 1px 10px black;
+                    border: 1px solid orange;
+                }
+                .selt:hover{
+                    background-color: whitesmoke;
+                    transition: 0.365s;
+                }
+                button[type='submit']{
+                    width: 100px;
+                    height: 35px;
+                    background-color: orange;
+                    border: none;
+                    border-radius: 5px;
+                    position: relative;
+                    top: 10px;
+                }
+                button[type='submit']:hover{
+                    width: 200px;
+                    transition: 0.365s;
+                    background-color: rgb(241, 64, 93);
+                }
+                footer{
+                    width: 100%;
+                    height: 70px;
+                    background-color: black;
+                    position: absolute;
+                }
+                footer h1{
+                    color: white;
+                    text-align: center;
+                    position: relative;
+                    top: 14px;
+                    font-size: 25px;
+                }
+                
+            }          
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>صفحه ثبت مغازه بازار قائم</h1>
+        </header>
         <br>
-        <label for="last_name" class="blab"> نام خانوادگی شما:</label>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="text" placeholder="مثلا: علیپور" class="colb" id="last_name" name="last_name" required maxlength="100">
         <br>
-        <label for="kod_melli" class="blab">کد ملّی شما:</label>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="text" placeholder="مثلا: 0200747411" class="colb" id="kod_melli" name="kod_melli" required inputmode="numeric" maxlength="10" minlength="10">
-        <br>
-        <label for="photel" class="blab">شماره شما:</label>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="text" placeholder="####-###-09##" class="colb" inputmode="numeric" id="photel" name="photel" required maxlength="11" minlength="11">
-        <br>
-        <label for="kod_posti" class="blab">کد پستی: </label>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="text" placeholder="مثلا: 5347214689" class="colb" id="kod_posti" name="kod_posti" required inputmode="numeric" maxlength="10" minlength="10">
-        <br>
-        <label for="telma" class="blab">تلفن مغازه:</label>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="text" placeholder="مثلا: ******55 " class="colb" inputmode="numeric" id="telma" name="telma" required maxlength="8" minlength="8">
-        <br>
-        <label for="metrazh_maghazeh" class="blab">متراژ مغازه را وارد کنید:</label>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="text" placeholder="مثلا 12" class="colb" id="metrazh_maghazeh" name="metrazh_maghazeh" inputmode="numeric" required minlength="1" maxlength="2">
-        <br>
-        <label for="tabaghe" class="blab">در طبقه چندم قرار دارید:</label>
-        &nbsp;&nbsp;&nbsp;
-        <select name="tabaghe" id="tabaghe" required class="selt">
-            <option value=""  disabled selected>لطفا یکی از گزینه های زیر را انتخاب کنید:</option>
-            <option value="طبقه منفی دو">طبقه منفی دو</option>
-            <option value="طبقه منفی یک">طبقه منفی یک</option>
-            <option value="طبقه همکف">طبقه همکف</option>
-            <option value="طبقه مثبت یک">طبقه مثبت یک</option>
-            <option value="طبقه مثبت دو">طبقه مثبت دو</option>
-            <option value="طبقه مثبت سه">طبقه مثبت سه</option>
-        </select>
-        <br>
-        <label for="dalan" class="blab">در کدام دالان هستید؟</label>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <select name="dalan" id="dalan" required class="selt">
-            <option value=""  disabled selected>لطفا یکی از گزینه های زیر را انتخاب کنید:</option>
-            <option value="دالان اول">دالان اول</option>
-            <option value="دالان دوم">دالان دوم</option>
-            <option value="دالان سوم">دالان سوم</option>
-            <option value="دالان چهارم">دالان چهارم</option>
-            <option value="دالان پنجم">دالان پنجم</option>
-            <option value="دالان ششم">دالان ششم</option>
-            <option value="دالان هفتم">دالان هفتم</option>
-            <option value="دالان هشتم">دالان هشتم</option>
-            <option value="دالان نهم">دالان نهم</option>
-            <option value="دالان دهم">دالان دهم</option>
-            <option value="دالان یازدهم">دالان یازدهم</option>
-        </select>
-        <br>
-        <label for="pelak" class="blab">لطفا پلاک خود را وارد کنید:</label>
-        <input type="text" name="pelak" class="colb" id="pelak" inputmode="numeric" required placeholder="پلاک مغازه شما:" minlength="1" maxlength="5">
-        <br>
-        <label for="dm" class="blab">آیا دور میدان هستید؟</label>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <select name="dm" id="dm" required class="selt">
-            <option value=""  disabled selected >لطفا یکی از گزینه های زیر را انتخاب کنید:</option>
-            <option value="هست">هست</option>
-            <option value="نیست">نیست</option>
-        </select>
+        <main>
+        <form action="verfying.php" method="post" enctype="multipart/form-data">
+            <center>
+            <label for="first_name" class="blab">نام شما:</label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" placeholder="مثلا: امیرحسین" class="colb" id="first_name" name="first_name" required maxlength="100">
+            <br>
+            <label for="last_name" class="blab"> نام خانوادگی شما:</label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" placeholder="مثلا: علیپور" class="colb" id="last_name" name="last_name" required maxlength="100">
+            <br>
+            <label for="kod_melli" class="blab">کد ملّی شما:</label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" placeholder="مثلا: 0200747411" class="colb" id="kod_melli" name="kod_melli" required inputmode="numeric" maxlength="10" minlength="10">
+            <br>
+            <label for="photel" class="blab">شماره شما:</label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" placeholder="####-###-09##" class="colb" inputmode="numeric" id="photel" name="photel" required maxlength="11" minlength="11">
+            <br>
+            <label for="kod_posti" class="blab">کد پستی: </label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" placeholder="مثلا: 5347214689" class="colb" id="kod_posti" name="kod_posti" required inputmode="numeric" maxlength="10" minlength="10">
+            <br>
+            <label for="telma" class="blab">تلفن مغازه:</label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" placeholder="مثلا: ******55 " class="colb" inputmode="numeric" id="telma" name="telma" required maxlength="8" minlength="8">
+            <br>
+            <label for="metrazh_maghazeh" class="blab">متراژ مغازه را وارد کنید:</label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" placeholder="مثلا 12" class="colb" id="metrazh_maghazeh" name="metrazh_maghazeh" inputmode="numeric" required minlength="1" maxlength="2">
+            <br>
+            <label for="tabaghe" class="blab">در طبقه چندم قرار دارید:</label>
+            &nbsp;&nbsp;&nbsp;
+            <select name="tabaghe" id="tabaghe" required class="selt">
+                <option value=""  disabled selected>لطفا یکی از گزینه های زیر را انتخاب کنید:</option>
+                <option value="طبقه منفی دو">طبقه منفی دو</option>
+                <option value="طبقه منفی یک">طبقه منفی یک</option>
+                <option value="طبقه همکف">طبقه همکف</option>
+                <option value="طبقه مثبت یک">طبقه مثبت یک</option>
+                <option value="طبقه مثبت دو">طبقه مثبت دو</option>
+                <option value="طبقه مثبت سه">طبقه مثبت سه</option>
+            </select>
+            <br>
+            <label for="dalan" class="blab">در کدام دالان هستید؟</label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <select name="dalan" id="dalan" required class="selt">
+                <option value=""  disabled selected>لطفا یکی از گزینه های زیر را انتخاب کنید:</option>
+                <option value="دالان اول">دالان اول</option>
+                <option value="دالان دوم">دالان دوم</option>
+                <option value="دالان سوم">دالان سوم</option>
+                <option value="دالان چهارم">دالان چهارم</option>
+                <option value="دالان پنجم">دالان پنجم</option>
+                <option value="دالان ششم">دالان ششم</option>
+                <option value="دالان هفتم">دالان هفتم</option>
+                <option value="دالان هشتم">دالان هشتم</option>
+                <option value="دالان نهم">دالان نهم</option>
+                <option value="دالان دهم">دالان دهم</option>
+                <option value="دالان یازدهم">دالان یازدهم</option>
+            </select>
+            <br>
+            <label for="pelak" class="blab">لطفا پلاک خود را وارد کنید:</label>
+            <input type="text" name="pelak" class="colb" id="pelak" inputmode="numeric" required placeholder="پلاک مغازه شما:" minlength="1" maxlength="5">
+            <br>
+            <label for="dm" class="blab">آیا دور میدان هستید؟</label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <select name="dm" id="dm" required class="selt">
+                <option value=""  disabled selected >لطفا یکی از گزینه های زیر را انتخاب کنید:</option>
+                <option value="هست">هست</option>
+                <option value="نیست">نیست</option>
+            </select>
 
-        <br>
-        <br>
-
-
-        <button type="submit">ثبت مغازه</button>
-
-        </center>
+            <br>
+            <br>
 
 
-    </form>
-                <br>
+            <button type="submit">ثبت مغازه</button>
 
-    </main>
-    <footer>
+            </center>
 
-        <h1>
-            www.bazar-ghaem.ir
-        </h1>
-    </footer>
-    
-</body>
-</html>
+
+        </form>
+        <br>
+        </main>
+        <footer>
+
+            <h1>
+                www.bazar-ghaem.ir
+            </h1>
+        </footer>
+        
+    </body>
+    </html>
