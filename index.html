@@ -3,366 +3,488 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/2303137_bright_brightness_light_monitor_more_icon.png">
+    <link rel="apple-touch-icon" href="images/2303137_bright_brightness_light_monitor_more_icon.png">
+
     <title>
-        Footer For Test
+        About Page
     </title>
     <style>
-
-        @import url('https://fonts.googleapis.com/css2?family=Lalezar&family=Noto+Naskh+Arabic:wght@500&family=Ubuntu:wght@300&family=Vazirmatn:wght@200;400&display=swap');
-
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'vazirmatn';
-  direction:rtl;
-}
-:root{
-  --clr: white;
-}
-@media screen and (min-width:700px) {
-    body{
-  display: flex;
-  min-height: 100vh;
-  justify-content: center;
-  align-items: center;
-  background-color: white;  
-}
-footer{
-    width: 50%;
-    height: 90px;
-    background-color: white;
-    margin-left: 0%;
-    margin-right: 0px;
-    position: absolute;
-    bottom: 10px;
-    border-radius: 10px;
-
-}
-.navigator{
-  position:absolute;
-  width:90%;
-  margin-left: 5%;
-  margin-right: 5%;
-  height:70px;
-  background:orange;
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  border-radius:10px;
-  bottom: 10px;
-  
-}
-
-.navigator ul{
-  display:flex;
-  width:350px;
-}
-.navigator ul li{
-  position:relative;
-  list-style:none;
-  width:70px;
-  height:70px;
-  z-index:1;
-    
-}
-.navigator ul li a{
-  position:relative;
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction:column;
-  width:100%;
-  text-align:center;
-  font-weight:500;
-}
-.navigator ul li a .icon{
-  position:relative;
-  line-height:75px;
-  font-size:1.5em;
-  text-align:center;
-  transition:0.5s;
-  color:var(--clr);
-}
-.navigator ul li.active a .icon{
-  transform: translatey(-35px);
-}
-.navigator ul li a .text{
-  position:absolute;
-  font-size:0.75em;
-  font-weight:400;
-  color:black;
-  letter-spacing:0.05em;
-  transition:0.5s;
-  opacity:0;
-  transform: translatey(20px);
-  
-}
-.navigator ul li.active a .text{
-   opacity:1;
-  transform: translatey(10px)
-}
-.indicator{
-  position:absolute;
-  top:-50%;
-  width:70px;
-  height:70px;
-  background-image: linear-gradient(90deg,rgb(30, 43, 165),rgb(199, 38, 164));
-  border-radius:50%;
-  border:6px solid var(--clr);
-  transition:0.5s;
-}
-.indicator::before{
-  content:'';
-  position:absolute;
-  top:50%;
-  left:-22px;
-  width:20px;
-  height:20px;
-  background:transprent;
-  border-top-right-radius:20px;
-  box-shadow:0px -9px 0 0 var(--clr);
-    
-}
-.indicator::after{
-  content:'';
-  position:absolute;
-  top:50%;
-  right:-22px;
-  width:20px;
-  height:20px;
-  background:transprent;
-  border-top-left-radius:20px;
-  box-shadow:0px -9px 0 0 var(--clr);
-    
-}
-.aks{
-    width: 40px;
-    height: 40px;
-    margin-top: 15px;
-}
-
-.navigator ul li:nth-child(1).active ~ .indicator{
-  transform: translateX(calc(-70px * 0));
-}
-.navigator ul li:nth-child(2).active ~ .indicator{
-  transform: translateX(calc(-70px * 1));
-}
-.navigator ul li:nth-child(3).active ~ .indicator{
-  transform: translateX(calc(-70px * 2));
-}
-.navigator ul li:nth-child(4).active ~ .indicator{
-  transform: translateX(calc(-70px * 3));
-}
-.navigator ul li:nth-child(5).active ~ .indicator{
-  transform: translateX(calc(-70px * 4));
-}
-            
+      @import url('https://fonts.googleapis.com/css2?family=Lalezar&family=Noto+Naskh+Arabic:wght@500&family=Ubuntu:wght@300&family=Vazirmatn:wght@200;400&display=swap');
+        *{
+            margin: 0px;
+            font-family: 'vazirmatn';
+            direction: rtl;
+        }
+        ::selection{
+          background-color: orange;
+          color: purple;
+          
         }
 
+        @media screen and (min-width:1310px) {
+                header{
+                    width: 100%;
+                    background-color: black;
+                    height: 70px;
+                }
+                nav a{
+                    text-decoration: none;
+                    color: white;
+                    margin: 20px;
+                    position: relative;
+                    top: 20px;
+                }
+                nav a:hover{
+                    color: blue;
+                    transition: 0.365s;
+                }
+                #dayere{
+                    background-image: linear-gradient(90deg,lightblue,darkblue);
+                    border-radius: 7.55px;
+                    width: 70%;
+                    height: 100px;
+                    margin-top: 20px;
+                    margin-right: 15%;
+                    margin-left: 15%;
+                    font-size: 20px;
+                    cursor: pointer;
 
-@media screen and (max-width:700px) {
-    body{
-  display: flex;
-  min-height: 100vh;
-  justify-content: center;
-  align-items: center;
-  background-color: white;  
-}
-footer{
-    width: 90%;
-    height: 90px;
-    background-color: white;
-    margin-left: 5%;
-    margin-right: 5%;
-    position: absolute;
+                }
+                img{
+                    width: 100px;
+                    height: 100px;
+                    float: left;
+                    margin-top: 0px;
+                    border-radius: 7.5px;
+                }
+                a{
+                text-decoration: none;
+                    color:orange;
+                    position: relative;
+                }
+                #vma{
+                position: relative;
+                top: 27.5px;
+                right: 27.5px;
+                }
+                #myNav{
+                    display: none;
+                }
+                #hamburger{
+                    display: none;
+                }
+                #rs{
+                    color: white;
+                    width: 50px;
+                    height: 50px;
+                    background-color: white;
+                }
+                .container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    }
+
+    footer {
+    background-color: orange;
+    padding: 15px;
+    text-align: center;
+    position: fixed;
     bottom: 10px;
-    border-radius: 10px;
+    left: 20%;
+    right: 20%;
+    width: auto;
+    border-radius: 50px;
+    height: auto;
+    }
 
-}
-.navigator{
-  position:absolute;
-  width:90%;
-  margin-left: 5%;
-  margin-right: 5%;
-  height:70px;
-  background:orange;
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  border-radius:10px;
-  bottom: 10px;
-  
-}
+    .icon-container {
+    display: flex;
+    justify-content: center;
+    }
+    footer img{
+        width: 60px;
+        height: 60px;
+        position: relative;
+        margin-left: 2vh;
+        margin-right: 2vh;
+        border-radius: 50%;
+    }
 
-.navigator ul{
-  display:flex;
-  width:350px;
-}
-.navigator ul li{
-  position:relative;
-  list-style:none;
-  width:70px;
-  height:70px;
-  z-index:1;
     
-}
-.navigator ul li a{
-  position:relative;
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction:column;
-  width:100%;
-  text-align:center;
-  font-weight:500;
-}
-.navigator ul li a .icon{
-  position:relative;
-  line-height:75px;
-  font-size:1.5em;
-  text-align:center;
-  transition:0.5s;
-  color:var(--clr);
-}
-.navigator ul li.active a .icon{
-  transform: translatey(-35px);
-}
-.navigator ul li a .text{
-  position:absolute;
-  font-size:0.75em;
-  font-weight:400;
-  color:black;
-  letter-spacing:0.05em;
-  transition:0.5s;
-  opacity:0;
-  transform: translatey(20px);
-  
-}
-.navigator ul li.active a .text{
-   opacity:1;
-  transform: translatey(10px)
-}
-.indicator{
-  position:absolute;
-  top:-50%;
-  width:70px;
-  height:70px;
-  background-image: linear-gradient(90deg,rgb(30, 43, 165),rgb(199, 38, 164));
-  border-radius:50%;
-  border:6px solid var(--clr);
-  transition:0.5s;
-}
-.indicator::before{
-  content:'';
-  position:absolute;
-  top:50%;
-  left:-22px;
-  width:20px;
-  height:20px;
-  background:transprent;
-  border-top-right-radius:20px;
-  box-shadow:0px -9px 0 0 var(--clr);
-    
-}
-.indicator::after{
-  content:'';
-  position:absolute;
-  top:50%;
-  right:-22px;
-  width:20px;
-  height:20px;
-  background:transprent;
-  border-top-left-radius:20px;
-  box-shadow:0px -9px 0 0 var(--clr);
-    
-}
-.aks{
-    width: 40px;
-    height: 40px;
-    margin-top: 15px;
-}
+    .icon-container a {
+    margin: 0 10px;
+    color: #333;
+    font-size: 20px;
+    text-decoration: none;
+    }
 
-.navigator ul li:nth-child(1).active ~ .indicator{
-  transform: translateX(calc(-70px * 0));
-}
-.navigator ul li:nth-child(2).active ~ .indicator{
-  transform: translateX(calc(-70px * 1));
-}
-.navigator ul li:nth-child(3).active ~ .indicator{
-  transform: translateX(calc(-70px * 2));
-}
-.navigator ul li:nth-child(4).active ~ .indicator{
-  transform: translateX(calc(-70px * 3));
-}
-.navigator ul li:nth-child(5).active ~ .indicator{
-  transform: translateX(calc(-70px * 4));
-}
-            
+    p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #777;
+    }
+    #myImage1:active{
+    background-color: white;
+    transition: 0.15s;
+    }
+    #myImage3:active{
+    background-color: white;
+    transition: 0.15s;
+    }
+    #kmbvpabb{
+    text-align: center;
+    margin-top: 29px;
+    }
+            #mnfe{
+                margin-left: 20%;
+                margin-right: 20%;
+                width: 60%;
+                height: 430px;
+                margin-top: 10px;
+                background-color: aquamarine;
+                float: right;
+                border-radius: 25px;
+            }
+            #aks{
+                width: 55%;
+                height: 55%;
+                float: left;
+                border-radius: 25px;
+                max-width: 300px;
+                max-height: 300px;
+            }
+            h3{
+                margin-right: 25px;
+                margin-top: 13px;
+                color: black;
+            }
+            #kamalsaz{
+                display: none;
+            }
+            #fasele{
+                display: none;
+            }
         }
 
+        @media screen and (max-width:1310px) {
+            header{
+                background-color: black;
+                width: 100%;
+                height: 70px;
+                color: white;
+            }
+            #myDiv{
+                display: none;
+            }
+            #dayere{
+                background-image: linear-gradient(90deg,lightblue,darkblue);
+                border-radius: 7.5px;
+                width: 90%;
+                height: 100px;
+                margin-top: 20px;
+                margin-right: 5%;
+                margin-left: 5%;
+                font-size: 12.5px;
+                cursor: pointer;
+        }
 
+            a{
+                text-decoration: none;
+                color:orange;
+                position: relative;
+            }
+            #vma{
+              position: relative;
+              top: 37.5px;
+              right: 27.5px;
+              font-size: 90%;
+            }
+            nav a{
+                display: none;
+            }
+        
+      .overlay {
+                height: 100%;
+                width: 0;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                background-color: rgb(0,0,0);
+                background-color: rgba(0,0,0, 0.9);
+                overflow-x: hidden;
+                transition: 0.5s;
+}
 
+.overlay-content {
+                position: relative;
+                top: 25%;
+                width: 100%;
+                text-align: center;
+                margin-top: 10px;
+}
+
+.overlay a {
+                padding: 10px;
+                text-decoration: none;
+                font-size: 20px;
+                color: #818181;
+                display: block;
+                transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+                color: blue;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 10px;
+  right: 45px;
+  font-size: 60px;
+}
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  background-color: orange;
+  padding: 15px;
+  text-align: center;
+  position: fixed;
+  bottom: 10px;
+  left: 2%;
+  right: 2%;
+  width: auto;
+  border-radius: 50px;
+  height: auto;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+}
+footer img{
+    width: 60px;
+    height: 60px;
+    position: relative;
+    margin-left: 15px;
+    margin-right: 15px;
+    border-radius: 50%;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+
+#hamburger{
+  float: left;
+  font-size:50px;
+  cursor:pointer;
+  margin-left: 10px;
+}
+
+#kmbvpabb{
+  text-align: center;
+  font-size: 20px;
+  margin-top: 35px;
+}
+#mnfe{
+                margin-left: 5%;
+                margin-right: 5%;
+                width: 90%;
+                height: 800px;
+                background-color: aquamarine;
+                border-radius: 20px;
+                max-width: 100%;
+            }
+
+            h3{
+                margin-right: 10px;
+                margin-top: 17.5px;
+                color: black;
+                font-size: 15px;
+                margin-left: 10px;
+                top: 40px;
+                position: relative;
+            }
+            #bl{
+                position: relative;
+                float: left;
+                top: 175px;
+                left: -140px;
+                color: rgb(173, 173, 173);
+                
+            }
+            #aks{
+                width: 80%;
+                height: 80%;
+                margin-right: 10%;
+                margin-left: 10%;
+                float: left;
+                border-radius: 15px;
+                background-color: black;
+                margin-top: 40px;
+
+            }
+            #modaks{
+                background-color: black;
+            }
+            #kamalsaz{
+    float: right;
+    position: relative;
+    top: 15px;
+    left: -15px;
+}
+
+        }
     </style>
+
+
+
+
+
+    <script>
+
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+
+
+
+      // فراخوانی سرویس ip-api.com برای دریافت اطلاعات مکان جغرافیایی کاربر
+function getGeoLocation(callback) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'http://ip-api.com/json');
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+            var response = JSON.parse(xhr.responseText);
+            callback(response);
+        }
+    };
+    xhr.send();
+}
+
+// بررسی آیا مکان جغرافیایی کاربر داخل ایران است یا خیر
+function isUserInIran(callback) {
+    getGeoLocation(function(response) {
+        var country = response.countryCode;
+        callback(country === 'IR');
+    });
+}
+
+// اجرای تابع بررسی برای تصمیم‌گیری درباره دسترسی کاربر به وبسایت
+isUserInIran(function(isInIran) {
+    if (!isInIran) {
+        // اگر کاربر خارج از ایران است، اقدام به محدود کردن دسترسی کنید
+
+        alert("تنها کاربرانی که در داخل ایران حضور دارند میتوانند اقدام به ورود به سایت کنند! لطفا اگر فیلترشکن شما فعال است آن را غیر فعال کنید" , "color: red;");
+        window.location.href = "filtering.html"; // آدرس صفحه دسترسی ممنوع
+    } else {
+        // اگر کاربر در داخل ایران است، به وبسایت اجازه ورود بدهید
+    }
+});
+
+
+
+
+    </script>
 </head>
 <body>
 
-    <footer>
+<center>
 
-    <div class="navigator">
-        <center>
-        <ul>
-          <li class="list active">
-            <a href="#">
-                <span class="icon"><img src="images/homeicon.png" alt="" class="aks"></span>
-                <span class="text">خانه</span>
+<header>
 
-            </a>
-          </li>
-          <li class="list">
-            <a href="#">
-                <span class="icon"><img src="images/2123954_app_essential_list_ui_icon.png" class="aks" alt=""></span>
-                <span class="text">اگهی من</span>
 
-            </a>
-          </li>
-          <li class="list">
-            <a href="#">
-                <span class="icon"><img src="images/plus.png" class="aks" alt=""></span>
-                <span class="text">آگهی جدید</span>
-            </a>
-          </li>
-          <li class="list">
-            <a href="#">         
-                <span class="icon"><img src="images/searchicon.png" class="aks" alt=""></span>
-                <span class="text">استعلام</span>
+<nav>
 
-            </a>
-          </li>
-        <li class="list">
-            <a href="#">
-                <span class="icon"><img src="images/profileicon.png" class="aks" alt=""></span>
-              <span class="text">پروفایل</span>
-            </a>
-          </li>
-       <div class="indicator"></div>
-        </ul>
-    </center>
+    <a href="abrobadi.php">ابر و بادی</a>
+    <a href="li.php">لی</a>
+    <a href="katan.php">کتان</a>
+    <a href="nakh_panbeh.php">نخ پنبه</a>
+    <a href="lenin.php">لنین</a>
+    <a href="satan.php">ساتن</a>
+    <a href="kerep.php">کرپ</a>
+    <a href="nakhi.php">نخی</a>
+    <a href="astar.php">استر</a>
+    <a href="viskoz.php">ویسکوز</a>
+    <a href="mantoyi.php">مانتویی</a>
+    <a href="kot_shalvari.php">کت شلواری</a>
+    <a href="toor.php">تور</a>
+    <a href="majlesi.php">مجلسی</a>
+    <a href="harir.php">حریر</a>
+    <a href="mazerati.php">مازراتی</a>
 
+</nav>
+
+    <div id="myNav" class="overlay">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <div class="overlay-content">
+    <a href="abrobadi.php">ابر و بادی</a>
+    <a href="li.php">لی</a>
+    <a href="katan.php">کتان</a>
+    <a href="nakh_panbeh.php">نخ پنبه</a>
+    <a href="lenin.php">لنین</a>
+    <a href="satan.php">ساتن</a>
+    <a href="kerep.php">کرپ</a>
+    <a href="nakhi.php">نخی</a>
+    <a href="astar.php">استر</a>
+    <a href="viskoz.php">ویسکوز</a>
+    <a href="mantoyi.php">مانتویی</a>
+    <a href="kot_shalvari.php">کت شلواری</a>
+    <a href="toor.php">تور</a>
+    <a href="majlesi.php">مجلسی</a>
+    <a href="harir.php">حریر</a>
+    <a href="mazerati.php">مازراتی</a>
+    <br>
+    <br>
+      </div>
     </div>
-</footer>
 
-       <script>
+    <span id="hamburger" onclick="openNav()">&#9776;</span>
 
-const list=document.querySelectorAll(".list");
-function activeLink(){
-  list.forEach((item)=>
-  item.classList.remove("active"));
-  this.classList.add("active");
-}
-list.forEach((item)=>
-item.addEventListener("click",activeLink));
-       </script>
+    <div id="kamalsaz">
+    <h1>Bazar-ghaem.ir</h1>
+    </div>
+
+
+</header>
+</center>
+
+
+<div id='mnfe'><div id='modaks'><img src='converted/photo1691145462.jpeg' alt='عکس' id='aks'></div><h3 id='takh3'>نام پارچه : ابر و بادی</h3><h3>رنگ پارچه : سفید</h3><h3>ضخامت پارچه : 370g</h3><h3>متراژ هر طاقه : 220 </h3><h3>قیمت هر  یارد  : 27000  تومان</h3><h3> شماره تلفن صاحب جنس : 09371097225</h3><h3>شماره تلفن دفتر :02155692685-021</h3><h3>آدرس دفتر : بازار بزرگ خیابان عباس آباد کوچه حمام جال کوچه زیبا پاساژ قائم طبقه اول پلاک 124</h3><h3>توضیحات : پارچه مازراتی سفارش چین جنس درجه یک موجودی فقط 200 طاقه</h3></div>
+
+<div id="fasele">
+<br><br>
+<br><br>
+<br>
+</div>
+
+<footer>
+      <div class="icon-container">
+      <a href="Gallery.php"><i class="icon"><img src="images/homeicon.png" alt="" id="myImage1"></i></a>
+      <a href="#"><i class="icon"><img src="images/searchicon.png" alt="" id="myImage2"></i></a>
+        <a href="Send Page.html"><i class="icon"><img src="images/plus.png" alt="" id="myImage3"></i></a>
+        <a href="#"><i class="icon"><img src="images/chaticon.png" alt="" id="myImage4"></i></a>
+        <a href="#"><i class="icon"><img src="images/profileicon.png" alt="" id="myImage5"></i></a>
+
+      </div>
+    </footer>
+
     
 </body>
 </html>
