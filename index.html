@@ -1,379 +1,524 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" href="images/3994420_draw_edit_new_pen_write_icon.png">
-        <link rel="apple-touch-icon" href="images/3994420_draw_edit_new_pen_write_icon.png">
-        <title>
-            Shop saver
-        </title>
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Lalezar&family=Noto+Naskh+Arabic:wght@500&family=Ubuntu:wght@300&family=Vazirmatn:wght@200;400&display=swap');
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="images/9133514_signup_register_login_icon.png">
+  <link rel="apple-touch-icon" href="images/9133514_signup_register_login_icon.png">
 
-            *{
-                margin: 0px;
-                direction: rtl;
-                font-family: 'vazirmatn';
+  <title>
+    Signing Up
+  </title>
+  <style>
+      @import url('https://fonts.googleapis.com/css2?family=Lalezar&family=Noto+Naskh+Arabic:wght@500&family=Ubuntu:wght@300&family=Vazirmatn:wght@200;400&display=swap');
+*{
+  margin: 0px;
+  padding: 0px;
+  font-family: 'vazirmatn';
+}
+::selection{
+          background-color: orange;
+          color: purple;
+          
+        }
+@media screen and (min-width:624px) {
+  body {
+      background-image: url(images/pexels_engin_akyurt_1487809.jpg);
+      margin: 0;
+      padding: 0;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      background-attachment: fixed;
+    }
+    header{
+        width: 100%;
+        height: 70px;
+        background-color: black;
+        color: white;
+        text-align: center;
+    }
+    header h1{
+      position: relative;
+      top: 8px;
+      font-size: 175%;  
+    }
+    form {
+      position:relative;
+      margin-left: 25%;
+      margin-right: 25%;
+      width: 50%;
+      height: 775px;
+      background-color: aquamarine;
+      transition: transform 0.365s cubic-bezier(0.42, 0, 0.58, 1);
+      border: 5px solider whitesmoke;
+      border-radius: 25px;
+      box-shadow: 1px -1px 20px rgb(187, 187, 187);
+      margin-top: 49px;
+    }
+    input{
+      text-align: center;
+      margin-top: 2px;
+    }
+    input[type='text']{
+      width: 250px;
+      height: 40px;
+      border-radius: 5px;
+      border: 0.5px whitesmoke solid;
+
+    }
+    input[type='tel']{
+      width: 250px;
+      height: 40px;
+      border-radius: 5px;
+      border: 0.5px whitesmoke solid;
+      margin-top: 10px;
+
+
+
+    }
+    input[type='password']{
+      width: 250px;
+      height: 40px;
+      border-radius: 5px;
+      border: 0.5px whitesmoke solid;
+      margin-top: 10px;
+      margin-right: -40px;
+
+    }
+    input:focus{
+      outline: 0px;
+      border: 1px solid green;
+      text-align: center;
+    }
+    #namkhanlabel{
+      position: absolute;
+      right:12px;
+      color: black;
+      margin-top: -10px;
+      font-size: 90%;
+    }
+    #ersal{
+      color: white;
+      border: none;
+      background-color: palevioletred;
+      width: 20%;
+      height: 35px;
+      border-radius: 5px;
+      background-color: rgb(214, 52, 106);
+      margin-right: 10px;
+      margin-top: 3%;
+      position: relative;
+      top: 5%;
+
+    }
+    #ersal:hover{
+      background-color: rgb(185, 42, 90);
+      transition: 0.365s;
+    }
+    #signup{
+      color: white;
+      border: none;
+      background-color: palevioletred;
+      width: 200px;
+      height: 35px;
+      border-radius: 5px;
+      background-color: orange;
+      margin-top: 7.5%;
+    }
+    #signup:hover{
+      background-color: rgb(212, 138, 0);
+      transition: 0.365s;
+    }
+    footer{
+        width: 100%;
+        height: 70px;
+        background-color: black;
+        color: white;
+        text-align: center;
+        position: relative;
+      }
+      footer h1{
+        position: relative;
+        top: 10px;
+        text-align: center;
+      }
+      #icon{
+        width: 32.5px;
+        height: 32.5px;
+        position: relative;
+        top:11px;
+        right: -300px;
+      }
+      #password{
+        margin-right: 30px;
+        }
+
+        .file-input-container {
+            display: inline-block;
+            padding: 5px 45px;
+            background-color: #ffffff;
+            border: 2px dashed blue;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .file-input-container:hover {
+            border-color: rgb(0, 0, 163);
+        }
+        .file-input {
+            display: none;
+        }
+        .selected-file {
+            font-size: 18px;
+            color: red;
+            margin-top: 10px;
+        }
+        .no-selected-file {
+            color: #0000FF; /* تغییر رنگ متن به آبی */
+        }
+
+    
+  }
+  @media screen and (max-width:624px) {
+    body {
+      background-image: url(images/pexels_engin_akyurt_1487809.jpg);
+      margin: 0;
+      padding: 0;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      background-attachment: fixed;
+    }
+    header{
+        width: 100%;
+        height: 70px;
+        background-color: black;
+        color: white;
+        text-align: center;
+    }
+    header h1{
+      position: relative;
+      top: 15px;
+      font-size:x-large;
+    }
+    form {
+      position:relative;
+      margin-left: 5%;
+      margin-right: 5%;
+      width: 90%;
+      height: 750px;
+      background-color: aquamarine;
+      transition: transform 0.365s cubic-bezier(0.42, 0, 0.58, 1);
+      border: 5px solider whitesmoke;
+      border-radius: 25px;
+      margin-right: 50px;
+      bottom: 25px;
+      box-shadow: 1px -1px 20px rgb(187, 187, 187);
+      margin-top: 49px;
+    }
+    input{
+      text-align: center;
+      margin-top: 2px;
+    }
+    input[type='text']{
+      width: 250px;
+      height: 40px;
+      border-radius: 5px;
+      border: 0.5px whitesmoke solid;
+
+    }
+    input[type='tel']{
+      width: 250px;
+      height: 40px;
+      border-radius: 5px;
+      border: 0.5px whitesmoke solid;
+      margin-top: 10px;
+
+
+
+    }
+    input[type='password']{
+      width: 250px;
+      height: 40px;
+      border-radius: 5px;
+      border: 0.5px whitesmoke solid;
+      margin-top: 10px;
+      margin-right: -40px;
+
+    }
+    input:focus{
+      outline: 0px;
+      border: 1px solid green;
+      text-align: center;
+    }
+    #namkhanlabel{
+      position: absolute;
+      right:12px;
+      color: black;
+      margin-top: -10px;
+      font-size: 90%;
+    }
+    #ersal{
+      color: white;
+      border: none;
+      background-color: palevioletred;
+      width: 20%;
+      height: 35px;
+      border-radius: 5px;
+      background-color: rgb(214, 52, 106);
+      margin-right: 10px;
+      margin-top: 3%;
+      position: relative;
+      top: 5%;
+
+    }
+    #ersal:hover{
+      background-color: rgb(185, 42, 90);
+      transition: 0.365s;
+    }
+    #signup{
+      color: white;
+      border: none;
+      background-color: palevioletred;
+      width: 200px;
+      height: 35px;
+      border-radius: 5px;
+      background-color: orange;
+      margin-top: 7.5%;
+    }
+    #signup:hover{
+      background-color: rgb(216, 140, 0);
+      transition: 0.365s;
+    }
+    footer{
+        width: 100%;
+        height: 70px;
+        background-color: black;
+        color: white;
+        text-align: center;
+        position: relative;
+      }
+      footer h1{
+        position: relative;
+        top: 10px;
+        text-align: center;
+      }
+      #icon{
+        width: 32.5px;
+        height: 32.5px;
+        position: relative;
+        top:11px;
+        right: -300px;
+      }
+      #password{
+        margin-right: 30px;
+        }
+        .file-input-container {
+            display: inline-block;
+            padding: 5px 45px;
+            background-color: #ffffff;
+            border: 2px dashed blue;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .file-input-container:hover {
+            border-color: rgb(0, 0, 163);
+        }
+        .file-input {
+            display: none;
+        }
+        .selected-file {
+            font-size: 18px;
+            color: red;
+            margin-top: 10px;
+        }
+        .no-selected-file {
+            color: #0000FF; /* تغییر رنگ متن به آبی */
+        }
+  }
+  </style>
+  <script>
+
+     // فراخوانی سرویس ip-api.com برای دریافت اطلاعات مکان جغرافیایی کاربر
+function getGeoLocation(callback) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'http://ip-api.com/json');
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+            var response = JSON.parse(xhr.responseText);
+            callback(response);
+        }
+    };
+    xhr.send();
+}
+
+// بررسی آیا مکان جغرافیایی کاربر داخل ایران است یا خیر
+function isUserInIran(callback) {
+    getGeoLocation(function(response) {
+        var country = response.countryCode;
+        callback(country === 'IR');
+    });
+}
+
+// اجرای تابع بررسی برای تصمیم‌گیری درباره دسترسی کاربر به وبسایت
+isUserInIran(function(isInIran) {
+    if (!isInIran) {
+        // اگر کاربر خارج از ایران است، اقدام به محدود کردن دسترسی کنید
+
+        alert("تنها کاربرانی که در داخل ایران حضور دارند میتوانند اقدام به ورود به سایت کنند! لطفا اگر فیلترشکن شما فعال است آن را غیر فعال کنید" , "color: red;");
+        window.location.href = "filtering.html"; // آدرس صفحه دسترسی ممنوع
+    } else {
+        // اگر کاربر در داخل ایران است، به وبسایت اجازه ورود بدهید
+    }
+});
+
+function togglePasswordVisibility() {
+      var passwordInput = document.getElementById("password");
+      var passwordIcon = document.getElementById("icon");
+
+      if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        passwordIcon.src = "images/eye_open.png"; // تصویر آیکون چشم باز
+      } else {
+        passwordInput.type = "password";
+        passwordIcon.src = "images/eye_closed.png"; // تصویر آیکون چشم بسته
+      }
+    }
+
+
+    
+    var telephoneInput = document.getElementById('telephone');
+    var ersalButton = document.getElementById('ersal');
+
+    telephoneInput.addEventListener('input', function() {
+      ersalButton.style.display = false;
+      if (telephoneInput.value.trim() === '') {
+        ersalButton.style.display = false;
+      } else {
+        ersalButton.style.display = true;
+      }
+    });
+    
+
+  </script>
+</head>
+<body>
+    <header>
+        <h1>صفحه ثبت نام سایت بازار قائم</h1>
+      </header>
+    <main>
+
+  
+<center>
+    <form action="savesignup.php" method="post">
+      <center>
+      <br>
+      <label for="namkhan" id="namkhanlabel">:لطفا نام و نام خانوادگی خود را به فارسی وارد کنید</label>
+      <br>
+      <input type="text" id="namkhan" name="namkh" dir="rtl" minlength="2" placeholder="نام و نام خانوادگی : مثلا امیرحسین علیپور" required>
+      <br>
+      <br>
+      <label for="kod_malli" id="namkhanlabel">:لطفا کد ملّی خود را به صورت کامل وارد کنید</label>
+      <br>
+      <input type="text" placeholder=":کد ملی شما" name="kod_malli" inputmode="numeric" maxlength="10" minlength="10"  required>
+      <br>
+      <br>
+      <label for="password" id="namkhanlabel">:لطفا به انگلیسی برای خود یک رمز عبور انتخاب کنید</label>
+      <br>
+      <img src="images/eye_closed.png" id="icon" class="icon" onclick="togglePasswordVisibility()">
+      <input type="password" name="password" id="password" placeholder=":رمز عبور شما"  required minlength="8">
+      <br>
+      <br>
+      <label for="telephone" id="namkhanlabel">:لطفا شماره تلفن خود را وارد کنید</label>
+      <br>
+      <input type="tel" name="username" id="telephone" dir="ltr" maxlength="11" minlength="11"  inputmode="numeric" placeholder="09*********" [0-9]{2}\d*  required>
+      <br>
+      <br>
+      <label for="file-input" id="namkhanlabel">:لطفا عکس پروفایل خود را وارد کنید</label>
+      <br>
+      <div class="file-input-container">
+        <label for="file-input" class="file-label">عکس خود را انتخاب کنید</label>
+        <br>
+        <input type="file" id="file-input" class="file-input" dir="rtl"  accept="image/*"  required>
+    </div>
+    <p class="selected-file">هیچ عکسی انتخاب نشده است!</p>
+    
+    <script>
+        const fileInput = document.getElementById('file-input');
+        const selectedFileText = document.querySelector('.selected-file');
+
+        fileInput.addEventListener('change', (event) => {
+            const selectedFile = event.target.files[0];
+            if (selectedFile) {
+                selectedFileText.textContent = `عکس پروفایل انتخاب شد`;
+                selectedFileText.classList.add('no-selected-file'); // حذف کلاس برای تغییر رنگ متن
+
+            } else {
+                selectedFileText.textContent = 'هیچ عکسی انتخاب نشده است.';
+                selectedFileText.classList.remove('no-selected-file'); // اضافه کردن کلاس برای تغییر رنگ متن
+
             }
-            @media screen and (min-width:700px) {
-                body {
-                    background-image: url(images/IMG_20230810_133842.jpg);
-                    margin: 0;
-                    padding: 0;
-                    background-repeat: no-repeat;
-                    background-size: 100% 100%;
-                    background-attachment: fixed;
-                }
-                header{
-                    width: 100%;
-                    height: 70px;
-                    background-color: black;
-                }
-                header h1{
-                    color: white;
-                    text-align: center;
-                    position: relative;
-                    top: 10px;
-                }
-                form{
-                    width: 50%;
-                    margin-left: 25%;
-                    margin-right: 25%;
-                    height: 600px;
-                    background-color: aquamarine;
-                    border-radius: 20px;
-                }
-                .blab{
-                    float: right;
-                    margin-right: 20px;
-                    position: relative;
-                    top:20px;
-                    margin-top: 10px;
-                    cursor: pointer;
-                }
-                .colb{
-                    position: relative;
-                    margin-left: 20px;
-                    top: 20px;
-                    margin-top: 10px;
-                    width: 180px;
-                    height: 25px;
-                    padding: 5px 15px;
-                    border-radius: 5px;
-                    border: 1px solid rgb(192, 192, 192);
-                    cursor: pointer;
-                }
-                .colb:focus{
-                    outline: 0px;
-                    border: 1px solid orange;
-                    box-shadow: 1px 1px 10px black;
-                    width: 265px;
-                }
-                .colb:hover{
-                    background-color: whitesmoke;
-                    transition: 0.365s;
-                }
-                .selt{
-                    position: relative;
-                    margin-left: 20px;
-                    top: 20px;
-                    margin-top: 10px;
-                    width: 212px;
-                    height: 35px;
-                    border: 1px solid rgb(192, 192, 192);
-                    cursor: pointer;
-                    text-align: center;
-                    border-radius: 5px;
+        });
+    </script>
+      <br>
+      <br>
+      <label for="teleg" id="namkhanlabel">:ابتدا ارسال کد را کلیک و سپس کد ارسال شده را وارد کنید</label>
+      <br>
+      <button id="ersal">:ارسال کد</button>
+      <script>
+        var button = document.getElementById("ersal");
+       
+       button.addEventListener("click", function() {
+         button.disabled = true;
+         countdown(2, 0);
+       });
+       
+       function countdown(minutes, seconds) {
+         button.innerHTML = formatTime(minutes, seconds);
+         var interval = setInterval(function() {
+           if (seconds > 0) {
+             seconds--;
+           } else {
+             if (minutes > 0) {
+               minutes--;
+               seconds = 59;
+             } else {
+               clearInterval(interval);
+               button.innerHTML = ":ارسال کد";
+               button.disabled = false; // فعال کردن دکمه
+               return;
+             }
+           }
+           button.innerHTML = formatTime(minutes, seconds);
+         }, 1000); // هر 1,000 میلی‌ثانیه (1 ثانیه) تابع setInterval فراخوانی می‌شود
+       }
+       
+       function formatTime(minutes, seconds) {
+         return padZero(minutes) + ":" + padZero(seconds);
+       }
+       
+       function padZero(num) {
+         return (num < 10 ? "0" : "") + num;
+       }
+       
+         </script>
+      <input type="text" inputmode="numeric" name="teleg" id="teleg" placeholder=":لطفا کد ارسال شده را وارد کنید" maxlength="6" minlength="4">
+    
+      <br>
+      <br>
+  
+      <button type="submit" id="signup">تایید و ثبت نام</button>
+    </center>
+    </form>
 
-                }
-                .selt:focus{
-                    outline: 0px;
-                    width: 300px;
-                    transition: 0.365s;
-                    box-shadow: 1px 1px 10px black;
-                    border: 1px solid orange;
-                }
-                .selt:hover{
-                    background-color: whitesmoke;
-                    transition: 0.365s;
-                }
-                button[type='submit']{
-                    width: 100px;
-                    height: 35px;
-                    background-color: orange;
-                    border: none;
-                    border-radius: 5px;
-                    position: relative;
-                    top: 10px;
-                }
-                button[type='submit']:hover{
-                    width: 200px;
-                    transition: 0.365s;
-                    background-color: rgb(241, 64, 93);
-                }
-                footer{
-                    width: 100%;
-                    height: 70px;
-                    background-color: black;
-                }
-                footer h1{
-                    color: white;
-                    text-align: center;
-                    position: relative;
-                    top: 10px;
-                }
-                
-                
-            } 
-            @media screen and (max-width:700px) {
-                body {
-                    background-image: url(images/IMG_20230810_133924.jpg);
-                    margin: 0;
-                    padding: 0;
-                    background-repeat: no-repeat;
-                    background-size: 100% 100%;
-                    background-attachment: fixed;
-                }
-                header{
-                    width: 100%;
-                    height: 70px;
-                    background-color: black;
-                }
-                header h1{
-                    color: white;
-                    text-align: center;
-                    position: relative;
-                    top: 14px;
-                    font-size: 25px;
-                }
-                form{
-                    width: 92%;
-                    margin-left: 4%;
-                    margin-right: 4%;
-                    height: 925px;
-                    background-color: aquamarine;
-                    border-radius: 20px;
-                }
-                .blab{
-                    float: right;
-                    margin-right: 5px;
-                    position: relative;
-                    top:20px;
-                    margin-top: 10px;
-                    cursor: pointer;
-                }
-                .colb{
-                    position: relative;
-                    margin-left: 20px;
-                    top: 20px;
-                    margin-top: 10px;
-                    width: 180px;
-                    height: 25px;
-                    padding: 5px 15px;
-                    border-radius: 5px;
-                    border: 1px solid rgb(192, 192, 192);
-                    cursor: pointer;
-                }
-                .colb:focus{
-                    outline: 0px;
-                    border: 1px solid orange;
-                    box-shadow: 1px 1px 10px black;
-                    width: 223px;
-                }
-                .colb:hover{
-                    background-color: whitesmoke;
-                    transition: 0.365s;
-                }
-                .selt{
-                    position: relative;
-                    margin-left: 20px;
-                    top: 20px;
-                    margin-top: 10px;
-                    width: 212px;
-                    height: 35px;
-                    border: 1px solid rgb(192, 192, 192);
-                    cursor: pointer;
-                    text-align: center;
-                    border-radius: 5px;
+  </center>
+</main>
 
-                }
-                .selt:focus{
-                    outline: 0px;
-                    width: 270px;
-                    transition: 0.365s;
-                    box-shadow: 1px 1px 10px black;
-                    border: 1px solid orange;
-                }
-                .selt:hover{
-                    background-color: whitesmoke;
-                    transition: 0.365s;
-                }
-                button[type='submit']{
-                    width: 100px;
-                    height: 35px;
-                    background-color: orange;
-                    border: none;
-                    border-radius: 5px;
-                    position: relative;
-                    top: 10px;
-                }
-                button[type='submit']:hover{
-                    width: 200px;
-                    transition: 0.365s;
-                    background-color: rgb(241, 64, 93);
-                }
-                footer{
-                    width: 100%;
-                    height: 70px;
-                    background-color: black;
-                    position: absolute;
-                }
-                footer h1{
-                    color: white;
-                    text-align: center;
-                    position: relative;
-                    top: 14px;
-                    font-size: 25px;
-                }
-                #telma{
-                    position: relative;
-                    left: 38px;
-                    margin-top: 10px;
+<br><br>
+<footer>
+    <h1>
+      www.bazar-ghaem.ir
+    </h1>
+  </footer>
 
 
-                }
-                #kod_posti{  
-                    position: relative;
-                    left: 30px;
-                    margin-top: 10px;
-
-                }
-                #photel{
-                    position: relative;
-                    left: 36px;
-                    margin-top: 10px;
-
-
-                }
-                #kod_melli{
-                    position: relative;
-                    left: 38px;
-                    margin-top: 10px;
-
-
-                }
-                #last_name{
-                    position: relative;
-                    left: 54px;
-                    margin-top: 10px;
-
-                }
-                #first_name{
-                    position: relative;
-                    left: 23px;
-                    margin-top: 10px;
-
-                }
-                
-            }          
-        </style>
-    </head>
-    <body>
-        <header>
-            <h1>صفحه ثبت مغازه بازار قائم</h1>
-        </header>
-        <br>
-        <br>
-        <main>
-        <form action="verfying.php" method="post" enctype="multipart/form-data">
-            <center>
-            <label for="first_name" class="blab">نام شما:</label>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input type="text" placeholder="مثلا: امیرحسین" class="colb" id="first_name" name="first_name" required maxlength="100">
-            <br>
-            <label for="last_name" class="blab"> نام خانوادگی شما:</label>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input type="text" placeholder="مثلا: علیپور" class="colb" id="last_name" name="last_name" required maxlength="100">
-            <br>
-            <label for="kod_melli" class="blab">کد ملّی شما:</label>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input type="text" placeholder="مثلا: 0200747411" class="colb" id="kod_melli" name="kod_melli" required inputmode="numeric" maxlength="10" minlength="10">
-            <br>
-            <label for="photel" class="blab">شماره شما:</label>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input type="text" placeholder="####-###-09##" class="colb" inputmode="numeric" id="photel" name="photel" required maxlength="11" minlength="11">
-            <br>
-            <label for="kod_posti" class="blab">کد پستی: </label>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input type="text" placeholder="مثلا: 5347214689" class="colb" id="kod_posti" name="kod_posti" required inputmode="numeric" maxlength="10" minlength="10">
-            <br>
-            <label for="telma" class="blab">تلفن مغازه:</label>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input type="text" placeholder="مثلا: ******55 " class="colb" inputmode="numeric" id="telma" name="telma" required maxlength="8" minlength="8">
-            <br>
-            <label for="metrazh_maghazeh" class="blab">متراژ مغازه را وارد کنید:</label>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input type="text" placeholder="مثلا 12" class="colb" id="metrazh_maghazeh" name="metrazh_maghazeh" inputmode="numeric" required minlength="1" maxlength="2">
-            <br>
-            <label for="tabaghe" class="blab">در طبقه چندم قرار دارید:</label>
-            &nbsp;&nbsp;&nbsp;
-            <select name="tabaghe" id="tabaghe" required class="selt">
-                <option value=""  disabled selected>لطفا یکی از گزینه های زیر را انتخاب کنید:</option>
-                <option value="طبقه منفی دو">طبقه منفی دو</option>
-                <option value="طبقه منفی یک">طبقه منفی یک</option>
-                <option value="طبقه همکف">طبقه همکف</option>
-                <option value="طبقه مثبت یک">طبقه مثبت یک</option>
-                <option value="طبقه مثبت دو">طبقه مثبت دو</option>
-                <option value="طبقه مثبت سه">طبقه مثبت سه</option>
-            </select>
-            <br>
-            <label for="dalan" class="blab">در کدام دالان هستید؟</label>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <select name="dalan" id="dalan" required class="selt">
-                <option value=""  disabled selected>لطفا یکی از گزینه های زیر را انتخاب کنید:</option>
-                <option value="دالان اول">دالان اول</option>
-                <option value="دالان دوم">دالان دوم</option>
-                <option value="دالان سوم">دالان سوم</option>
-                <option value="دالان چهارم">دالان چهارم</option>
-                <option value="دالان پنجم">دالان پنجم</option>
-                <option value="دالان ششم">دالان ششم</option>
-                <option value="دالان هفتم">دالان هفتم</option>
-                <option value="دالان هشتم">دالان هشتم</option>
-                <option value="دالان نهم">دالان نهم</option>
-                <option value="دالان دهم">دالان دهم</option>
-                <option value="دالان یازدهم">دالان یازدهم</option>
-            </select>
-            <br>
-            <label for="pelak" class="blab">لطفا پلاک خود را وارد کنید:</label>
-            <input type="text" name="pelak" class="colb" id="pelak" inputmode="numeric" required placeholder="پلاک مغازه شما:" minlength="1" maxlength="5">
-            <br>
-            <label for="dm" class="blab">آیا دور میدان هستید؟</label>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <select name="dm" id="dm" required class="selt">
-                <option value=""  disabled selected >لطفا یکی از گزینه های زیر را انتخاب کنید:</option>
-                <option value="هست">هست</option>
-                <option value="نیست">نیست</option>
-            </select>
-
-            <br>
-            <br>
-
-
-            <button type="submit">ثبت مغازه</button>
-
-            </center>
-
-
-        </form>
-        <br>
-        </main>
-        <footer>
-
-            <h1>
-                www.bazar-ghaem.ir
-            </h1>
-        </footer>
-        
-    </body>
-    </html>
+</body>
+</html>
