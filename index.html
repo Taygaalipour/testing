@@ -146,6 +146,8 @@ background: #fff url('https://codepenworldsfair.com/images/small-worlds-fair.png
 	transform: translate3d(var(--x), var(--y), var(--z));
 	transition: .2s cubic-bezier(.33,1,.53,1);
     display: none;
+    transition: all 0.365s;
+    transform: translate(0px, -0px);
 	&[hidden] {
 		--y: 150%;
 	}
@@ -307,12 +309,17 @@ function showMenu () {
 	menu.removeAttribute('hidden');
 	overlay.removeAttribute('hidden');
     menu.style.display = 'block';
+    menu.style.transition = '0.365s';
+    menu.style.transform.translate = '0px , -230px';
 };
 
 function hideMenu () {
 	menu.setAttribute('hidden', '');
 	overlay.setAttribute('hidden', '');
 	button.removeAttribute('hidden');
+    menu.style.display = 'none';
+    menu.style.transition = '0.365s';
+
 };
 
 button.addEventListener('click', showMenu);
