@@ -13,8 +13,8 @@
     font-family: 'vazirmatn';
 }
 
-
-.hero__wrapper {
+@media screen and (max-width:624px) {
+    .hero__wrapper {
 	display: flex;
 	align-items: flex-end;
 	justify-content: center;
@@ -36,7 +36,9 @@
 }
 
 .hero__phone {
-	width: 300px;
+	width: 100%;
+    margin-left: 0%;
+    margin-right: 0%;
 	height: 630px;
 	background: var(--light);
 	background-color: #ffffff;
@@ -88,6 +90,7 @@ background: #fff url('https://codepenworldsfair.com/images/small-worlds-fair.png
 	white-space: nowrap;
 	position: absolute;
 	bottom: 30px;
+    padding: 10px 70px;
 	left: 50%;
 	transform: translate3d(var(--x), var(--y), var(--z));
 	cursor: pointer;
@@ -243,6 +246,11 @@ background: #fff url('https://codepenworldsfair.com/images/small-worlds-fair.png
         height: 24px;
     }
 }
+    
+}
+
+
+
     </style>
 </head>
 <body>
