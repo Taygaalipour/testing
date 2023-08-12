@@ -148,9 +148,23 @@ background: #fff url('https://codepenworldsfair.com/images/small-worlds-fair.png
 }
 
 .menu__header {
-	display: flex;
 	justify-content: space-between;
 	padding: 15px 20px;
+}
+#close{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border-radius: 5px;
+    border: none;
+    background-image: linear-gradient(90deg, rgb(0, 189, 0) , green);
+    padding: 10px 20px;
+    cursor: pointer;
+    color: white;
+    font-size: 15px;
+
+}
+
 	label {
 		div {
 			width: 15px;
@@ -180,33 +194,7 @@ background: #fff url('https://codepenworldsfair.com/images/small-worlds-fair.png
 	h3 {
 		font-weight: normal;
 	}
-	button {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 25px;
-		height: 25px;
-		background: var(--neutral-dark);
-		border-radius: 50%;
-		cursor: pointer;
-		div {
-			width: 15px;
-			height: 3px;
-			background: var(--light);
-			position: relative;
-			transform: rotate(5.5rad);
-			&:before {
-				content: '';
-				width: 3px;
-				height: 15px;
-				background: var(--light);
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-			}
-		}
-	}
+	
 }
 
 .menu__links {
@@ -245,6 +233,7 @@ background: #fff url('https://codepenworldsfair.com/images/small-worlds-fair.png
         width: 24px;
         height: 24px;
     }
+
 }
     
 }
@@ -254,7 +243,7 @@ background: #fff url('https://codepenworldsfair.com/images/small-worlds-fair.png
     </style>
 </head>
 <body>
-
+<center>
     <div class="hero__wrapper">
         <div class="hero__phone">
             <button class="menu__button">
@@ -267,59 +256,35 @@ background: #fff url('https://codepenworldsfair.com/images/small-worlds-fair.png
                     <label>
                         <div></div>
                     </label>
-                    <p>Quick Navigation</p>
-                    <button title="Close">
-                        <div></div>
+                    <p>گزینه ها:</p>
+                    <button title="بستن" id="close">
+                        <div>بستن</div>
                     </button>
                 </div>
                 <div class="menu__links">
-                    <a href="#0">About Us</a>
-                    <a href="#0">Services</a>
-                    <a href="#0">Pricing</a>
-                    <a href="#0">Blog</a>
-                    <a href="#0">Contact</a>
-                </div>
-                <div class="menu__contact">
-                    <a href="#0">
+                    <a href="#">
                         <img src="images/homeicon.png" alt="" width="24" height="24">
-                            <path d="M0 0h24v24H0z" fill="none"/>
-                            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-                        </svg>
-                        <br>    
-                        <span>بازار</span>
+                        <br>
+                        خانه
                     </a>
-                    <a href="#0">
+                    <a href="#">
                         <img src="images/searchicon.png" alt="" width="24" height="24">
-                            <path d="M0 0h24v24H0z" fill="none"/>
-                            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-                        </svg>
-                        <br>    
-                        <span>مغازه ها</span>
+                        <br>
+                        مغازه ها
                     </a>
-                    <a href="#0">
+                    <a href="#">
                         <img src="images/plus.png" alt="" width="24" height="24">
-                            <path d="M0 0h24v24H0z" fill="none"/>
-                            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-                        </svg>
-                        <br>    
-                        <span>آگهی جدید</span>
-                    </a>
-                    <a href="#0">
-                        <img src="images/homeicon.png" alt="" width="24" height="24">
-                            <path d="M0 0h24v24H0z" fill="none"/>
-                            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-                        </svg>
-                        <br>    
-                        <span>بازار</span>
-                    </a>                    <a href="#0">
-                        <img src="images/homeicon.png" alt="" width="24" height="24">
-                            <path d="M0 0h24v24H0z" fill="none"/>
-                            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-                        </svg>
-                        <br>    
-                        <span>بازار</span>
-                    </a>
-                </div>
+                        <br>
+                        آگهی جدید
+                        <a href="#">
+                            <img src="images/chaticon.png" alt="" width="24" height="24">
+                            <br>
+                            آگهی های من
+                            <a href="#">
+                                <img src="images/profileicon.png" alt="" width="24" height="24">
+                                <br>
+                                پروفایل
+                            </a>
             </section>
             <div class="menu__overlay" hidden></div>
         </div>
@@ -347,6 +312,7 @@ button.addEventListener('click', showMenu);
 close.addEventListener('click', hideMenu);
 overlay.addEventListener('click', hideMenu);
     </script>
+    </center>
     
 
 </body>
