@@ -145,6 +145,7 @@ background: #fff url('https://codepenworldsfair.com/images/small-worlds-fair.png
 	z-index: 105;
 	transform: translate3d(var(--x), var(--y), var(--z));
 	transition: .2s cubic-bezier(.33,1,.53,1);
+    display: none;
 	&[hidden] {
 		--y: 150%;
 	}
@@ -305,6 +306,7 @@ function showMenu () {
 	button.setAttribute('hidden', '');
 	menu.removeAttribute('hidden');
 	overlay.removeAttribute('hidden');
+    menu.style.display = 'block';
 };
 
 function hideMenu () {
