@@ -1,524 +1,345 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="images/9133514_signup_register_login_icon.png">
-  <link rel="apple-touch-icon" href="images/9133514_signup_register_login_icon.png">
-
-  <title>
-    Signing Up
-  </title>
-  <style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <title>Document</title>
+    <style>
       @import url('https://fonts.googleapis.com/css2?family=Lalezar&family=Noto+Naskh+Arabic:wght@500&family=Ubuntu:wght@300&family=Vazirmatn:wght@200;400&display=swap');
 *{
-  margin: 0px;
-  padding: 0px;
-  font-family: 'vazirmatn';
-}
-::selection{
-          background-color: orange;
-          color: purple;
-          
-        }
-@media screen and (min-width:624px) {
-  body {
-      background-image: url(images/pexels_engin_akyurt_1487809.jpg);
-      margin: 0;
-      padding: 0;
-      background-repeat: no-repeat;
-      background-size: 100% 100%;
-      background-attachment: fixed;
-    }
-    header{
-        width: 100%;
-        height: 70px;
-        background-color: black;
-        color: white;
-        text-align: center;
-    }
-    header h1{
-      position: relative;
-      top: 8px;
-      font-size: 175%;  
-    }
-    form {
-      position:relative;
-      margin-left: 25%;
-      margin-right: 25%;
-      width: 50%;
-      height: 775px;
-      background-color: aquamarine;
-      transition: transform 0.365s cubic-bezier(0.42, 0, 0.58, 1);
-      border: 5px solider whitesmoke;
-      border-radius: 25px;
-      box-shadow: 1px -1px 20px rgb(187, 187, 187);
-      margin-top: 49px;
-    }
-    input{
-      text-align: center;
-      margin-top: 2px;
-    }
-    input[type='text']{
-      width: 250px;
-      height: 40px;
-      border-radius: 5px;
-      border: 0.5px whitesmoke solid;
-
-    }
-    input[type='tel']{
-      width: 250px;
-      height: 40px;
-      border-radius: 5px;
-      border: 0.5px whitesmoke solid;
-      margin-top: 10px;
-
-
-
-    }
-    input[type='password']{
-      width: 250px;
-      height: 40px;
-      border-radius: 5px;
-      border: 0.5px whitesmoke solid;
-      margin-top: 10px;
-      margin-right: -40px;
-
-    }
-    input:focus{
-      outline: 0px;
-      border: 1px solid green;
-      text-align: center;
-    }
-    #namkhanlabel{
-      position: absolute;
-      right:12px;
-      color: black;
-      margin-top: -10px;
-      font-size: 90%;
-    }
-    #ersal{
-      color: white;
-      border: none;
-      background-color: palevioletred;
-      width: 20%;
-      height: 35px;
-      border-radius: 5px;
-      background-color: rgb(214, 52, 106);
-      margin-right: 10px;
-      margin-top: 3%;
-      position: relative;
-      top: 5%;
-
-    }
-    #ersal:hover{
-      background-color: rgb(185, 42, 90);
-      transition: 0.365s;
-    }
-    #signup{
-      color: white;
-      border: none;
-      background-color: palevioletred;
-      width: 200px;
-      height: 35px;
-      border-radius: 5px;
-      background-color: orange;
-      margin-top: 7.5%;
-    }
-    #signup:hover{
-      background-color: rgb(212, 138, 0);
-      transition: 0.365s;
-    }
-    footer{
-        width: 100%;
-        height: 70px;
-        background-color: black;
-        color: white;
-        text-align: center;
-        position: relative;
-      }
-      footer h1{
-        position: relative;
-        top: 10px;
-        text-align: center;
-      }
-      #icon{
-        width: 32.5px;
-        height: 32.5px;
-        position: relative;
-        top:11px;
-        right: -300px;
-      }
-      #password{
-        margin-right: 30px;
-        }
-
-        .file-input-container {
-            display: inline-block;
-            padding: 5px 45px;
-            background-color: #ffffff;
-            border: 2px dashed blue;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .file-input-container:hover {
-            border-color: rgb(0, 0, 163);
-        }
-        .file-input {
-            display: none;
-        }
-        .selected-file {
-            font-size: 18px;
-            color: red;
-            margin-top: 10px;
-        }
-        .no-selected-file {
-            color: #0000FF; /* تغییر رنگ متن به آبی */
-        }
-
-    
-  }
-  @media screen and (max-width:624px) {
-    body {
-      background-image: url(images/pexels_engin_akyurt_1487809.jpg);
-      margin: 0;
-      padding: 0;
-      background-repeat: no-repeat;
-      background-size: 100% 100%;
-      background-attachment: fixed;
-    }
-    header{
-        width: 100%;
-        height: 70px;
-        background-color: black;
-        color: white;
-        text-align: center;
-    }
-    header h1{
-      position: relative;
-      top: 15px;
-      font-size:x-large;
-    }
-    form {
-      position:relative;
-      margin-left: 5%;
-      margin-right: 5%;
-      width: 90%;
-      height: 750px;
-      background-color: aquamarine;
-      transition: transform 0.365s cubic-bezier(0.42, 0, 0.58, 1);
-      border: 5px solider whitesmoke;
-      border-radius: 25px;
-      margin-right: 50px;
-      bottom: 25px;
-      box-shadow: 1px -1px 20px rgb(187, 187, 187);
-      margin-top: 49px;
-    }
-    input{
-      text-align: center;
-      margin-top: 2px;
-    }
-    input[type='text']{
-      width: 250px;
-      height: 40px;
-      border-radius: 5px;
-      border: 0.5px whitesmoke solid;
-
-    }
-    input[type='tel']{
-      width: 250px;
-      height: 40px;
-      border-radius: 5px;
-      border: 0.5px whitesmoke solid;
-      margin-top: 10px;
-
-
-
-    }
-    input[type='password']{
-      width: 250px;
-      height: 40px;
-      border-radius: 5px;
-      border: 0.5px whitesmoke solid;
-      margin-top: 10px;
-      margin-right: -40px;
-
-    }
-    input:focus{
-      outline: 0px;
-      border: 1px solid green;
-      text-align: center;
-    }
-    #namkhanlabel{
-      position: absolute;
-      right:12px;
-      color: black;
-      margin-top: -10px;
-      font-size: 90%;
-    }
-    #ersal{
-      color: white;
-      border: none;
-      background-color: palevioletred;
-      width: 20%;
-      height: 35px;
-      border-radius: 5px;
-      background-color: rgb(214, 52, 106);
-      margin-right: 10px;
-      margin-top: 3%;
-      position: relative;
-      top: 5%;
-
-    }
-    #ersal:hover{
-      background-color: rgb(185, 42, 90);
-      transition: 0.365s;
-    }
-    #signup{
-      color: white;
-      border: none;
-      background-color: palevioletred;
-      width: 200px;
-      height: 35px;
-      border-radius: 5px;
-      background-color: orange;
-      margin-top: 7.5%;
-    }
-    #signup:hover{
-      background-color: rgb(216, 140, 0);
-      transition: 0.365s;
-    }
-    footer{
-        width: 100%;
-        height: 70px;
-        background-color: black;
-        color: white;
-        text-align: center;
-        position: relative;
-      }
-      footer h1{
-        position: relative;
-        top: 10px;
-        text-align: center;
-      }
-      #icon{
-        width: 32.5px;
-        height: 32.5px;
-        position: relative;
-        top:11px;
-        right: -300px;
-      }
-      #password{
-        margin-right: 30px;
-        }
-        .file-input-container {
-            display: inline-block;
-            padding: 5px 45px;
-            background-color: #ffffff;
-            border: 2px dashed blue;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .file-input-container:hover {
-            border-color: rgb(0, 0, 163);
-        }
-        .file-input {
-            display: none;
-        }
-        .selected-file {
-            font-size: 18px;
-            color: red;
-            margin-top: 10px;
-        }
-        .no-selected-file {
-            color: #0000FF; /* تغییر رنگ متن به آبی */
-        }
-  }
-  </style>
-  <script>
-
-     // فراخوانی سرویس ip-api.com برای دریافت اطلاعات مکان جغرافیایی کاربر
-function getGeoLocation(callback) {
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'http://ip-api.com/json');
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-            var response = JSON.parse(xhr.responseText);
-            callback(response);
-        }
-    };
-    xhr.send();
+    margin: 0px;
+    direction: rtl;
+    font-family: 'vazirmatn';
 }
 
-// بررسی آیا مکان جغرافیایی کاربر داخل ایران است یا خیر
-function isUserInIran(callback) {
-    getGeoLocation(function(response) {
-        var country = response.countryCode;
-        callback(country === 'IR');
-    });
+
+.hero__wrapper {
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	flex-wrap: wrap;
+	&:before {
+		content: '';
+		width: 150px;
+		height: 150px;
+		background: linear-gradient(135deg, var(--color-light), var(--color-dark));
+		border-radius: 50%;
+		position: fixed;
+		bottom: 50px;
+		left: 10px;
+		z-index: -1;
+	}
+	> * {
+		margin: 15px;
+	}
 }
 
-// اجرای تابع بررسی برای تصمیم‌گیری درباره دسترسی کاربر به وبسایت
-isUserInIran(function(isInIran) {
-    if (!isInIran) {
-        // اگر کاربر خارج از ایران است، اقدام به محدود کردن دسترسی کنید
+.hero__phone {
+	width: 300px;
+	height: 630px;
+	background: var(--light);
+	background-color: #ffffff;
+background: #fff url('https://codepenworldsfair.com/images/small-worlds-fair.png') center/250px no-repeat;
+	border: 12px solid var(--dark);
+	border-radius: 36px;
+	position: relative;
+	overflow: hidden;
+	&:before {
+		content: '';
+		width: 175px;
+		height: 25px;
+		background: var(--dark);
+		border-bottom-right-radius: 20px;
+		border-bottom-left-radius: 20px;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translatex(-50%);
+		z-index: 1000;
+	}
+	&:after {
+		content: '';
+		width: 100px;
+		height: 5px;
+		background: var(--dark);
+		border-radius: 2px;
+		position: absolute;
+		bottom: 6px;
+		left: 50%;
+		transform: translatex(-50%);
+		z-index: 1000;
+	}
+}
 
-        alert("تنها کاربرانی که در داخل ایران حضور دارند میتوانند اقدام به ورود به سایت کنند! لطفا اگر فیلترشکن شما فعال است آن را غیر فعال کنید" , "color: red;");
-        window.location.href = "filtering.html"; // آدرس صفحه دسترسی ممنوع
-    } else {
-        // اگر کاربر در داخل ایران است، به وبسایت اجازه ورود بدهید
+.menu__button {
+	--x: -50%;
+	--y: 0;
+	--z: 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: linear-gradient(to right, var(--color-light), var(--color-dark));
+	padding: 10px 20px;
+	border-radius: 28px;
+	box-shadow: 0 2px 40px -10px var(--color);
+	color: var(--light);
+	font-size: 16px;
+	white-space: nowrap;
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	transform: translate3d(var(--x), var(--y), var(--z));
+	cursor: pointer;
+	z-index: 105;
+	transition: .15s cubic-bezier(.33,1,.53,1);
+	&[hidden] {
+		--y: 200%;
+	}
+	div {
+		display: flex;
+		align-items: center;
+		width: 12px;
+		height: 12px;
+		margin-right: 20px;
+		div {
+			display: table;
+			height: 1px;
+			background: var(--light);
+			box-shadow: 0 4px 0 var(--light), 0 -4px 0 var(--light);
+		}
+	}
+}
+
+.menu__overlay {
+		width: 100%;
+		height: 100%;
+		background: rgba(#000, .1);
+		position: absolute;
+		z-index: 100;
+}
+
+.menu__body {
+	--x: 0;
+	--y: 0;
+	--z: 0;
+	display: block;
+	width: 100%;
+	background: var(--light);
+	padding-bottom: 15px;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	box-shadow: 0px -9px 50px -30px black;
+	font-family: 'Montserrat', sans-serif;
+	position: absolute;
+	bottom: 0;
+	z-index: 105;
+	transform: translate3d(var(--x), var(--y), var(--z));
+	transition: .2s cubic-bezier(.33,1,.53,1);
+	&[hidden] {
+		--y: 150%;
+	}
+	> *:not(:last-child) {
+		border-bottom: 2px solid var(--neutral);
+	}
+}
+
+.menu__header {
+	display: flex;
+	justify-content: space-between;
+	padding: 15px 20px;
+	label {
+		div {
+			width: 15px;
+			height: 15px;
+			border: 2px solid var(--dark);
+			border-radius: 50%;
+			position: relative;
+			transform: rotate(5.5rad);
+			&:after {
+				content: '';
+				width: 2px;
+				height: 10px;
+				background: var(--dark);
+				position: absolute;
+				top: 100%;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+		}
+	}
+	p {
+		font-size: 18px;
+		font-weight: bold;
+		vertical-align: center;
+		white-space: nowrap;
+	}
+	h3 {
+		font-weight: normal;
+	}
+	button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 25px;
+		height: 25px;
+		background: var(--neutral-dark);
+		border-radius: 50%;
+		cursor: pointer;
+		div {
+			width: 15px;
+			height: 3px;
+			background: var(--light);
+			position: relative;
+			transform: rotate(5.5rad);
+			&:before {
+				content: '';
+				width: 3px;
+				height: 15px;
+				background: var(--light);
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+		}
+	}
+}
+
+.menu__links {
+	display: flex;
+	padding: 10px 15px;
+	font-weight: bold;
+	overflow-x: auto;
+	a {
+		flex: 1 1 1px;
+		padding: 10px 8px;
+		color: var(--dark);
+		text-decoration: none;
+		white-space: nowrap;
+	}
+}
+
+.menu__contact {
+	display: flex;
+	padding: 8px;
+	svg {
+		width: 100%;
+		fill: var(--color);
+	}
+	a {
+		flex: 1 1 30%;
+		padding: 5px;
+		margin: 5px;
+		border-radius: 8px;
+		background: var(--neutral);
+		color: var(--color);
+		text-align: center;
+		font-size: 14px;
+		font-weight: bold;
+	}
+    .menu__links igm{
+        width: 24px;
+        height: 24px;
     }
-});
-
-function togglePasswordVisibility() {
-      var passwordInput = document.getElementById("password");
-      var passwordIcon = document.getElementById("icon");
-
-      if (passwordInput.type === "password") {
-        passwordInput.type = "text";
-        passwordIcon.src = "images/eye_open.png"; // تصویر آیکون چشم باز
-      } else {
-        passwordInput.type = "password";
-        passwordIcon.src = "images/eye_closed.png"; // تصویر آیکون چشم بسته
-      }
-    }
-
-
-    
-    var telephoneInput = document.getElementById('telephone');
-    var ersalButton = document.getElementById('ersal');
-
-    telephoneInput.addEventListener('input', function() {
-      ersalButton.style.display = false;
-      if (telephoneInput.value.trim() === '') {
-        ersalButton.style.display = false;
-      } else {
-        ersalButton.style.display = true;
-      }
-    });
-    
-
-  </script>
+}
+    </style>
 </head>
 <body>
-    <header>
-        <h1>صفحه ثبت نام سایت بازار قائم</h1>
-      </header>
-    <main>
 
-  
-<center>
-    <form action="savesignup.php" method="post">
-      <center>
-      <br>
-      <label for="namkhan" id="namkhanlabel">:لطفا نام و نام خانوادگی خود را به فارسی وارد کنید</label>
-      <br>
-      <input type="text" id="namkhan" name="namkh" dir="rtl" minlength="2" placeholder="نام و نام خانوادگی : مثلا امیرحسین علیپور" required>
-      <br>
-      <br>
-      <label for="kod_malli" id="namkhanlabel">:لطفا کد ملّی خود را به صورت کامل وارد کنید</label>
-      <br>
-      <input type="text" placeholder=":کد ملی شما" name="kod_malli" inputmode="numeric" maxlength="10" minlength="10"  required>
-      <br>
-      <br>
-      <label for="password" id="namkhanlabel">:لطفا به انگلیسی برای خود یک رمز عبور انتخاب کنید</label>
-      <br>
-      <img src="images/eye_closed.png" id="icon" class="icon" onclick="togglePasswordVisibility()">
-      <input type="password" name="password" id="password" placeholder=":رمز عبور شما"  required minlength="8">
-      <br>
-      <br>
-      <label for="telephone" id="namkhanlabel">:لطفا شماره تلفن خود را وارد کنید</label>
-      <br>
-      <input type="tel" name="username" id="telephone" dir="ltr" maxlength="11" minlength="11"  inputmode="numeric" placeholder="09*********" [0-9]{2}\d*  required>
-      <br>
-      <br>
-      <label for="file-input" id="namkhanlabel">:لطفا عکس پروفایل خود را وارد کنید</label>
-      <br>
-      <div class="file-input-container">
-        <label for="file-input" class="file-label">عکس خود را انتخاب کنید</label>
-        <br>
-        <input type="file" id="file-input" class="file-input" dir="rtl"  accept="image/*"  required>
+    <div class="hero__wrapper">
+        <div class="hero__phone">
+            <button class="menu__button">
+                <div>
+                    <div>منوی دسترسی</div>
+                </div>
+            </button>
+            <section class="menu__body" hidden>
+                <div class="menu__header">
+                    <label>
+                        <div></div>
+                    </label>
+                    <p>Quick Navigation</p>
+                    <button title="Close">
+                        <div></div>
+                    </button>
+                </div>
+                <div class="menu__links">
+                    <a href="#0">About Us</a>
+                    <a href="#0">Services</a>
+                    <a href="#0">Pricing</a>
+                    <a href="#0">Blog</a>
+                    <a href="#0">Contact</a>
+                </div>
+                <div class="menu__contact">
+                    <a href="#0">
+                        <img src="images/homeicon.png" alt="" width="24" height="24">
+                            <path d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                        </svg>
+                        <br>    
+                        <span>بازار</span>
+                    </a>
+                    <a href="#0">
+                        <img src="images/searchicon.png" alt="" width="24" height="24">
+                            <path d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                        </svg>
+                        <br>    
+                        <span>مغازه ها</span>
+                    </a>
+                    <a href="#0">
+                        <img src="images/plus.png" alt="" width="24" height="24">
+                            <path d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                        </svg>
+                        <br>    
+                        <span>آگهی جدید</span>
+                    </a>
+                    <a href="#0">
+                        <img src="images/homeicon.png" alt="" width="24" height="24">
+                            <path d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                        </svg>
+                        <br>    
+                        <span>بازار</span>
+                    </a>                    <a href="#0">
+                        <img src="images/homeicon.png" alt="" width="24" height="24">
+                            <path d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                        </svg>
+                        <br>    
+                        <span>بازار</span>
+                    </a>
+                </div>
+            </section>
+            <div class="menu__overlay" hidden></div>
+        </div>
     </div>
-    <p class="selected-file">هیچ عکسی انتخاب نشده است!</p>
-    
+
     <script>
-        const fileInput = document.getElementById('file-input');
-        const selectedFileText = document.querySelector('.selected-file');
+        const button = document.querySelector('.menu__button');
+const menu = document.querySelector('.menu__body');
+const close = document.querySelector('.menu__header button');
+const overlay = document.querySelector('.menu__overlay');
 
-        fileInput.addEventListener('change', (event) => {
-            const selectedFile = event.target.files[0];
-            if (selectedFile) {
-                selectedFileText.textContent = `عکس پروفایل انتخاب شد`;
-                selectedFileText.classList.add('no-selected-file'); // حذف کلاس برای تغییر رنگ متن
+function showMenu () {
+	button.setAttribute('hidden', '');
+	menu.removeAttribute('hidden');
+	overlay.removeAttribute('hidden');
+};
 
-            } else {
-                selectedFileText.textContent = 'هیچ عکسی انتخاب نشده است.';
-                selectedFileText.classList.remove('no-selected-file'); // اضافه کردن کلاس برای تغییر رنگ متن
+function hideMenu () {
+	menu.setAttribute('hidden', '');
+	overlay.setAttribute('hidden', '');
+	button.removeAttribute('hidden');
+};
 
-            }
-        });
+button.addEventListener('click', showMenu);
+close.addEventListener('click', hideMenu);
+overlay.addEventListener('click', hideMenu);
     </script>
-      <br>
-      <br>
-      <label for="teleg" id="namkhanlabel">:ابتدا ارسال کد را کلیک و سپس کد ارسال شده را وارد کنید</label>
-      <br>
-      <button id="ersal">:ارسال کد</button>
-      <script>
-        var button = document.getElementById("ersal");
-       
-       button.addEventListener("click", function() {
-         button.disabled = true;
-         countdown(2, 0);
-       });
-       
-       function countdown(minutes, seconds) {
-         button.innerHTML = formatTime(minutes, seconds);
-         var interval = setInterval(function() {
-           if (seconds > 0) {
-             seconds--;
-           } else {
-             if (minutes > 0) {
-               minutes--;
-               seconds = 59;
-             } else {
-               clearInterval(interval);
-               button.innerHTML = ":ارسال کد";
-               button.disabled = false; // فعال کردن دکمه
-               return;
-             }
-           }
-           button.innerHTML = formatTime(minutes, seconds);
-         }, 1000); // هر 1,000 میلی‌ثانیه (1 ثانیه) تابع setInterval فراخوانی می‌شود
-       }
-       
-       function formatTime(minutes, seconds) {
-         return padZero(minutes) + ":" + padZero(seconds);
-       }
-       
-       function padZero(num) {
-         return (num < 10 ? "0" : "") + num;
-       }
-       
-         </script>
-      <input type="text" inputmode="numeric" name="teleg" id="teleg" placeholder=":لطفا کد ارسال شده را وارد کنید" maxlength="6" minlength="4">
     
-      <br>
-      <br>
-  
-      <button type="submit" id="signup">تایید و ثبت نام</button>
-    </center>
-    </form>
-
-  </center>
-</main>
-
-<br><br>
-<footer>
-    <h1>
-      www.bazar-ghaem.ir
-    </h1>
-  </footer>
-
 
 </body>
 </html>
