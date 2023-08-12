@@ -2,326 +2,612 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="">
-    <title>Document</title>
+    <link rel="shortcut icon" href="images/logo.png">
+    <link rel="apple-touch-icon" href="images/logo.png">
+
+    <title>
+      صفحه اصلی
+    </title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Lalezar&family=Noto+Naskh+Arabic:wght@500&family=Ubuntu:wght@300&family=Vazirmatn:wght@200;400&display=swap');
-  *{
-      margin: 0px;
-      direction: rtl;
-      font-family: 'vazirmatn';
-  }
-  
-  @media screen and (max-width:624px) {
-      .hero__wrapper {
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-      flex-wrap: wrap;
-      &:before {
-          content: '';
-          width: 150px;
-          height: 150px;
-          background: linear-gradient(135deg, var(--color-light), var(--color-dark));
-          border-radius: 50%;
-          position: fixed;
-          bottom: 50px;
-          left: 10px;
-          z-index: -1;
-      }
-      > * {
-          margin: 15px;
-      }
-  }
-  
-  .hero__phone {
-      width: 100%;
-      margin-left: 0%;
-      margin-right: 0%;
-      height: 630px;
-      background: var(--light);
-      background-color: #ffffff;
-  background: #fff url('https://codepenworldsfair.com/images/small-worlds-fair.png') center/250px no-repeat;
-      border: 12px solid var(--dark);
-      border-radius: 36px;
-      position: relative;
-      overflow: hidden;
-      &:before {
-          content: '';
-          width: 175px;
-          height: 25px;
-          background: var(--dark);
-          border-bottom-right-radius: 20px;
-          border-bottom-left-radius: 20px;
-          position: absolute;
-          top: 0;
-          left: 50%;
-          transform: translatex(-50%);
-          z-index: 1000;
-      }
-      &:after {
-          content: '';
-          width: 100px;
-          height: 5px;
-          background: var(--dark);
-          border-radius: 2px;
-          position: absolute;
-          bottom: 6px;
-          left: 50%;
-          transform: translatex(-50%);
-          z-index: 1000;
-      }
-  }
-  
-  .menu__button {
-      --x: -50%;
-      --y: 0;
-      --z: 0;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background-color: orange;
-      padding: 10px 20px;
-      border-radius: 28px;
-      box-shadow: 0 2px 40px -10px var(--color);
-      color: var(--light);
-      font-size: 16px;
-      white-space: nowrap;
-      position: absolute;
-      bottom: 5px;
-      padding: 10px 70px;
-      left: 50%;
-      transform: translate3d(var(--x), var(--y), var(--z));
-      cursor: pointer;
-      z-index: 105;
-      transition: .15s cubic-bezier(.33,1,.53,1);
-      border: none;
-      &[hidden] {
-          --y: 200%;
-      }
-  
-      div {
-          display: flex;
-          align-items: center;
-          width: 12px;
-          height: 12px;
-          margin-right: 20px;
-          div {
-              display: table;
-              height: 1px;
-              background: var(--light);
-              box-shadow: 0 4px 0 var(--light), 0 -4px 0 var(--light);
-          }
+      @import url('https://fonts.googleapis.com/css2?family=Lalezar&family=Noto+Naskh+Arabic:wght@500&family=Ubuntu:wght@300&family=Vazirmatn:wght@200;400&display=swap');
+        *{
+            margin: 0px;
+            font-family: 'vazirmatn';
+            direction: rtl;
+            box-sizing: border-box;
+
+        }
+        ::selection{
+          background-color: orange;
+          color: purple;
           
-      }
-      
-  }
-  .menu__button:active {
-          background-color: rgb(18, 216, 107);
-          transition: 0.365s;
-      }
-  .menu__overlay {
-          width: 100%;
-          height: 100%;
-          background: rgba(#000, .1);
-          position: absolute;
-  }
-  
-  .menu__body {
-      --x: 0;
-      --y: 0;
-      --z: 0;
-      display: block;
-      width: 100%;
-      background: var(--light);
-      padding-bottom: 15px;
-      border-top-left-radius: 20px;
-      border-top-right-radius: 20px;
-      box-shadow: 0px -9px 50px -30px black;
-      font-family: 'Montserrat', sans-serif;
-      position: absolute;
-      bottom: 0;
-      z-index: 105;
-      transform: translate3d(var(--x), var(--y), var(--z));
-      transition: .2s cubic-bezier(.33,1,.53,1);
-      &[hidden] {
-          --y: 150%;
-      }
-      > *:not(:last-child) {
-          border-bottom: 2px solid var(--neutral);
-      }
-  }
-  
-  .menu__header {
-      justify-content: space-between;
-      padding: 15px 20px;
-  }
-  #close{
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      border-radius: 5px;
-      border: none;
-      background-image: linear-gradient(90deg, rgb(0, 189, 0) , green);
-      padding: 10px 20px;
-      cursor: pointer;
-      color: white;
-      font-size: 15px;
-  
-  }
-  
-      label {
-          div {
-              width: 15px;
-              height: 15px;
-              border: 2px solid var(--dark);
-              border-radius: 50%;
+        }
+
+        @media screen and (min-width:1310px) {
+         
+            header{
+                width: 100%;
+                background-color: black;
+                height: 70px;
+            }
+            nav a{
+                text-decoration: none;
+                color: white;
+                margin: 20px;
+                position: relative;
+                top: 20px;
+            }
+            nav a:hover{
+                color: blue;
+                transition: 0.365s;
+            }
+            #dayere{
+                background-image: linear-gradient(90deg,lightblue,darkblue);
+                border-radius: 7.55px;
+                width: 70%;
+                height: 100px;
+                margin-top: 20px;
+                margin-right: 15%;
+                margin-left: 15%;
+                font-size: 20px;
+                cursor: pointer;
+
+            }
+            img{
+                width: 100px;
+                height: 100px;
+                float: left;
+                margin-top: 0px;
+                border-radius: 7.5px;
+            }
+            a{
+              text-decoration: none;
+                color:orange;
+                position: relative;
+            }
+            #vma{
               position: relative;
-              transform: rotate(5.5rad);
-              &:after {
-                  content: '';
-                  width: 2px;
-                  height: 10px;
-                  background: var(--dark);
-                  position: absolute;
-                  top: 100%;
-                  left: 50%;
-                  transform: translateX(-50%);
-              }
-          }
-      }
-      p {
-          font-size: 18px;
-          font-weight: bold;
-          vertical-align: center;
-          white-space: nowrap;
-      }
-      h3 {
-          font-weight: normal;
-      }
-      
+              top: 27.5px;
+              right: 27.5px;
+            }
+            #myNav{
+                display: none;
+            }
+            #hamburger{
+                display: none;
+            }
+            #kamalsaz{
+                display: none;
+            }
+            #rs{
+                color: white;
+                width: 50px;
+                height: 50px;
+                background-color: white;
+            }
+            .container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  background-color: orange;
+  padding: 15px;
+  text-align: center;
+  position: fixed;
+  bottom: 10px;
+  left: 20%;
+  right: 20%;
+  width: auto;
+  border-radius: 50px;
+  height: auto;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+}
+footer img{
+    width: 60px;
+    height: 60px;
+    position: relative;
+    margin-left: 2vh;
+    margin-right: 2vh;
+    border-radius: 50%;
+}
+
+ 
+.icon-container a {
+  margin: 0 10px;
+  color: #333;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #777;
+}
+#myImage1:active{
+  background-color: white;
+  transition: 0.15s;
+}
+#myImage2:active{
+  background-color: white;
+  transition: 0.15s;
+}
+#myImage3:active{
+  background-color: white;
+  transition: 0.15s;
+}
+#kmbvpabb{
+  text-align: center;
+  margin-top: 29px;
+}
+
+}
+
+        @media screen and (max-width:1310px) {
+            header{
+                background-color: black;
+                width: 100%;
+                height: 70px;
+                color: white;
+            }
+            #myDiv{
+                display: none;
+            }
+            #dayere{
+                background-image: linear-gradient(90deg,lightblue,darkblue);
+                border-radius: 7.5px;
+                width: 90%;
+                height: 100px;
+                margin-top: 20px;
+                margin-right: 5%;
+                margin-left: 5%;
+                font-size: 12.5px;
+                cursor: pointer;
+        }
+            img{
+                width: 100px;
+                height: 100px;
+                float: left;
+                margin-top: 0px;
+                border-radius: 7.5px;
+        }
+            a{
+                text-decoration: none;
+                color:orange;
+                position: relative;
+            }
+            #vma{
+              position: relative;
+              top: 37.5px;
+              right: 27.5px;
+              font-size: 90%;
+            }
+            nav a{
+                display: none;
+            }
+        
+      .overlay {
+                height: 100%;
+                width: 0;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                background-color: rgb(0,0,0);
+                background-color: rgba(0,0,0, 0.9);
+                overflow-x: hidden;
+                transition: 0.5s;
+}
+
+.overlay-content {
+                position: relative;
+                top: 25%;
+                width: 100%;
+                text-align: center;
+                margin-top: 10px;
+}
+
+.overlay a {
+                padding: 10px;
+                text-decoration: none;
+                font-size: 20px;
+                color: #818181;
+                display: block;
+                transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+                color: blue;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 10px;
+  right: 45px;
+  font-size: 60px;
+}
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  background-color: orange;
+  padding: 15px;
+  text-align: center;
+  position: fixed;
+  bottom: 10px;
+  left: 2%;
+  right: 2%;
+  width: auto;
+  border-radius: 50px;
+  height: auto;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+}
+footer img{
+    width: 60px;
+    height: 60px;
+    position: relative;
+    margin-left: 15px;
+    margin-right: 15px;
+    border-radius: 50%;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
   }
-  
-  .menu__links {
-      display: flex;
-      padding: 10px 15px;
-      font-weight: bold;
-      overflow-x: auto;
-      a {
-          flex: 1 1 1px;
-          padding: 10px 8px;
-          color: var(--dark);
-          text-decoration: none;
-          white-space: nowrap;
-      }
-  }
-  
-  .menu__contact {
-      display: flex;
-      padding: 8px;
-      svg {
-          width: 100%;
-          fill: var(--color);
-      }
-      a {
-          flex: 1 1 30%;
-          padding: 5px;
-          margin: 5px;
-          border-radius: 8px;
-          background: var(--neutral);
-          color: var(--color);
-          text-align: center;
-          font-size: 14px;
-          font-weight: bold;
-      }
-      .menu__links igm{
-          width: 24px;
-          height: 24px;
-      }
-  
-  }
-  
-  
-  
-  
-      </style>
+}
+
+#hamburger{
+  float: left;
+  font-size:50px;
+  cursor:pointer;
+  margin-left: 10px;
+}
+
+#kamalsaz{
+    float: right;
+    position: relative;
+    top: 15px;
+    left: -15px;
+}
+#kmbvpabb{
+  text-align: center;
+  font-size: 20px;
+  margin-top: 35px;
+}
+        }
+    </style>
+
+
+
+
+
+    <script>
+
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+
+
+
+      // فراخوانی سرویس ip-api.com برای دریافت اطلاعات مکان جغرافیایی کاربر
+function getGeoLocation(callback) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'http://ip-api.com/json');
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+            var response = JSON.parse(xhr.responseText);
+            callback(response);
+        }
+    };
+    xhr.send();
+}
+
+// بررسی آیا مکان جغرافیایی کاربر داخل ایران است یا خیر
+function isUserInIran(callback) {
+    getGeoLocation(function(response) {
+        var country = response.countryCode;
+        callback(country === 'IR');
+    });
+}
+
+// اجرای تابع بررسی برای تصمیم‌گیری درباره دسترسی کاربر به وبسایت
+isUserInIran(function(isInIran) {
+    if (!isInIran) {
+        // اگر کاربر خارج از ایران است، اقدام به محدود کردن دسترسی کنید
+
+        alert("تنها کاربرانی که در داخل ایران حضور دارند میتوانند اقدام به ورود به سایت کنند! لطفا اگر فیلترشکن شما فعال است آن را غیر فعال کنید" , "color: red;");
+        window.location.href = "filtering.html"; // آدرس صفحه دسترسی ممنوع
+    } else {
+        // اگر کاربر در داخل ایران است، به وبسایت اجازه ورود بدهید
+    }
+});
+
+
+
+
+    </script>
 </head>
 <body>
 <center>
-    <div class="hero__wrapper">
-        <div class="hero__phone">
-            <button class="menu__button">
-                <div>
-                    <div>منوی دسترسی</div>
-                </div>
-            </button>
-            <section class="menu__body" hidden>
-                <div class="menu__header">
-                    <label>
-                        <div></div>
-                    </label>
-                    <p>گزینه ها:</p>
-                    <button title="بستن" id="close">
-                        <div>بستن</div>
-                    </button>
-                </div>
-                <div class="menu__links">
-                    <a href="#">
-                        <img src="images/homeicon.png" alt="خانه" width="24" height="24">
-                        <br>
-                        خانه
-                    </a>
-                    <a href="#">
-                        <img src="images/searchicon.png" alt="مغازه ها" width="24" height="24">
-                        <br>
-                        مغازه ها
-                    </a>
-                    <a href="#">
-                        <img src="images/plus.png" alt="آگهی جدید" width="24" height="24">
-                        <br>
-                        آگهی جدید
-                    </a>
-                    <a href="#">
-                        <img src="images/chaticon.png" alt="آگهی های من" width="24" height="24">
-                        <br>
-                        آگهی های من
-                    </a>
-                    <a href="#">
-                        <img src="images/profileicon.png" alt="پروفایل" width="24" height="24">
-                        <br>
-                        پروفایل
-                    </a>
-                </div>
-            </section>
-            <div class="menu__overlay" hidden></div>
-        </div>
+
+<header>
+
+
+<nav>
+
+    <a href="abrobadi.php">ابر و بادی</a>
+    <a href="li.php">لی</a>
+    <a href="katan.php">کتان</a>
+    <a href="nakh_panbeh.php">نخ پنبه</a>
+    <a href="lenin.php">لنین</a>
+    <a href="satan.php">ساتن</a>
+    <a href="kerep.php">کرپ</a>
+    <a href="nakhi.php">نخی</a>
+    <a href="astar.php">استر</a>
+    <a href="viskoz.php">ویسکوز</a>
+    <a href="mantoyi.php">مانتویی</a>
+    <a href="kot_shalvari.php">کت شلواری</a>
+    <a href="toor.php">تور</a>
+    <a href="majlesi.php">مجلسی</a>
+    <a href="harir.php">حریر</a>
+    <a href="mazerati.php">مازراتی</a>
+
+</nav>
+
+    <div id="myNav" class="overlay">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <div class="overlay-content">
+    <a href="abrobadi.php">ابر و بادی</a>
+    <a href="li.php">لی</a>
+    <a href="katan.php">کتان</a>
+    <a href="nakh_panbeh.php">نخ پنبه</a>
+    <a href="lenin.php">لنین</a>
+    <a href="satan.php">ساتن</a>
+    <a href="kerep.php">کرپ</a>
+    <a href="nakhi.php">نخی</a>
+    <a href="astar.php">استر</a>
+    <a href="viskoz.php">ویسکوز</a>
+    <a href="mantoyi.php">مانتویی</a>
+    <a href="kot_shalvari.php">کت شلواری</a>
+    <a href="toor.php">تور</a>
+    <a href="majlesi.php">مجلسی</a>
+    <a href="harir.php">حریر</a>
+    <a href="mazerati.php">مازراتی</a>
+    <br>
+    <br>
+      </div>
     </div>
 
-    <script>
-        const button = document.querySelector('.menu__button');
-const menu = document.querySelector('.menu__body');
-const close = document.querySelector('.menu__header button');
-const overlay = document.querySelector('.menu__overlay');
+    <span id="hamburger" onclick="openNav()">&#9776;</span>
 
-function showMenu () {
-	button.setAttribute('hidden', '');
-	menu.removeAttribute('hidden');
-	overlay.removeAttribute('hidden');
-};
+    <div id="kamalsaz">
+    <h1>Bazar-ghaem.ir</h1>
+    </div>
 
-function hideMenu () {
-	menu.setAttribute('hidden', '');
-	overlay.setAttribute('hidden', '');
-	button.removeAttribute('hidden');
-};
 
-button.addEventListener('click', showMenu);
-close.addEventListener('click', hideMenu);
-overlay.addEventListener('click', hideMenu);
-    </script>
-    </center>
+
+</header>
+</center>
+<main>
+  <h1 id="kmbvpabb">
+  خرید مستقیم و بدون واسطه پارچه از بازار بزرگ :
+  </h1>
+<br>
+
+<a href ='etelaat.php?id=313' id ='link'><div id='dayere'><span id='vma'>استر قرمز 4g قیمت هر  یارد  27000  تومان</span><img src='converted/photo1690720395.jpeg' alt='عکس'></div></a><a href ='etelaat.php?id=312' id ='link'><div id='dayere'><span id='vma'>حریر سفید 370g قیمت هر  متر  27000  تومان</span><img src='converted/photo1691145462.jpeg' alt='عکس'></div></a><a href ='etelaat.php?id=298' id ='link'><div id='dayere'><span id='vma'>ویسکوز مشکی 370g قیمت هر  یارد  27000  تومان</span><img src='converted/352278_cloud_upload_icon.png' alt='عکس'></div></a><a href ='etelaat.php?id=292' id ='link'><div id='dayere'><span id='vma'>کتان 3 370g قیمت هر  یارد  27000  تومان</span><img src='converted/plus.png' alt='عکس'></div></a><a href ='etelaat.php?id=287' id ='link'><div id='dayere'><span id='vma'>ساتن قرمز 240گرم قیمت هر  متر  41000  تومان</span><img src='converted/logo.png' alt='عکس'></div></a><a href ='etelaat.php?id=285' id ='link'><div id='dayere'><span id='vma'>استر مشکی 210g قیمت هر  یارد  15000  تومان</span><img src='converted/Colth1.jpg' alt='عکس'></div></a><a href ='etelaat.php?id=284' id ='link'><div id='dayere'><span id='vma'>لنین مشکی 370g قیمت هر  یارد  sdfgh  تومان</span><img src='converted/ligo.png' alt='عکس'></div></a><a href ='etelaat.php?id=283' id ='link'><div id='dayere'><span id='vma'>ابر و بادی ابی 400گرم قیمت هر  یارد  27000  تومان</span><img src='converted/logo.png' alt='عکس'></div></a><a href ='etelaat.php?id=282' id ='link'><div id='dayere'><span id='vma'>کتان مشکی 370g قیمت هر  متر  27000  تومان</span><img src='converted/Abstract.Background.633.EPS_.Thmb_.jpg' alt='عکس'></div></a><a href ='etelaat.php?id=281' id ='link'><div id='dayere'><span id='vma'>لنین مشکی 370g قیمت هر  یارد  27000  تومان</span><img src='converted/1608651604521.jpg' alt='عکس'></div></a><a href ='etelaat.php?id=280' id ='link'><div id='dayere'><span id='vma'>استر مشکی 370g قیمت هر  متر  27000  تومان</span><img src='converted/Colth2.jpg' alt='عکس'></div></a><a href ='etelaat.php?id=279' id ='link'><div id='dayere'><span id='vma'>استر مشکی 370g قیمت هر  متر  27000  تومان</span></div></a><a href ='etelaat.php?id=278' id ='link'><div id='dayere'><span id='vma'>کتان مشکی 210g قیمت هر  یارد  234  تومان</span><img src='converted/16564637-4691-b__2589.jpg' alt='عکس'></div></a><a href ='etelaat.php?id=277' id ='link'><div id='dayere'><span id='vma'>کتان قرمز 4g قیمت هر  متر  27000  تومان</span><img src='converted/FABRICS-2.jpg' alt='عکس'></div></a><a href ='etelaat.php?id=276' id ='link'><div id='dayere'><span id='vma'>نخ پنبه سفید 370g قیمت هر  یارد  sdfgh  تومان</span></div></a><a href ='etelaat.php?id=275' id ='link'><div id='dayere'><span id='vma'>نخ پنبه سفید 370g قیمت هر  یارد  sdfgh  تومان</span></div></a><a href ='etelaat.php?id=274' id ='link'><div id='dayere'><span id='vma'>کتان سفید 370g قیمت هر  متر  sdfgh  تومان</span><img src='converted/4592811-1734-b__2947.jpg' alt='عکس'></div></a><a href ='etelaat.php?id=273' id ='link'><div id='dayere'><span id='vma'>کت شلواری قرمز 210g قیمت هر  یارد  27000  تومان</span><img src='converted/Colth2.jpg' alt='عکس'></div></a><a href ='etelaat.php?id=272' id ='link'><div id='dayere'><span id='vma'>کت شلواری قرمز 210g قیمت هر  یارد  27000  تومان</span><img src='converted/Colth2.jpg' alt='عکس'></div></a><a href ='etelaat.php?id=271' id ='link'><div id='dayere'><span id='vma'>کت شلواری قرمز 210g قیمت هر  یارد  27000  تومان</span><img src='converted/Colth2.jpg' alt='عکس'></div></a><a href ='etelaat.php?id=270' id ='link'><div id='dayere'><span id='vma'>کت شلواری قرمز 210g قیمت هر  یارد  27000  تومان</span><img src='converted/Colth2.jpg' alt='عکس'></div></a><a href ='etelaat.php?id=269' id ='link'><div id='dayere'><span id='vma'>استر مشکی 370g قیمت هر  یارد  27000  تومان</span><img src='converted/BGS.jpg' alt='عکس'></div></a><a href ='etelaat.php?id=268' id ='link'><div id='dayere'><span id='vma'>استر مشکی 370g قیمت هر  یارد  27000  تومان</span><img src='converted/BGS.jpg' alt='عکس'></div></a><a href ='etelaat.php?id=267' id ='link'><div id='dayere'><span id='vma'>استر مشکی 370g قیمت هر  یارد  27000  تومان</span><img src='converted/BGS.jpg' alt='عکس'></div></a><a href ='etelaat.php?id=266' id ='link'><div id='dayere'><span id='vma'>استر مشکی 370g قیمت هر  یارد  27000  تومان</span><img src='converted/BGS.jpg' alt='عکس'></div></a><a href ='etelaat.php?id=265' id ='link'><div id='dayere'><span id='vma'>استر مشکی 370g قیمت هر  یارد  27000  تومان</span><img src='converted/BGS.jpg' alt='عکس'></div></a><a href ='etelaat.php?id=264' id ='link'><div id='dayere'><span id='vma'>استر مشکی 370g قیمت هر  یارد  27000  تومان</span><img src='converted/BGS.jpg' alt='عکس'></div></a><a href ='etelaat.php?id=263' id ='link'><div id='dayere'><span id='vma'>استر مشکی 370g قیمت هر  یارد  27000  تومان</span><img src='converted/BGS.jpg' alt='عکس'></div></a><a href ='etelaat.php?id=262' id ='link'><div id='dayere'><span id='vma'>استر مشکی 370g قیمت هر  یارد  27000  تومان</span><img src='converted/BGS.jpg' alt='عکس'></div></a><a href ='etelaat.php?id=261' id ='link'><div id='dayere'><span id='vma'>ساتن سفید 4g قیمت هر  یارد  27000  تومان</span><img src='converted/Capan.PNG' alt='عکس'></div></a><a href ='etelaat.php?id=260' id ='link'><div id='dayere'><span id='vma'>مجلسی قرمز 4g قیمت هر  یارد  5t  تومان</span><img src='converted/Colth2.jpg' alt='عکس'></div></a><a href ='etelaat.php?id=259' id ='link'><div id='dayere'><span id='vma'>ساتن سفید 370g قیمت هر  متر  sdfgh  تومان</span><img src='converted/BGS.jpg' alt='عکس'></div></a><a href ='etelaat.php?id=258' id ='link'><div id='dayere'><span id='vma'>نخی مشکی 370g قیمت هر  متر  59000  تومان</span><img src='converted/FABRICS-2.jpg' alt='عکس'></div></a><a href ='etelaat.php?id=257' id ='link'><div id='dayere'><span id='vma'>نخی مشکی 370g قیمت هر  متر  59000  تومان</span><img src='converted/FABRICS-2.jpg' alt='عکس'></div></a><a href ='etelaat.php?id=256' id ='link'><div id='dayere'><span id='vma'>حریر بنفش 210g قیمت هر  یارد  27000  تومان</span><img src='converted/2009_hyundai_genesis_100025911_l (1).jpg' alt='عکس'></div></a><a href ='etelaat.php?id=255' id ='link'><div id='dayere'><span id='vma'>حریر بنفش 210g قیمت هر  یارد  27000  تومان</span><img src='converted/2009_hyundai_genesis_100025911_l (1).jpg' alt='عکس'></div></a><a href ='etelaat.php?id=254' id ='link'><div id='dayere'><span id='vma'>کتان 3 4g قیمت هر  یارد  27000  تومان</span><img src='converted/BG1004609www.tiktarh.com_ (1).jpg' alt='عکس'></div></a><a href ='etelaat.php?id=253' id ='link'><div id='dayere'><span id='vma'>لی مشکی 370g قیمت هر  متر  27000  تومان</span><img src='converted/Add_Logo.png' alt='عکس'></div></a><a href ='etelaat.php?id=252' id ='link'><div id='dayere'><span id='vma'>نخی سفید 4g قیمت هر  متر  27000  تومان</span><img src='converted/Colth1.jpg' alt='عکس'></div></a><a href ='etelaat.php?id=251' id ='link'><div id='dayere'><span id='vma'>نخی سفید 4g قیمت هر  متر  27000  تومان</span><img src='converted/Colth1.jpg' alt='عکس'></div></a><a href ='etelaat.php?id=250' id ='link'><div id='dayere'><span id='vma'>تور سفید 370g قیمت هر  یارد  27000  تومان</span><img src='converted/Abstract.Background.633.EPS_.Thmb_.jpg' alt='عکس'></div></a><a href ='etelaat.php?id=249' id ='link'><div id='dayere'><span id='vma'>کتان مشکی 44 قیمت هر  متر  27000  تومان</span><img src='converted/Capan.PNG' alt='عکس'></div></a><a href ='etelaat.php?id=248' id ='link'><div id='dayere'><span id='vma'>کتان مشکی 44 قیمت هر  متر  27000  تومان</span><img src='converted/Capan.PNG' alt='عکس'></div></a><a href ='etelaat.php?id=247' id ='link'><div id='dayere'><span id='vma'>کتان مشکی 44 قیمت هر  متر  27000  تومان</span><img src='converted/Capan.PNG' alt='عکس'></div></a><a href ='etelaat.php?id=246' id ='link'><div id='dayere'><span id='vma'>کتان مشکی 44 قیمت هر  متر  27000  تومان</span><img src='converted/Capan.PNG' alt='عکس'></div></a><a href ='etelaat.php?id=245' id ='link'><div id='dayere'><span id='vma'>کتان مشکی 44 قیمت هر  متر  27000  تومان</span><img src='converted/Capan.PNG' alt='عکس'></div></a><a href ='etelaat.php?id=244' id ='link'><div id='dayere'><span id='vma'>کتان مشکی 44 قیمت هر  متر  27000  تومان</span><img src='converted/Capan.PNG' alt='عکس'></div></a><a href ='etelaat.php?id=243' id ='link'><div id='dayere'><span id='vma'>کتان مشکی 44 قیمت هر  متر  27000  تومان</span><img src='converted/Capan.PNG' alt='عکس'></div></a><a href ='etelaat.php?id=242' id ='link'><div id='dayere'><span id='vma'>کتان مشکی 44 قیمت هر  متر  27000  تومان</span></div></a><a href ='etelaat.php?id=241' id ='link'><div id='dayere'><span id='vma'>کتان مشکی 44 قیمت هر  متر  27000  تومان</span></div></a><a href ='etelaat.php?id=240' id ='link'><div id='dayere'><span id='vma'>کتان مشکی 44 قیمت هر  متر  27000  تومان</span></div></a><a href ='etelaat.php?id=239' id ='link'><div id='dayere'><span id='vma'>کت شلواری مشکی 210g قیمت هر  متر  27000  تومان</span><img src='converted/Abstract.Background.633.EPS_.Thmb_.jpg' alt='عکس'></div></a><a href ='etelaat.php?id=238' id ='link'><div id='dayere'><span id='vma'>کت شلواری مشکی 210g قیمت هر  متر  27000  تومان</span><img src='converted/Abstract.Background.633.EPS_.Thmb_.jpg' alt='عکس'></div></a><a href ='etelaat.php?id=237' id ='link'><div id='dayere'><span id='vma'>کت شلواری مشکی 210g قیمت هر  متر  27000  تومان</span><img src='converted/logo.png' alt='عکس'></div></a><a href ='etelaat.php?id=236' id ='link'><div id='dayere'><span id='vma'>کت شلواری مشکی 210g قیمت هر  متر  27000  تومان</span><img src='converted/logo.png' alt='عکس'></div></a><a href ='etelaat.php?id=235' id ='link'><div id='dayere'><span id='vma'>کت شلواری مشکی 210g قیمت هر  متر  27000  تومان</span><img src='converted/logo.png' alt='عکس'></div></a><a href ='etelaat.php?id=234' id ='link'><div id='dayere'><span id='vma'>کت شلواری مشکی 210g قیمت هر  متر  27000  تومان</span><img src='converted/logo.png' alt='عکس'></div></a><a href ='etelaat.php?id=233' id ='link'><div id='dayere'><span id='vma'>کت شلواری مشکی 210g قیمت هر  متر  27000  تومان</span><img src='converted/logo.png' alt='عکس'></div></a><a href ='etelaat.php?id=232' id ='link'><div id='dayere'><span id='vma'>کت شلواری مشکی 210g قیمت هر  متر  27000  تومان</span><img src='converted/logo.png' alt='عکس'></div></a><a href ='etelaat.php?id=231' id ='link'><div id='dayere'><span id='vma'>کت شلواری مشکی 210g قیمت هر  متر  27000  تومان</span><img src='converted/logo.png' alt='عکس'></div></a><a href ='etelaat.php?id=230' id ='link'><div id='dayere'><span id='vma'>کت شلواری مشکی 210g قیمت هر  متر  27000  تومان</span><img src='converted/logo.png' alt='عکس'></div></a><a href ='etelaat.php?id=229' id ='link'><div id='dayere'><span id='vma'>کت شلواری مشکی 210g قیمت هر  متر  27000  تومان</span><img src='converted/logo.png' alt='عکس'></div></a><a href ='etelaat.php?id=228' id ='link'><div id='dayere'><span id='vma'>کت شلواری مشکی 210g قیمت هر  متر  27000  تومان</span><img src='converted/logo.png' alt='عکس'></div></a><a href ='etelaat.php?id=227' id ='link'><div id='dayere'><span id='vma'>کت شلواری مشکی 210g قیمت هر  متر  27000  تومان</span><img src='converted/logo.png' alt='عکس'></div></a><a href ='etelaat.php?id=226' id ='link'><div id='dayere'><span id='vma'>کت شلواری مشکی 210g قیمت هر  متر  27000  تومان</span><img src='converted/logo.png' alt='عکس'></div></a><a href ='etelaat.php?id=225' id ='link'><div id='dayere'><span id='vma'>کت شلواری مشکی 210g قیمت هر  متر  27000  تومان</span><img src='converted/logo.png' alt='عکس'></div></a><a href ='etelaat.php?id=224' id ='link'><div id='dayere'><span id='vma'>کت شلواری مشکی 210g قیمت هر  متر  27000  تومان</span><img src='converted/logo.png' alt='عکس'></div></a><a href ='etelaat.php?id=223' id ='link'><div id='dayere'><span id='vma'>کت شلواری مشکی 210g قیمت هر  متر  27000  تومان</span><img src='converted/logo.png' alt='عکس'></div></a><a href ='etelaat.php?id=222' id ='link'><div id='dayere'><span id='vma'>کت شلواری مشکی 210g قیمت هر  متر  27000  تومان</span><img src='converted/logo.png' alt='عکس'></div></a><a href ='etelaat.php?id=221' id ='link'><div id='dayere'><span id='vma'>کت شلواری مشکی 210g قیمت هر  متر  27000  تومان</span><img src='converted/logo.png' alt='عکس'></div></a><a href ='etelaat.php?id=220' id ='link'><div id='dayere'><span id='vma'>کت شلواری مشکی 210g قیمت هر  متر  27000  تومان</span><img src='converted/logo.png' alt='عکس'></div></a><a href ='etelaat.php?id=219' id ='link'><div id='dayere'><span id='vma'>مازراتی کرمی 370g قیمت هر  یارد  27000  تومان</span><img src='converted/BPFS.jpg' alt='عکس'></div></a><a href ='etelaat.php?id=218' id ='link'><div id='dayere'><span id='vma'>مازراتی کرمی 370g قیمت هر  یارد  27000  تومان</span><img src='converted/BPFS.jpg' alt='عکس'></div></a><a href ='etelaat.php?id=217' id ='link'><div id='dayere'><span id='vma'>مازراتی کرمی 370g قیمت هر  یارد  27000  تومان</span><img src='converted/BPFS.jpg' alt='عکس'></div></a><a href ='etelaat.php?id=216' id ='link'><div id='dayere'><span id='vma'>مازراتی کرمی 370g قیمت هر  یارد  27000  تومان</span><img src='converted/BPFS.jpg' alt='عکس'></div></a><a href ='etelaat.php?id=215' id ='link'><div id='dayere'><span id='vma'>مازراتی کرمی 370g قیمت هر  یارد  27000  تومان</span><img src='converted/BPFS.jpg' alt='عکس'></div></a><a href ='etelaat.php?id=214' id ='link'><div id='dayere'><span id='vma'>مازراتی کرمی 370g قیمت هر  یارد  27000  تومان</span><img src='converted/BPFS.jpg' alt='عکس'></div></a><a href ='etelaat.php?id=213' id ='link'><div id='dayere'><span id='vma'>مازراتی کرمی 370g قیمت هر  یارد  27000  تومان</span><img src='converted/BPFS.jpg' alt='عکس'></div></a><a href ='etelaat.php?id=212' id ='link'><div id='dayere'><span id='vma'>مازراتی کرمی 370g قیمت هر  یارد  27000  تومان</span><img src='converted/BPFS.jpg' alt='عکس'></div></a><a href ='etelaat.php?id=211' id ='link'><div id='dayere'><span id='vma'>مازراتی کرمی 370g قیمت هر  یارد  27000  تومان</span><img src='converted/BPFS.jpg' alt='عکس'></div></a><a href ='etelaat.php?id=210' id ='link'><div id='dayere'><span id='vma'>استر سفید 210g قیمت هر  یارد  27000  تومان</span><img src='converted/Colth2.jpg' alt='عکس'></div></a>
+
+
+</main>
+<br><br><br><br><br>
+
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Navbar UI Interaction</title>
+  <style>
+    * {
+  box-sizing: border-box;
+}
+
+@media screen and (min-width:1310px) {
     
+}
+
+@media screen and (max-width:1310px) {
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+.navbar {
+  background: #fdfdfd;
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px 15px;
+  box-shadow: 0px 20px 40px rgba(18, 34, 64, 0.1);
+  position: fixed;
+  bottom: 0px;
+}
+.navbar:after {
+  content: "";
+  width: 120px;
+  background: #d9e0ea;
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  height: 3px;
+  transform: translatex(-50%);
+  opacity: 0.7;
+}
+.navbar__item {
+  width: 90px;
+  height: 90px;
+  position: relative;
+  cursor: pointer;
+  padding: 10px 10px;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 21px;
+}
+.navbar__item::before, .navbar__item:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: currentColor;
+  border-radius: 50%;
+  transform: scale(0.8);
+  opacity: 0;
+  transition: all 0.55s cubic-bezier(0.71, 0.03, 0.23, 0.95);
+}
+.navbar__item::after {
+  box-shadow: 0 7px 15px currentColor;
+}
+.navbar__item.-blue {
+  color: #06b8ff;
+}
+.navbar__item.-orange {
+  color: #f2704d;
+}
+.navbar__item.-navy-blue {
+  color: #405fff;
+}
+.navbar__item.-yellow {
+  color: #f8cd4b;
+}
+.navbar__item.-purple {
+  color: #8444d6;
+}
+.navbar__item:hover::before, .navbar__item:hover::after {
+  transform: translateY(-60px) scale(1.1);
+}
+.navbar__item:hover::before {
+  opacity: 1;
+}
+.navbar__item:hover::after {
+  opacity: 0.4;
+}
+.navbar__item:hover .navbar__icon {
+  transform: translateY(-58px) scale(1.25);
+  color: #fff;
+  transition-delay: 0.1s, 0.1s;
+}
+.navbar__icon {
+  transition: all 0.5s cubic-bezier(0.71, 0.03, 0.23, 0.95);
+  transition-delay: 0.1s;
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+}
+
+}
+  </style>
+</head>
+<body>
+<div class="wrapper">
+        <div class="navbar">
+            <div class="navbar__item -blue">
+                <span class="navbar__icon">
+                    <svg class="icon">
+                      <use xlink:href="#icon-home"></use>
+                    </svg>
+                </span>
+            </div>
+            <div class="navbar__item -orange">
+                <span class="navbar__icon">
+                    <svg class="icon">
+                      <use xlink:href="#icon-cup"></use>
+                    </svg>
+                </span>
+            </div>
+            <div class="navbar__item -navy-blue">
+                <span class="navbar__icon">
+                    <svg class="icon">
+                      <use xlink:href="#icon-plus"></use>
+                    </svg>
+                </span>
+            </div>
+            <div class="navbar__item -yellow">
+                <span class="navbar__icon">
+                    <svg class="icon">
+                      <use xlink:href="#icon-search"></use>
+                    </svg>
+                </span>
+            </div>
+            <div class="navbar__item -purple">
+                <span class="navbar__icon">
+                    <svg class="icon">
+                      <use xlink:href="#icon-user"></use>
+                    </svg>
+                </span>
+            </div>
+        </div>
+    </div>
+  <svg style="display:none" xmlns="http://www.w3.org/2000/svg" hidden xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+      <symbol id="icon-plus" viewBox="0 0 32 32">
+        <title>plus</title>
+        <path d="M32 14.4v3.2c0 0.8-0.64 1.44-1.44 1.44h-11.68v11.52c0 0.8-0.64 1.44-1.44 1.44h-3.040c-0.8 0-1.44-0.64-1.44-1.44v-11.52h-11.52c-0.8 0-1.44-0.64-1.44-1.44v-3.2c0-0.8 0.64-1.44 1.44-1.44h11.68v-11.52c-0.16-0.8 0.48-1.44 1.28-1.44h3.2c0.8 0 1.44 0.64 1.44 1.44v11.68h11.68c0.64-0.16 1.28 0.48 1.28 1.28z"></path>
+      </symbol>
+      <symbol id="icon-search" viewBox="0 0 32 32">
+      <title>search</title>
+        <path d="M30.56 28.64l-5.76-5.76c2.24-2.4 3.52-5.6 3.52-9.12 0-7.52-6.24-13.76-13.76-13.76s-13.76 6.24-13.76 13.76 6.24 13.76 13.76 13.76c2.72 0 5.12-0.8 7.36-2.080l6.080 6.080c0.32 0.32 0.8 0.48 1.28 0.48s0.96-0.16 1.28-0.48c0.8-0.8 0.8-2.080 0-2.88zM4.64 13.76c0-5.44 4.48-9.92 9.92-9.92s9.92 4.48 9.92 9.92-4.48 9.92-9.92 9.92-9.92-4.48-9.92-9.92z"></path>
+      </symbol>
+      <symbol id="icon-user" viewBox="0 0 32 32">
+        <title>user</title>
+        <path d="M16 0.64c4.16 0 7.52 3.36 7.52 7.36 0 4.16-3.36 7.52-7.52 7.52s-7.36-3.36-7.36-7.52c-0.16-4 3.2-7.36 7.36-7.36zM16 2.56c-3.2 0-5.6 2.56-5.6 5.6s2.4 5.6 5.6 5.6 5.76-2.56 5.76-5.76-2.56-5.44-5.76-5.44z"></path>
+        <path d="M16 16.32c-2.24 0-4.16-0.8-5.76-2.4s-2.4-3.68-2.4-5.76c0-2.24 0.8-4.16 2.4-5.76s3.52-2.4 5.76-2.4c4.48 0 8.16 3.68 8.16 8.16s-3.68 8.16-8.16 8.16zM16 1.44c-1.76 0-3.52 0.64-4.8 1.92s-1.92 3.040-1.92 4.8c0 1.76 0.64 3.52 1.92 4.8s2.88 1.92 4.8 1.92c3.84 0 6.72-3.040 6.72-6.72s-3.040-6.72-6.72-6.72zM16 14.56c-3.52 0-6.4-2.88-6.4-6.4 0-1.76 0.64-3.36 1.92-4.48s2.72-1.92 4.48-1.92c3.68 0 6.4 2.72 6.4 6.4 0 1.76-0.64 3.36-1.92 4.48-1.28 1.28-2.88 1.92-4.48 1.92zM16 3.2c-1.44 0-2.56 0.48-3.52 1.44s-1.44 2.080-1.44 3.52c0 2.72 2.24 4.96 4.96 4.96 1.28 0 2.56-0.48 3.52-1.44s1.44-2.24 1.44-3.52c0-2.72-2.24-4.96-4.96-4.96z"></path>
+        <path d="M3.68 30.4c0 1.12-1.76 1.12-1.76 0v-3.68c0-4.64 3.84-8.48 8.48-8.48h11.36c4.64 0 8.48 3.84 8.48 8.48v3.68c0 1.12-1.76 1.12-1.76 0v-3.68c0-3.68-3.040-6.72-6.72-6.72h-11.36c-3.68 0-6.72 3.040-6.72 6.72v3.68z"></path>
+        <path d="M29.28 32c-0.96 0-1.6-0.64-1.6-1.6v-3.68c0-1.6-0.64-3.040-1.76-4.16s-2.56-1.76-4.16-1.76h-11.36c-1.6 0-3.040 0.64-4.16 1.76s-1.76 2.56-1.76 4.16v3.68c0 0.96-0.64 1.6-1.6 1.6s-1.6-0.64-1.6-1.6v-3.68c0-2.4 0.96-4.8 2.72-6.56 1.6-1.6 3.84-2.56 6.4-2.56h11.36c2.4 0 4.8 0.96 6.56 2.72s2.72 4 2.72 6.56v3.52c-0.16 0.96-0.8 1.6-1.76 1.6zM10.4 19.36h11.36c1.92 0 3.84 0.8 5.28 2.24s2.24 3.2 2.24 5.28v3.52c0 0 0 0.16 0.16 0.16s0.16-0.16 0.16-0.16v-3.68c0-2.080-0.8-4-2.24-5.44s-3.36-2.24-5.44-2.24h-11.52c-2.080 0-4 0.8-5.44 2.24s-2.24 3.36-2.24 5.44v3.68c0 0 0 0.16 0.16 0.16s0-0.16 0-0.16v-3.68c0-1.92 0.8-3.84 2.24-5.28 1.44-1.28 3.2-2.080 5.28-2.080z"></path>
+      </symbol>
+      <symbol id="icon-cup" viewBox="0 0 32 32">
+        <title>cup</title>
+        <path d="M28 4h-1.28v-2.72c0-0.8-0.64-1.28-1.28-1.28h-18.72c-0.8 0-1.44 0.64-1.44 1.28v2.72h-1.28c-2.24 0-4 1.76-4 4v1.28c0 2.24 1.76 4 4 4h1.76c0.8 3.2 3.2 5.92 6.24 7.2v3.52h-1.28c-2.24 0-4 1.76-4 4v2.72c0 0.64 0.48 1.28 1.28 1.28h16c0.8 0 1.28-0.64 1.28-1.28v-2.72c0-2.24-1.76-4-4-4h-1.28v-3.52c3.2-1.28 5.44-4 6.4-7.2h1.6c2.24 0 4-1.76 4-4v-1.28c0-2.24-1.76-4-4-4zM4 10.72c-0.8 0-1.28-0.64-1.28-1.44v-1.28c0-0.8 0.64-1.28 1.28-1.28h1.28v4h-1.28zM22.72 28v1.28h-13.44v-1.28c0-0.8 0.64-1.28 1.28-1.28h10.72c0.8 0 1.44 0.48 1.44 1.28zM17.28 24h-2.56v-2.72c0.96 0.16 1.76 0.16 2.72 0v2.72zM16 18.72c-4.48 0-8-3.52-8-8v-8h16v8c0 4.32-3.52 8-8 8zM29.28 9.28c0 0.8-0.64 1.28-1.28 1.28h-1.28v-3.84h1.28c0.8 0 1.28 0.64 1.28 1.28v1.28z"></path>
+      </symbol>
+      <symbol id="icon-home" viewBox="0 0 32 32">
+        <title>home</title>
+        <path d="M16 4.48l12.48 9.92v14.080h-24.96v-14.080l12.48-9.92zM16 0.48l-15.52 12.48v18.72h31.040v-18.72l-15.52-12.48z"></path>
+        <path d="M32 32h-32v-19.2l16-12.8 16 12.8v19.2zM0.8 31.2h30.4v-18.080l-15.2-12.16-15.2 12.16v18.080zM28.8 28.8h-25.6v-14.56l12.8-10.24 12.8 10.24v14.56zM4 28h24.16v-13.44l-12-9.6-12 9.6v13.44z"></path>
+      </symbol>
+    </defs>
+  </svg>
+</body>
+</html>
 
 </body>
 </html>
