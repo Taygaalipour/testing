@@ -81,7 +81,7 @@ background: #fff url('https://codepenworldsfair.com/images/small-worlds-fair.png
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	background: linear-gradient(to right, var(--color-light), var(--color-dark));
+    background-color: orange;
 	padding: 10px 20px;
 	border-radius: 28px;
 	box-shadow: 0 2px 40px -10px var(--color);
@@ -89,16 +89,18 @@ background: #fff url('https://codepenworldsfair.com/images/small-worlds-fair.png
 	font-size: 16px;
 	white-space: nowrap;
 	position: absolute;
-	bottom: 30px;
+	bottom: 10px;
     padding: 10px 70px;
 	left: 50%;
 	transform: translate3d(var(--x), var(--y), var(--z));
 	cursor: pointer;
 	z-index: 105;
 	transition: .15s cubic-bezier(.33,1,.53,1);
+    border: none;
 	&[hidden] {
 		--y: 200%;
 	}
+
 	div {
 		display: flex;
 		align-items: center;
@@ -111,9 +113,14 @@ background: #fff url('https://codepenworldsfair.com/images/small-worlds-fair.png
 			background: var(--light);
 			box-shadow: 0 4px 0 var(--light), 0 -4px 0 var(--light);
 		}
+        
 	}
+    
 }
-
+.menu__button:active {
+        background-color: rgb(18, 216, 107);
+        transition: 0.365s;
+    }
 .menu__overlay {
 		width: 100%;
 		height: 100%;
