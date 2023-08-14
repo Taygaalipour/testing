@@ -2,73 +2,161 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/9004715_cross_delete_remove_cancel_icon.png">
+  <link rel="apple-touch-icon" href="images/9004715_cross_delete_remove_cancel_icon.png">
+
+
     <title>
-        Store Verfying
+        Delete Page
     </title>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Lalezar&family=Noto+Naskh+Arabic:wght@500&family=Ubuntu:wght@300&family=Vazirmatn:wght@200;400&display=swap');
         *{
             margin: 0px;
-            direction: rtl;
             font-family: 'vazirmatn';
+            direction: rtl;
         }
-        tr{
-            text-align: center;
-            position: relative;
-            top: 20px;
+        ::selection{
+          background-color: orange;
+          color: purple;
+          
         }
-        td{
-            text-align: center;
+        @media screen and (min-width:750px) {
+            
+            #bazdid{
+                color: purple;
+                font-size: 25px;
+                text-align: center;
+                margin-top: 20px;
+            }
+            table{
+                text-align: center;
+                background-color: whitesmoke;
+                float: center;
+                margin-top: 50px;
+            }
+            td{
+                border: 1px solid black;
+                color: black;
+                padding-left: 20px;
+                padding-right: 20px;
+                padding: 20px;
+                border-radius: 0px;
+
+            }
+            tr:nth-child(even){
+                background-color: white;
+            }
+            #hazf{
+                color: blue;
+                text-decoration: none;
+            }
+            button[type=submit]{
+                background-color: aqua;
+                border: none;
+                border-radius: 2.55px
+            }
+            img{
+                width: 100px;
+                height: 100px;
+                border-radius: 5px;
+            }
+            header{
+                width: 100%;
+                height: 70px;
+                background-color: black;
+                color: white;
+                text-align: center;
+            }
+            header h1{
+                top: 10px;
+                position: relative;
+            }
+
         }
-        #titr{
-            background-color: whitesmoke;
+        @media screen and (max-width:750px) {
+            #bazdid{
+                color: purple;
+                font-size: 25px;
+                text-align: center;
+                margin-top: 20px;
+            }
+            table{
+                text-align: center;
+                background-color: whitesmoke;
+                float: center;
+                margin-top: 50px;
+                width: 95%;
+                margin-left: 2.5%;
+                margin-right: 2.5%;
+            }
+            td{
+                border: 1px solid black;
+                color: black;
+
+                border-radius: 0px;
+
+            }
+            tr:nth-child(even){
+                background-color: white;
+            }
+            #hazf{
+                color: blue;
+                text-decoration: none;
+            }
+            button[type=submit]{
+                background-color: aqua;
+                border: none;
+                border-radius: 2.55px
+            }
+            img{
+                width: 70px;
+                height: 70px;
+                border-radius: 5px;
+            }
+            header{
+                width: 100%;
+                height: 70px;
+                background-color: black;
+                color: white;
+                text-align: center;
+            }
+            header h1{
+                top: 10px;
+                position: relative;
+            }
+            
         }
-        tr:nth-child(odd){
-            background-color: whitesmoke;
-        }
-        header{
-            width: 100%;
-            height: 70px;
-            background-color: black;
-        }
-        header h1{
-            text-align: center;
-            color: white;
-            position: relative;
-            top: 10px;
-        }
+
     </style>
+
 </head>
 <body>
+
+
+<center>
+
     <header>
         <h1>
-            در انتظار تاییدی ها 
+            لیست آگهی های سایت 
         </h1>
     </header>
-    <center>
 
-    <table>
-        
-    <tr id="titr">
-    <td>کد</td>
-    <td>نام</td>
-    <td>نام خانوادگی</td>
-    <td>تلفن مغازه</td>
-    <td>شماره موبایل</td>
-    <td>طبقه</td>
-    <td>دالان</td>
-    <td>پلاک</td>
-    <td>دور میدان هست؟</td>
-    <td>متراژ مغازه</td>
-    <td>کد پستی</td>
-    <td>کد ملّی</td>
-    <td>تایید مغازه</td>
-    </tr>
- 
-
-</table>
+<table>
+<tr>
+            <td>کد</td>
+            <td>نام پارچه</td>
+            <td>رنگ</td>
+            <td>میزان گرم</td>
+            <td>قیمت</td>
+            <td>حذف</td>
+            <td>عکس</td>
+        </tr>
+<tr><td>313</td><td>استر</td><td>قرمز</td><td>4g</td><td>27000 </td><td><a id='hazf' href='delete.php?id=313'>delete</a></td><td><img src='converted/photo1690720395.jpeg' alt='عکس'></td></tr><tr><td>312</td><td>حریر</td><td>سفید</td><td>370g</td><td>27000 </td><td><a id='hazf' href='delete.php?id=312'>delete</a></td><td><img src='converted/photo1691145462.jpeg' alt='عکس'></td></tr><tr><td>292</td><td>کتان</td><td>3</td><td>370g</td><td>27000 </td><td><a id='hazf' href='delete.php?id=292'>delete</a></td><td><img src='converted/plus.png' alt='عکس'></td></tr><tr><td>287</td><td>ساتن</td><td>قرمز</td><td>240گرم</td><td>41000 </td><td><a id='hazf' href='delete.php?id=287'>delete</a></td><td><img src='converted/logo.png' alt='عکس'></td></tr><tr><td>285</td><td>استر</td><td>مشکی</td><td>210g</td><td>15000 </td><td><a id='hazf' href='delete.php?id=285'>delete</a></td><td><img src='converted/Colth1.jpg' alt='عکس'></td></tr><tr><td>284</td><td>لنین</td><td>مشکی</td><td>370g</td><td>sdfgh </td><td><a id='hazf' href='delete.php?id=284'>delete</a></td><td><img src='converted/ligo.png' alt='عکس'></td></tr><tr><td>283</td><td>ابر و بادی</td><td>ابی</td><td>400گرم</td><td>27000 </td><td><a id='hazf' href='delete.php?id=283'>delete</a></td><td><img src='converted/logo.png' alt='عکس'></td></tr><tr><td>282</td><td>کتان</td><td>مشکی</td><td>370g</td><td>27000 </td><td><a id='hazf' href='delete.php?id=282'>delete</a></td><td><img src='converted/Abstract.Background.633.EPS_.Thmb_.jpg' alt='عکس'></td></tr><tr><td>281</td><td>لنین</td><td>مشکی</td><td>370g</td><td>27000 </td><td><a id='hazf' href='delete.php?id=281'>delete</a></td><td><img src='converted/1608651604521.jpg' alt='عکس'></td></tr><tr><td>280</td><td>استر</td><td>مشکی</td><td>370g</td><td>27000 </td><td><a id='hazf' href='delete.php?id=280'>delete</a></td><td><img src='converted/Colth2.jpg' alt='عکس'></td></tr><tr><td>278</td><td>کتان</td><td>مشکی</td><td>210g</td><td>234 </td><td><a id='hazf' href='delete.php?id=278'>delete</a></td><td><img src='converted/16564637-4691-b__2589.jpg' alt='عکس'></td></tr><tr><td>277</td><td>کتان</td><td>قرمز</td><td>4g</td><td>27000 </td><td><a id='hazf' href='delete.php?id=277'>delete</a></td><td><img src='converted/FABRICS-2.jpg' alt='عکس'></td></tr><tr><td>276</td><td>نخ پنبه</td><td>سفید</td><td>370g</td><td>sdfgh </td><td><a id='hazf' href='delete.php?id=276'>delete</a></td></tr><tr><td>275</td><td>نخ پنبه</td><td>سفید</td><td>370g</td><td>sdfgh </td><td><a id='hazf' href='delete.php?id=275'>delete</a></td></tr><tr><td>274</td><td>کتان</td><td>سفید</td><td>370g</td><td>sdfgh </td><td><a id='hazf' href='delete.php?id=274'>delete</a></td><td><img src='converted/4592811-1734-b__2947.jpg' alt='عکس'></td></tr><tr><td>273</td><td>کت شلواری</td><td>قرمز</td><td>210g</td><td>27000 </td><td><a id='hazf' href='delete.php?id=273'>delete</a></td><td><img src='converted/Colth2.jpg' alt='عکس'></td></tr><tr><td>272</td><td>کت شلواری</td><td>قرمز</td><td>210g</td><td>27000 </td><td><a id='hazf' href='delete.php?id=272'>delete</a></td><td><img src='converted/Colth2.jpg' alt='عکس'></td></tr><tr><td>271</td><td>کت شلواری</td><td>قرمز</td><td>210g</td><td>27000 </td><td><a id='hazf' href='delete.php?id=271'>delete</a></td><td><img src='converted/Colth2.jpg' alt='عکس'></td></tr><tr><td>270</td><td>کت شلواری</td><td>قرمز</td><td>210g</td><td>27000 </td><td><a id='hazf' href='delete.php?id=270'>delete</a></td><td><img src='converted/Colth2.jpg' alt='عکس'></td></tr><tr><td>269</td><td>استر</td><td>مشکی</td><td>370g</td><td>27000 </td><td><a id='hazf' href='delete.php?id=269'>delete</a></td><td><img src='converted/BGS.jpg' alt='عکس'></td></tr><tr><td>268</td><td>استر</td><td>مشکی</td><td>370g</td><td>27000 </td><td><a id='hazf' href='delete.php?id=268'>delete</a></td><td><img src='converted/BGS.jpg' alt='عکس'></td></tr><tr><td>267</td><td>استر</td><td>مشکی</td><td>370g</td><td>27000 </td><td><a id='hazf' href='delete.php?id=267'>delete</a></td><td><img src='converted/BGS.jpg' alt='عکس'></td></tr><tr><td>266</td><td>استر</td><td>مشکی</td><td>370g</td><td>27000 </td><td><a id='hazf' href='delete.php?id=266'>delete</a></td><td><img src='converted/BGS.jpg' alt='عکس'></td></tr><tr><td>265</td><td>استر</td><td>مشکی</td><td>370g</td><td>27000 </td><td><a id='hazf' href='delete.php?id=265'>delete</a></td><td><img src='converted/BGS.jpg' alt='عکس'></td></tr><tr><td>264</td><td>استر</td><td>مشکی</td><td>370g</td><td>27000 </td><td><a id='hazf' href='delete.php?id=264'>delete</a></td><td><img src='converted/BGS.jpg' alt='عکس'></td></tr><tr><td>263</td><td>استر</td><td>مشکی</td><td>370g</td><td>27000 </td><td><a id='hazf' href='delete.php?id=263'>delete</a></td><td><img src='converted/BGS.jpg' alt='عکس'></td></tr><tr><td>262</td><td>استر</td><td>مشکی</td><td>370g</td><td>27000 </td><td><a id='hazf' href='delete.php?id=262'>delete</a></td><td><img src='converted/BGS.jpg' alt='عکس'></td></tr><tr><td>261</td><td>ساتن</td><td>سفید</td><td>4g</td><td>27000 </td><td><a id='hazf' href='delete.php?id=261'>delete</a></td><td><img src='converted/Capan.PNG' alt='عکس'></td></tr><tr><td>260</td><td>مجلسی</td><td>قرمز</td><td>4g</td><td>5t </td><td><a id='hazf' href='delete.php?id=260'>delete</a></td><td><img src='converted/Colth2.jpg' alt='عکس'></td></tr><tr><td>259</td><td>ساتن</td><td>سفید</td><td>370g</td><td>sdfgh </td><td><a id='hazf' href='delete.php?id=259'>delete</a></td><td><img src='converted/BGS.jpg' alt='عکس'></td></tr><tr><td>258</td><td>نخی</td><td>مشکی</td><td>370g</td><td>59000 </td><td><a id='hazf' href='delete.php?id=258'>delete</a></td><td><img src='converted/FABRICS-2.jpg' alt='عکس'></td></tr><tr><td>257</td><td>نخی</td><td>مشکی</td><td>370g</td><td>59000 </td><td><a id='hazf' href='delete.php?id=257'>delete</a></td><td><img src='converted/FABRICS-2.jpg' alt='عکس'></td></tr><tr><td>256</td><td>حریر</td><td>بنفش</td><td>210g</td><td>27000 </td><td><a id='hazf' href='delete.php?id=256'>delete</a></td><td><img src='converted/2009_hyundai_genesis_100025911_l (1).jpg' alt='عکس'></td></tr><tr><td>255</td><td>حریر</td><td>بنفش</td><td>210g</td><td>27000 </td><td><a id='hazf' href='delete.php?id=255'>delete</a></td><td><img src='converted/2009_hyundai_genesis_100025911_l (1).jpg' alt='عکس'></td></tr><tr><td>254</td><td>کتان</td><td>3</td><td>4g</td><td>27000 </td><td><a id='hazf' href='delete.php?id=254'>delete</a></td><td><img src='converted/BG1004609www.tiktarh.com_ (1).jpg' alt='عکس'></td></tr><tr><td>253</td><td>لی</td><td>مشکی</td><td>370g</td><td>27000 </td><td><a id='hazf' href='delete.php?id=253'>delete</a></td><td><img src='converted/Add_Logo.png' alt='عکس'></td></tr><tr><td>252</td><td>نخی</td><td>سفید</td><td>4g</td><td>27000 </td><td><a id='hazf' href='delete.php?id=252'>delete</a></td><td><img src='converted/Colth1.jpg' alt='عکس'></td></tr><tr><td>251</td><td>نخی</td><td>سفید</td><td>4g</td><td>27000 </td><td><a id='hazf' href='delete.php?id=251'>delete</a></td><td><img src='converted/Colth1.jpg' alt='عکس'></td></tr><tr><td>250</td><td>تور</td><td>سفید</td><td>370g</td><td>27000 </td><td><a id='hazf' href='delete.php?id=250'>delete</a></td><td><img src='converted/Abstract.Background.633.EPS_.Thmb_.jpg' alt='عکس'></td></tr><tr><td>249</td><td>کتان</td><td>مشکی</td><td>44</td><td>27000 </td><td><a id='hazf' href='delete.php?id=249'>delete</a></td><td><img src='converted/Capan.PNG' alt='عکس'></td></tr><tr><td>248</td><td>کتان</td><td>مشکی</td><td>44</td><td>27000 </td><td><a id='hazf' href='delete.php?id=248'>delete</a></td><td><img src='converted/Capan.PNG' alt='عکس'></td></tr><tr><td>247</td><td>کتان</td><td>مشکی</td><td>44</td><td>27000 </td><td><a id='hazf' href='delete.php?id=247'>delete</a></td><td><img src='converted/Capan.PNG' alt='عکس'></td></tr><tr><td>246</td><td>کتان</td><td>مشکی</td><td>44</td><td>27000 </td><td><a id='hazf' href='delete.php?id=246'>delete</a></td><td><img src='converted/Capan.PNG' alt='عکس'></td></tr><tr><td>245</td><td>کتان</td><td>مشکی</td><td>44</td><td>27000 </td><td><a id='hazf' href='delete.php?id=245'>delete</a></td><td><img src='converted/Capan.PNG' alt='عکس'></td></tr><tr><td>244</td><td>کتان</td><td>مشکی</td><td>44</td><td>27000 </td><td><a id='hazf' href='delete.php?id=244'>delete</a></td><td><img src='converted/Capan.PNG' alt='عکس'></td></tr><tr><td>243</td><td>کتان</td><td>مشکی</td><td>44</td><td>27000 </td><td><a id='hazf' href='delete.php?id=243'>delete</a></td><td><img src='converted/Capan.PNG' alt='عکس'></td></tr><tr><td>242</td><td>کتان</td><td>مشکی</td><td>44</td><td>27000 </td><td><a id='hazf' href='delete.php?id=242'>delete</a></td></tr><tr><td>241</td><td>کتان</td><td>مشکی</td><td>44</td><td>27000 </td><td><a id='hazf' href='delete.php?id=241'>delete</a></td></tr><tr><td>240</td><td>کتان</td><td>مشکی</td><td>44</td><td>27000 </td><td><a id='hazf' href='delete.php?id=240'>delete</a></td></tr><tr><td>239</td><td>کت شلواری</td><td>مشکی</td><td>210g</td><td>27000 </td><td><a id='hazf' href='delete.php?id=239'>delete</a></td><td><img src='converted/Abstract.Background.633.EPS_.Thmb_.jpg' alt='عکس'></td></tr><tr><td>238</td><td>کت شلواری</td><td>مشکی</td><td>210g</td><td>27000 </td><td><a id='hazf' href='delete.php?id=238'>delete</a></td><td><img src='converted/Abstract.Background.633.EPS_.Thmb_.jpg' alt='عکس'></td></tr><tr><td>237</td><td>کت شلواری</td><td>مشکی</td><td>210g</td><td>27000 </td><td><a id='hazf' href='delete.php?id=237'>delete</a></td><td><img src='converted/logo.png' alt='عکس'></td></tr><tr><td>236</td><td>کت شلواری</td><td>مشکی</td><td>210g</td><td>27000 </td><td><a id='hazf' href='delete.php?id=236'>delete</a></td><td><img src='converted/logo.png' alt='عکس'></td></tr><tr><td>235</td><td>کت شلواری</td><td>مشکی</td><td>210g</td><td>27000 </td><td><a id='hazf' href='delete.php?id=235'>delete</a></td><td><img src='converted/logo.png' alt='عکس'></td></tr><tr><td>234</td><td>کت شلواری</td><td>مشکی</td><td>210g</td><td>27000 </td><td><a id='hazf' href='delete.php?id=234'>delete</a></td><td><img src='converted/logo.png' alt='عکس'></td></tr><tr><td>233</td><td>کت شلواری</td><td>مشکی</td><td>210g</td><td>27000 </td><td><a id='hazf' href='delete.php?id=233'>delete</a></td><td><img src='converted/logo.png' alt='عکس'></td></tr><tr><td>232</td><td>کت شلواری</td><td>مشکی</td><td>210g</td><td>27000 </td><td><a id='hazf' href='delete.php?id=232'>delete</a></td><td><img src='converted/logo.png' alt='عکس'></td></tr><tr><td>231</td><td>کت شلواری</td><td>مشکی</td><td>210g</td><td>27000 </td><td><a id='hazf' href='delete.php?id=231'>delete</a></td><td><img src='converted/logo.png' alt='عکس'></td></tr><tr><td>230</td><td>کت شلواری</td><td>مشکی</td><td>210g</td><td>27000 </td><td><a id='hazf' href='delete.php?id=230'>delete</a></td><td><img src='converted/logo.png' alt='عکس'></td></tr><tr><td>229</td><td>کت شلواری</td><td>مشکی</td><td>210g</td><td>27000 </td><td><a id='hazf' href='delete.php?id=229'>delete</a></td><td><img src='converted/logo.png' alt='عکس'></td></tr><tr><td>228</td><td>کت شلواری</td><td>مشکی</td><td>210g</td><td>27000 </td><td><a id='hazf' href='delete.php?id=228'>delete</a></td><td><img src='converted/logo.png' alt='عکس'></td></tr><tr><td>227</td><td>کت شلواری</td><td>مشکی</td><td>210g</td><td>27000 </td><td><a id='hazf' href='delete.php?id=227'>delete</a></td><td><img src='converted/logo.png' alt='عکس'></td></tr><tr><td>226</td><td>کت شلواری</td><td>مشکی</td><td>210g</td><td>27000 </td><td><a id='hazf' href='delete.php?id=226'>delete</a></td><td><img src='converted/logo.png' alt='عکس'></td></tr><tr><td>225</td><td>کت شلواری</td><td>مشکی</td><td>210g</td><td>27000 </td><td><a id='hazf' href='delete.php?id=225'>delete</a></td><td><img src='converted/logo.png' alt='عکس'></td></tr><tr><td>224</td><td>کت شلواری</td><td>مشکی</td><td>210g</td><td>27000 </td><td><a id='hazf' href='delete.php?id=224'>delete</a></td><td><img src='converted/logo.png' alt='عکس'></td></tr><tr><td>223</td><td>کت شلواری</td><td>مشکی</td><td>210g</td><td>27000 </td><td><a id='hazf' href='delete.php?id=223'>delete</a></td><td><img src='converted/logo.png' alt='عکس'></td></tr><tr><td>222</td><td>کت شلواری</td><td>مشکی</td><td>210g</td><td>27000 </td><td><a id='hazf' href='delete.php?id=222'>delete</a></td><td><img src='converted/logo.png' alt='عکس'></td></tr><tr><td>221</td><td>کت شلواری</td><td>مشکی</td><td>210g</td><td>27000 </td><td><a id='hazf' href='delete.php?id=221'>delete</a></td><td><img src='converted/logo.png' alt='عکس'></td></tr><tr><td>220</td><td>کت شلواری</td><td>مشکی</td><td>210g</td><td>27000 </td><td><a id='hazf' href='delete.php?id=220'>delete</a></td><td><img src='converted/logo.png' alt='عکس'></td></tr><tr><td>219</td><td>مازراتی</td><td>کرمی</td><td>370g</td><td>27000 </td><td><a id='hazf' href='delete.php?id=219'>delete</a></td><td><img src='converted/BPFS.jpg' alt='عکس'></td></tr><tr><td>218</td><td>مازراتی</td><td>کرمی</td><td>370g</td><td>27000 </td><td><a id='hazf' href='delete.php?id=218'>delete</a></td><td><img src='converted/BPFS.jpg' alt='عکس'></td></tr><tr><td>217</td><td>مازراتی</td><td>کرمی</td><td>370g</td><td>27000 </td><td><a id='hazf' href='delete.php?id=217'>delete</a></td><td><img src='converted/BPFS.jpg' alt='عکس'></td></tr><tr><td>216</td><td>مازراتی</td><td>کرمی</td><td>370g</td><td>27000 </td><td><a id='hazf' href='delete.php?id=216'>delete</a></td><td><img src='converted/BPFS.jpg' alt='عکس'></td></tr><tr><td>215</td><td>مازراتی</td><td>کرمی</td><td>370g</td><td>27000 </td><td><a id='hazf' href='delete.php?id=215'>delete</a></td><td><img src='converted/BPFS.jpg' alt='عکس'></td></tr><tr><td>214</td><td>مازراتی</td><td>کرمی</td><td>370g</td><td>27000 </td><td><a id='hazf' href='delete.php?id=214'>delete</a></td><td><img src='converted/BPFS.jpg' alt='عکس'></td></tr><tr><td>213</td><td>مازراتی</td><td>کرمی</td><td>370g</td><td>27000 </td><td><a id='hazf' href='delete.php?id=213'>delete</a></td><td><img src='converted/BPFS.jpg' alt='عکس'></td></tr><tr><td>212</td><td>مازراتی</td><td>کرمی</td><td>370g</td><td>27000 </td><td><a id='hazf' href='delete.php?id=212'>delete</a></td><td><img src='converted/BPFS.jpg' alt='عکس'></td></tr><tr><td>211</td><td>مازراتی</td><td>کرمی</td><td>370g</td><td>27000 </td><td><a id='hazf' href='delete.php?id=211'>delete</a></td><td><img src='converted/BPFS.jpg' alt='عکس'></td></tr><tr><td>210</td><td>استر</td><td>سفید</td><td>210g</td><td>27000 </td><td><a id='hazf' href='delete.php?id=210'>delete</a></td><td><img src='converted/Colth2.jpg' alt='عکس'></td></tr></table>
 </center>
-    
+
+<br><br>
+
+
 </body>
 </html>
