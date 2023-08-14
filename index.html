@@ -2,276 +2,123 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="images/web_3059997.png">
+    <link rel="shortcut icon" href="images/setting.png">
+  <link rel="apple-touch-icon" href="images/setting.png">
+
+
     <title>
-        Control Panel
+        Number of views
     </title>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Lalezar&family=Noto+Naskh+Arabic:wght@500&family=Ubuntu:wght@300&family=Vazirmatn:wght@200;400&display=swap');
-
         *{
             margin: 0px;
-            direction: rtl;
             font-family: 'vazirmatn';
+            direction: rtl;
         }
-        @media screen and (min-width:1100px) {
-        .nds{
-            width: 325px;
-            height: 70px;
-            background-color: aquamarine;
-            border-radius: 5px;
-            float: right;
-            position: relative;
-            top: 5px;
-            right: 5px;
+        ::selection{
+          background-color: orange;
+          color: purple;
+          
         }
-        .nds:hover{
-            box-shadow: 0px 0px 10px black;
-            transition: 0.365s;
-        }
-        img{
-            width: 65px;
-            height: 65px;
-            cursor: pointer;
-            float: right;
-            margin-top: 2px;
-            position: relative;
-            right: 5px;
+        body{
+                background-image: linear-gradient(90deg,lightblue,darkblue);
 
-        }
-        button{
-            width: 175px;
-            height: 40px;
-            border-radius: 5px;
-            border: 1px solid rgb(184, 184, 184);
-            cursor: pointer;
-            background-color: blue;
-            color: white;
-            margin-top: 15px;
+            }
+        @media screen and (min-width:600px){
 
-
-        }
-        button:hover{
-            background-color: white ;
-            color: blue;
-            transition: 0.365s;
-        }
-        button a{
-            text-decoration: none;
-        }
-        header h1{
-            text-align: center;
-            color: white;
-            position: relative;
-            top: 12.5px;
-            font-size: 30px;
-        }
-        header{
-            width: 100%;
-            height: 70px;
-            background-color: black;
-        }
-        nav{
-            margin-top: 10px;
-            margin-right: 10px;
-            border-radius: 5px;
-            position: relative;
-            width: 335px;
-            height: 530px;
-            background-image: linear-gradient(180deg,rgb(167, 20, 20),rgb(139, 0, 109));
-            float: center;
-        }
-            h1 a{
-                text-align: center;
-                text-decoration: none;
+            #bazdid{
+                width: 800px;
+                height: 200px;
+                background-color: rgba(0, 0, 0, 0.521);
                 color: white;
+                font-size: 25px;
+                margin-top: 180px;
+                border-radius: 10px;
+            }
+            h1{
+                position: relative;
+                top: 30px;
+            }
+            img{
+                width: 80px;
+                height: 80px;
+                border-radius: 5px;
+            }
+            header{
+                width: 100%;
+                height: 70px;
+                background-color: black;
+            }
+            header h1{
+                color: white;
+                text-align: center;
                 position: relative;
                 top: 10px;
             }
-    }
-    @media screen and (max-width:1100px) {
-        .nds{
-            width: 95%;
-            margin-left: 2.5%;
-            margin-right: 2.5%;
-            margin-top: 5px;
-            height: 70px;
-            background-color: aquamarine;
-            border-radius: 5px;
-            float: right;
-            position: relative;
-            top: 5px;
         }
-        .nds:hover{
-            box-shadow: 0px 0px 10px black;
-            transition: 0.365s;
-        }
-        img{
-            width: 65px;
-            height: 65px;
-            cursor: pointer;
-            float: right;
-            margin-top: 2px;
-            position: relative;
-            right: 15px;
-
-        }
-        button{
-            width: 175px;
-            height: 40px;
-            border-radius: 5px;
-            border: 1px solid rgb(184, 184, 184);
-            cursor: pointer;
-            background-color: blue;
-            color: white;
-            margin-top: 15px;
-
-
-        }
-        button:hover{
-            background-color: white ;
-            color: blue;
-            transition: 0.365s;
-        }
-        button a{
-            text-decoration: none;
-        }
-        header h1{
-            text-align: center;
-            color: white;
-            position: relative;
-            top: 12.5px;
-            font-size: 30px;
-        }
-        header{
-            width: 100%;
-            height: 70px;
-            background-color: black;
-        }
-        nav{
-            margin-top: 25px;
-            margin-right: 5%;
-            margin-left: 5%;
-            border-radius: 5px;
-            position: relative;
-            width: 90%;
-            height: 538px;
-            background-image: linear-gradient(180deg,rgb(167, 20, 20),rgb(139, 0, 109));
-            float: right;
-            margin-bottom: 90px;
-        }
-            h1 a{
-                text-align: center;
-                text-decoration: none;
+        @media screen and (max-width:600px){
+            #bazdid{
+                margin-left: 5%;
+                margin-right: 5%;
+                width: 90%;
+                height: 150px;
+                background-color: rgba(0, 0, 0, 0.521);
                 color: white;
+                font-size: 15px;
+                margin-top: 35%;
+                border-radius: 5px;
+            }
+            h1{
+                position: relative;
+                top: 30px;
+            }
+            img{
+                width: 80px;
+                height: 80px;
+                border-radius: 5px;
+            }
+            header{
+                width: 100%;
+                height: 70px;
+                background-color: black;
+            }
+            header h1{
+                color: white;
+                text-align: center;
                 position: relative;
                 top: 10px;
             }
-
-        
-    }
-
+            
+        }
     </style>
 </head>
 <body>
-
     <header>
-    <h1>
-        CONTROL PANEL
-    </h1>
-</header>
-
+        <h1>
+            تعداد کل بازدید ها 
+        </h1>
+    </header>
     <center>
-        <nav>
-        <div id="dfwd" class="nds">
-            <img src="images/6358082_browser_earth_global_globe_internet_icon.png" alt="">
-            <a href="http://bazar-ghaem.ir"/>
-            <button>
-                برو به خود سایت
-            </button>
-        </a>
-        </div>
-        <br>
-        <br>
-        <br>
-    <div id="nmb" class="nds">
-        <img src="images/8541829_eye_vision_view_icon.png" alt="">
-        <a href="views.php"/>
-        <button>
-            برو به میزان بازدید
-        </button>
-    </a>
-    </div>
-    <br>
-    <br>
-    <br>
-    <div id="delete" class="nds">
-        <img src="images/3643729_bin_delete_garbage_rubbish_trash_icon.png" alt="">
-        <a href="delete-ads.php">
-        <button>
-        برو به حذف آگهی ها    
-        </button>
-        </a>
+<?php
+session_start();
 
-    </div>
-<br>
-<br>
-<br>
-    <div id="sb" class="nds">
-        <img src="images/4781827_ecommerce_home_market_mart_shop_icon.png" alt="">
-        <a href="verfy-store.php">
-        <button>
-            برو به احراز هویت مغازه ها
-        </button>
-        </a>
+// بررسی وجود تعداد بازدیدها در جلسه
+if (!isset($_SESSION['views'])) {
+    $_SESSION['views'] = 0;
+}
 
-
-    </div>
-    <br>
-<br>
-<br>
-    <div id="sb" class="nds">
-        <img src="images/326571_check_circle_icon.png" alt="">
-        <a href="verfyed-store.php">
-        <button>
-            برو به مغازه های تایید شده
-        </button>
-        </a>
-
-
-    </div>
-    <br>
-<br>
-<br>
-    <div id="sb" class="nds">
-        <img src="images/1564535_customer_user_userphoto_account_person_icon.png" alt="">
-        <a href="accounts.php">
-        <button>
-            برو به حساب های کاربری
-        </button>
-        </a>
-
-
-    </div>
-    <br>
-    <br>
-    <br>
-        <div id="sb" class="nds">
-            <img src="images/3005767_account_door_enter_login_icon.png" alt="">
-            <a href="nup.php">
-            <button>
-                تغیر یوزرنیم و پسوورد ورود
-            </button>
-            </a>
-    
-    
-        </div>
-
+// نمایش تعداد بازدیدها
+print("<div id='bazdid'>");
+print("<h1>");
+echo('تعداد بازدید های صفحه اصلی ' . '<br>' . 'تاکنون: ' . $_SESSION['views'] . ' ' .  'نفر');
+print("</h1>");
+print("</div>");
+?>
 </center>
-</nav>
 
-
-    
+<br><br>
 </body>
 </html>
