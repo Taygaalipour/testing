@@ -102,22 +102,7 @@
         </h1>
     </header>
     <center>
-<?php
-session_start();
-
-// بررسی وجود تعداد بازدیدها در جلسه
-if (!isset($_SESSION['views'])) {
-    $_SESSION['views'] = 0;
-}
-
-// نمایش تعداد بازدیدها
-print("<div id='bazdid'>");
-print("<h1>");
-echo('تعداد بازدید های صفحه اصلی ' . '<br>' . 'تاکنون: ' . $_SESSION['views'] . ' ' .  'نفر');
-print("</h1>");
-print("</div>");
-?>
-</center>
+<div id='bazdid'><h1>تعداد بازدید های صفحه اصلی <br>تاکنون: 0 نفر</h1></div></center>
 
 <br><br>
 </body>
