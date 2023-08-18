@@ -1,138 +1,468 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="images/logo.png">
-  <title>
-    My Footer
-  </title>
-  <style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/2303137_bright_brightness_light_monitor_more_icon.png">
+    <link rel="apple-touch-icon" href="images/2303137_bright_brightness_light_monitor_more_icon.png">
+
+    <title>
+        About Page
+    </title>
+    <style>
       @import url('https://fonts.googleapis.com/css2?family=Lalezar&family=Noto+Naskh+Arabic:wght@500&family=Ubuntu:wght@300&family=Vazirmatn:wght@200;400&display=swap');
-    *{
-      margin: 0px;
-      direction: rtl;
-      font-family: 'vazirmatn';
-    }
-    @media screen and (min-width:1100px) {
-        #tapbar{
-            width: 90%;
-      margin-left: 5%;
-      margin-right: 5%;
-      height: 60px;
-      border-radius: 5px;
-      border: 1px solid rgb(214, 214, 214);
-      position: fixed;
-      bottom: 10px;
-      font-size: 12px;
-      background-color: orange;
+        *{
+            margin: 0px;
+            font-family: 'vazirmatn';
+            direction: rtl;
+        }
+        ::selection{
+          background-color: orange;
+          color: purple;
+          
+        }
 
-    }
-    #tapbar a{
-        text-decoration: none;
-        color: black;
-        cursor: pointer;
-        display: inline-block;
-        position: absolute;
-        top: 42px;
-        margin-right: 12px;
+        @media screen and (min-width:1310px) {
+                header{
+                    width: 100%;
+                    background-color: black;
+                    height: 70px;
+                }
+                nav a{
+                    text-decoration: none;
+                    color: white;
+                    margin: 20px;
+                    position: relative;
+                    top: 20px;
+                }
+                nav a:hover{
+                    color: blue;
+                    transition: 0.365s;
+                }
+                #dayere{
+                    background-image: linear-gradient(90deg,lightblue,darkblue);
+                    border-radius: 7.55px;
+                    width: 70%;
+                    height: 100px;
+                    margin-top: 20px;
+                    margin-right: 15%;
+                    margin-left: 15%;
+                    font-size: 20px;
+                    cursor: pointer;
 
+                }
+                #dayere img{
+                    width: 100px;
+                    height: 100px;
+                    float: left;
+                    margin-top: 0px;
+                    border-radius: 7.5px;
+                }
+                a{
+                text-decoration: none;
+                    color:orange;
+                }
+                #vma{
+                position: relative;
+                top: 27.5px;
+                right: 27.5px;
+                }
+                #myNav{
+                    display: none;
+                }
+                #hamburger{
+                    display: none;
+                }
+                #rs{
+                    color: white;
+                    width: 50px;
+                    height: 50px;
+                    background-color: white;
+                }
+                .container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     }
-    #tapbar img{
-        width: 40px;
-        height: 40px;
-        margin-left: 15px;
-        margin-right: 15px;
-        cursor: pointer;
-        display: inline-block;
+
+    p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #777;
     }
-    #new-ads a{
-        margin-right: 9px;
+    #myImage1:active{
+    background-color: white;
+    transition: 0.15s;
     }
-    #my-ads a{
-        margin-right: 5px;
+    #myImage3:active{
+    background-color: white;
+    transition: 0.15s;
     }
-    #stores a{
-        margin-right: 15px;
+    #kmbvpabb{
+    text-align: center;
+    margin-top: 29px;
     }
+            #mnfe{
+                margin-left: 20%;
+                margin-right: 20%;
+                width: 60%;
+                height: 430px;
+                margin-top: 10px;
+                background-color: aquamarine;
+                float: right;
+                border-radius: 25px;
+            }
+            #aks{
+                width: 55%;
+                height: 55%;
+                float: left;
+                border-radius: 25px;
+                max-width: 300px;
+                max-height: 300px;
+                cursor: pointer;
+
+            }
+            h3{
+                margin-right: 25px;
+                margin-top: 13px;
+                color: black;
+                cursor: pointer;
+
+            }
+            #kamalsaz{
+                display: none;
+            }
+            #fasele{
+                display: none;
+            }
+        }
+
+        @media screen and (max-width:1310px) {
+            header{
+                background-color: black;
+                width: 100%;
+                height: 70px;
+                color: white;
+            }
+            #myDiv{
+                display: none;
+            }
+            #dayere img{
+                background-image: linear-gradient(90deg,lightblue,darkblue);
+                border-radius: 7.5px;
+                width: 90%;
+                height: 100px;
+                margin-top: 20px;
+                margin-right: 5%;
+                margin-left: 5%;
+                font-size: 12.5px;
+                cursor: pointer;
+        }
+
+            a{
+                text-decoration: none;
+                color:orange;
+            }
+            #vma{
+              position: relative;
+              top: 37.5px;
+              right: 27.5px;
+              font-size: 90%;
+            }
+            nav a{
+                display: none;
+            }
         
-    }
+      .overlay {
+                height: 100%;
+                width: 0;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                background-color: rgb(0,0,0);
+                background-color: rgba(0,0,0, 0.9);
+                overflow-x: hidden;
+                transition: 0.5s;
+}
 
-    @media screen and (max-width:1100px) {
-        #tapbar{
-      width: 90%;
-      margin-left: 5%;
-      margin-right: 5%;
-      height: 60px;
-      border-radius: 5px;
-      position: fixed;
-      bottom: 10px;
-      font-size: 10px;
-      background-color: orange;
+.overlay-content {
+                position: relative;
+                top: 25%;
+                width: 100%;
+                text-align: center;
+                margin-top: 10px;
+}
 
-    }
-    #tapbar a{
-        text-decoration: none;
-        color: black;
-        cursor: pointer;
-        display: inline-block;
-        position: absolute;
-        top: 40px;
-        margin-right: 17px;
+.overlay a {
+                padding: 10px;
+                text-decoration: none;
+                font-size: 20px;
+                color: #818181;
+                display: block;
+                transition: 0.3s;
+}
 
+.overlay a:hover, .overlay a:focus {
+                color: blue;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 10px;
+  right: 45px;
+  font-size: 60px;
+}
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+
+#hamburger{
+  float: left;
+  font-size:50px;
+  cursor:pointer;
+  margin-left: 10px;
+}
+
+#kmbvpabb{
+  text-align: center;
+  font-size: 20px;
+  margin-top: 35px;
+}
+#mnfe{
+                margin-left: 5%;
+                margin-right: 5%;
+                width: 90%;
+                height: 850px;
+                background-color: aquamarine;
+                border-radius: 20px;
+                max-width: 100%;
+            }
+
+            h3{
+                margin-right: 10px;
+                margin-top: 17.5px;
+                color: black;
+                font-size: 15px;
+                margin-left: 10px;
+                top: 20px;
+                position: relative;
+                cursor: pointer;
+            }
+            #bl{
+                position: relative;
+                float: left;
+                top: 175px;
+                left: -140px;
+                color: rgb(173, 173, 173);
+                
+            }
+            #aks{
+                width: 90%;
+                height: 90%;
+                margin-right: 5%;
+                margin-left: 5%;
+                float: left;
+                border-radius: 15px;
+                background-color: black;
+                margin-top: 20px;
+                max-width: 400px;
+                max-height: 400px;
+
+            }
+            #modaks{
+                background-color: black;
+            }
+            #kamalsaz{
+    float: right;
+    position: relative;
+    top: 15px;
+    left: -15px;
+}
+
+        }
+    </style>
+
+
+
+
+
+    <script>
+
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+
+
+
+      // فراخوانی سرویس ip-api.com برای دریافت اطلاعات مکان جغرافیایی کاربر
+function getGeoLocation(callback) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'http://ip-api.com/json');
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+            var response = JSON.parse(xhr.responseText);
+            callback(response);
+        }
+    };
+    xhr.send();
+}
+
+// بررسی آیا مکان جغرافیایی کاربر داخل ایران است یا خیر
+function isUserInIran(callback) {
+    getGeoLocation(function(response) {
+        var country = response.countryCode;
+        callback(country === 'IR');
+    });
+}
+
+// اجرای تابع بررسی برای تصمیم‌گیری درباره دسترسی کاربر به وبسایت
+isUserInIran(function(isInIran) {
+    if (!isInIran) {
+        // اگر کاربر خارج از ایران است، اقدام به محدود کردن دسترسی کنید
+
+        alert("تنها کاربرانی که در داخل ایران حضور دارند میتوانند اقدام به ورود به سایت کنند! لطفا اگر فیلترشکن شما فعال است آن را غیر فعال کنید" , "color: red;");
+        window.location.href = "filtering.html"; // آدرس صفحه دسترسی ممنوع
+    } else {
+        // اگر کاربر در داخل ایران است، به وبسایت اجازه ورود بدهید
     }
-    #tapbar img{
-        width: 35px;
-        height: 35px;
-        margin-left: 15px;
-        margin-right: 15px;
-        cursor: pointer;
-        display: inline-block;
-    }
-    #new-ads a{
-        margin-right: 9px;
-    }
-    #my-ads a{
-        margin-right: 5px;
-    }
-    #stores a{
-        margin-right:17px;
-    }
-    #new-ads a{
-        margin-right: 11px;
-    }
-    #my-account a{
-        margin-right: 13px;
-    }
-        
-    }
-   
-  </style>
+});
+
+
+
+
+    </script>
 </head>
 <body>
-    <center>
-  <footer id="tapbar">
-    <span id="bazar">
-      <a href="#">بازار قائم</a>
-      <img src="images/homeicon.png" alt=""  id="phoak">
-    </span>
-    <span id="stores">
-      <a href="#">مغازه ها</a>
-      <img src="images/4781827_ecommerce_home_market_mart_shop_icon.png" alt=""  id="phoak">
-    </span>    
-    <span id="new-ads">
-      <a href="#">آگهی جدید</a>
-      <img src="images/plus.png" alt="" id="phoak">
-    </span>   
-     <span id="my-ads">
-      <a href="#">آگهی های من</a>
-      <img src="images/2123889_list_check_app_essential_icon.png" alt="" id="phoak">
-    </span>    
-    <span id="my-account">
-      <a href="#">حساب من</a>
-      <img src="images/profileicon.png" alt=""  id="phoak">
-    </span>
-  </footer>
+
+<center>
+
+<header>
+
+
+<nav>
+
+    <a href="abrobadi.php">ابر و بادی</a>
+    <a href="li.php">لی</a>
+    <a href="katan.php">کتان</a>
+    <a href="nakh_panbeh.php">نخ پنبه</a>
+    <a href="lenin.php">لنین</a>
+    <a href="satan.php">ساتن</a>
+    <a href="kerep.php">کرپ</a>
+    <a href="nakhi.php">نخی</a>
+    <a href="astar.php">استر</a>
+    <a href="viskoz.php">ویسکوز</a>
+    <a href="mantoyi.php">مانتویی</a>
+    <a href="kot_shalvari.php">کت شلواری</a>
+    <a href="toor.php">تور</a>
+    <a href="majlesi.php">مجلسی</a>
+    <a href="harir.php">حریر</a>
+    <a href="mazerati.php">مازراتی</a>
+
+</nav>
+
+    <div id="myNav" class="overlay">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <div class="overlay-content">
+    <a href="abrobadi.php">ابر و بادی</a>
+    <a href="li.php">لی</a>
+    <a href="katan.php">کتان</a>
+    <a href="nakh_panbeh.php">نخ پنبه</a>
+    <a href="lenin.php">لنین</a>
+    <a href="satan.php">ساتن</a>
+    <a href="kerep.php">کرپ</a>
+    <a href="nakhi.php">نخی</a>
+    <a href="astar.php">استر</a>
+    <a href="viskoz.php">ویسکوز</a>
+    <a href="mantoyi.php">مانتویی</a>
+    <a href="kot_shalvari.php">کت شلواری</a>
+    <a href="toor.php">تور</a>
+    <a href="majlesi.php">مجلسی</a>
+    <a href="harir.php">حریر</a>
+    <a href="mazerati.php">مازراتی</a>
+    <br>
+    <br>
+      </div>
+    </div>
+
+    <span id="hamburger" onclick="openNav()">&#9776;</span>
+
+    <div id="kamalsaz">
+    <h1>Bazar-ghaem.ir</h1>
+    </div>
+
+
+</header>
 </center>
+
+
+<?php
+
+    $x = $_GET['id'];
+   
+    include'upfl.php';
+    $link = mysqli_connect("$host_address","$host_username","$hostpassword","$table");
+    $result = mysqli_query($link , "SELECT * FROM `parche` WHERE `parche`.`id` = $x;");
+    if ($result === false) {
+        die("Error: " . mysqli_error($link));}
+    while($data = mysqli_fetch_array($result)){    
+
+
+
+print("<div id='mnfe'>");
+
+print("<div id='modaks'>");
+$upload_dir = 'converted/';
+$image_path = $upload_dir . $data['aks_parche'];
+if (file_exists($image_path)) {
+    echo "<img src='$image_path' alt='عکس' id='aks'>";
+
+}
+print("</div>");
+
+
+
+
+
+print("<h3 id='takh3'>نام پارچه : $data[nam_parche]</h3>");
+print("<h3>رنگ پارچه : $data[rang_parche]</h3>");
+print("<h3>ضخامت پارچه : $data[zekhamat_parche]</h3>");
+print("<h3>متراژ (طول) هر طاقه : $data[metrazh]</h3>");
+print("<h3>قیمت هر  $data[vahed_andazehgiri] : $data[gheymat_parche] تومان</h3>");
+print("<h3> شماره تلفن صاحب جنس : $data[hamrah_tel]</h3>");
+print("<h3>شماره تلفن دفتر :$data[office_tel]-021</h3>");  
+print("<h3>آدرس دفتر : $data[address]</h3>");
+print("<h3>توضیحات : $data[tozihat]</h3>");
+
+print("</div>");
+
+}
+?>
+
+
+<div id="fasele">
+<br><br>
+<br><br>
+<br>
+</div>
+
+<br><br><br><br><br> 
+
+<?php
+include("footer.html");
+?>
+
+
+
+    
 </body>
 </html>
