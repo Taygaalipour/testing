@@ -2,426 +2,116 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="images/352278_cloud_upload_icon.png">
-    <link rel="apple-touch-icon" href="images/352278_cloud_upload_icon.png">
-
-
+    <link rel="shortcut icon" href="images/logo.png">
+    <link rel="apple-touch-icon" href="images/logo.png">
     <title>
-        بخش ثبت آگهی
+        Shop information
     </title>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Lalezar&family=Noto+Naskh+Arabic:wght@500&family=Ubuntu:wght@300&family=Vazirmatn:wght@200;400&display=swap');
 
+        @import url('https://fonts.googleapis.com/css2?family=Lalezar&family=Noto+Naskh+Arabic:wght@500&family=Ubuntu:wght@300&family=Vazirmatn:wght@200;400&display=swap');
         *{
+            padding: 0px;
             margin: 0px;
+            direction: rtl;
             font-family: 'vazirmatn';
         }
         ::selection{
           background-color: orange;
           color: purple;
+          
         }
-        @media screen and (min-width:1000px){
-            body {
-                background-image: url(images/pexels_pixabay_531035.jpg);
-                margin: 0;
-                padding: 0;
-                background-repeat: no-repeat;
-                background-size: 100% 100%;
-                background-attachment: fixed;
+        @media screen and (min-width:624px) {
+            
+        #bakhsh{
+            width: 50%;
+            height: 400px;
+            margin-left: 25%;
+            margin-right: 25%;
+            background-image: linear-gradient(90deg,lightblue,rgb(31, 31, 180));
+            border-radius: 25px;
+            margin-top: 40px;
+        }
+        #matn{
+            position: relative;
+            right: 20px;
+            font-size: 20px;
             }
-            form{
-                width: 40%;
-                margin-left: 30%;
-                margin-right: 30%;
-                background-color: rgba(0, 0, 0, 0.514);
-                border-radius: 7.5px;
-                margin-top: 1%;
-                margin-bottom: 10%;
-                border-radius: 7.5px;
-                height: 80%;
+            footer{
+                width: 100%;
+                height: 70px;
+                background-color: black;
+                position: absolute;
+                bottom: 0px;
             }
-            input{
-                width: 250px;
-                height: 28px;
+            h1{
+                color: white;
                 text-align: center;
-                border: 1px solid #e40f84 ;
-                margin-top: 5px;
-                border-radius: 5px;
-                background-color: whitesmoke;
-                cursor: pointer;
-            }
-            input:hover{
-                border: 1px solid #940b56;
-                transition: 0.365s;
                 position: relative;
+                top: 10px;
             }
-            input:focus{
-                outline: 0px;
-                border: 1px solid rgb(12, 150, 214);
-                width: 300px;
-                background-color: white;
+            header{
+                width: 100%;
+                height: 70px;
+                background-color: black;
             }
-            button{
-                width: 150px;
-                height: 40px;
-                border: none;
-                border-radius: 5px;
-                background-color: #e40f84;
-                cursor: pointer;
-                color: white;
-                margin-top: 10px;
+            #hani{
+                color: aqua;
             }
-            button:hover{
-                background-color: #940b56;
-                transition: all 0.365s;
-            }
-            button:focus{
-                outline: 0px;
-                background-color: #e04a9d;
-            }
-            input[type="file"] {
-                border: 1px solid #e40f84;
-                padding: 10px;
-                background-color: lightgray;
-                color: white;
-                width: 235PX;
-                height: 50px;
-                background-color: #f2f2f2;
-                color: red;
-                display: block;
-            }
-            input[type="file"]::-webkit-file-upload-button {
-                width: 60%;
-                height: 100%;
-            }
-            
-#selist{
-    width: 256px;
-    height: 40px;
-    border-radius: 5px;
-    border: 1px solid #e40f84 ;
-    text-align: center;
-    margin-top: 5px;
-    background-color: whitesmoke;
-    cursor: pointer;
-    color: rgb(95, 95, 95);
-
-}
-#selist:focus{
-    outline: 0px;
-    border: 1px solid rgb(12, 150, 214);
-    background-color: white;
-    width: 300px;
-    transition: all 0.365s;
-
-}
-            
         }
-        @media screen and (max-width:1000px){
-            body {
-                background-image: url(images/pexels_julia_kuzenkov_1974521.jpg);
-                margin: 0;
-                padding: 0;
-                background-repeat: no-repeat;
-                background-size: 100% 100%;
-                background-attachment: fixed;
+        @media screen and (max-width:624px) {
+
+            #bakhsh{
+            width: 90%;
+            height: 400px;
+            margin-left: 5%;
+            margin-right: 5%;
+            background-image: linear-gradient(90deg,lightblue,rgb(31, 31, 180));
+            border-radius: 10px;
+            margin-top: 32.5px;
+        }
+        #matn{
+            position: relative;
+            right: 20px;
+            font-size: 20px;
+            top: 10px;
             }
-            form{
-                margin-left: 5%;
-                margin-right: 5%;
-                width: 90%;
-                background-color: rgba(0, 0, 0, 0.514);
-                margin-top: 2%;
-                margin-bottom: 10%;
-                border-radius: 7.5px;
-                height: 80%;
+            footer{
+                width: 100%;
+                height: 70px;
+                background-color: black;
+                position: fixed;
+                bottom: 0px;
             }
-            input{
-                width: 250px;
-                height: 28px;
+            h1{
+                color: white;
                 text-align: center;
-                border: 1px solid #e40f84 ;
-                margin-top: 5px;
-                border-radius: 5px;
-                background-color: whitesmoke;
-                cursor: pointer;
-            }
-            input:hover{
-                border: 1px solid #940b56;
-                transition: 0.365s;
                 position: relative;
+                top: 10px;
             }
-            input:focus{
-                outline: 0px;
-                border: 1px solid rgb(12, 150, 214);
-                width: 300px;
-                background-color: white;
+            header{
+                width: 100%;
+                height: 70px;
+                background-color: black;
             }
-            button{
-                width: 150px;
-                height: 40px;
-                border: none;
-                border-radius: 5px;
-                background-color: #e40f84;
-                cursor: pointer;
-                color: white;
-                position: relative;
-                top: 25px;
-            }
-            button:hover{
-                background-color: #940b56;
-                transition: all 0.365s;
-            }
-            button:focus{
-                outline: 0px;
-                background-color: #e04a9d;
-            }
-            input[type="file"] {
-                border: 1px solid #e40f84;
-                padding: 10px;
-                background-color: lightgray;
-                color: white;
-                width: 235PX;
-                height: 50px;
-                background-color: #f2f2f2;
-                color: red;
-                display: block;
-            }
-            input[type="file"]::-webkit-file-upload-button {
-                width: 60%;
-                height: 100%;
+            #hani{
+                color: aqua;
             }
             
-#selist{
-    width: 256px;
-    height: 40px;
-    border-radius: 5px;
-    border: 1px solid #e40f84 ;
-    text-align: center;
-    margin-top: 5px;
-    background-color: whitesmoke;
-    cursor: pointer;
-    color: rgb(95, 95, 95);
-
-}
-#selist:focus{
-    outline: 0px;
-    border: 1px solid rgb(12, 150, 214);
-    background-color: white;
-    width: 300px;
-    transition: all 0.365s;
-
-}
             
         }
+
     </style>
-      <script>
-        // فراخوانی سرویس ip-api.com برای دریافت اطلاعات مکان جغرافیایی کاربر
-   function getGeoLocation(callback) {
-       var xhr = new XMLHttpRequest();
-       xhr.open('GET', 'http://ip-api.com/json');
-       xhr.onreadystatechange = function() {
-           if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-               var response = JSON.parse(xhr.responseText);
-               callback(response);
-           }
-       };
-       xhr.send();
-   }
-   
-   // بررسی آیا مکان جغرافیایی کاربر داخل ایران است یا خیر
-   function isUserInIran(callback) {
-       getGeoLocation(function(response) {
-           var country = response.countryCode;
-           callback(country === 'IR');
-       });
-   }
-   
-   // اجرای تابع بررسی برای تصمیم‌گیری درباره دسترسی کاربر به وبسایت
-   isUserInIran(function(isInIran) {
-       if (!isInIran) {
-           // اگر کاربر خارج از ایران است، اقدام به محدود کردن دسترسی کنید
-   
-           alert("تنها کاربرانی که در داخل ایران حضور دارند میتوانند اقدام به ورود به سایت کنند! لطفا اگر فیلترشکن شما فعال است آن را غیر فعال کنید" , "color: red;");
-           window.location.href = "filtering.html"; // آدرس صفحه دسترسی ممنوع
-       } else {
-           // اگر کاربر در داخل ایران است، به وبسایت اجازه ورود بدهید
-       }
-   });
-   
-     </script>
 </head>
-<body dir="rtl">
-    <br>
-    <center>
-    <form action="Save.php" method="post" enctype="multipart/form-data">
-        <br>
-        <select name="np" id="selist" required >
-            <option value="" disabled selected>لطفا نوع پارچه خود را انخاب کنید :</option>
-            <option value="ابر و بادی">ابر و بادی</option>
-            <option value="لی">لی</option>
-            <option value="کتان">کتان</option>
-            <option value="نخ پنبه">نخ پنبه</option>
-            <option value="لنین">لنین</option>
-            <option value="ساتن">ساتن</option>
-            <option value="کرپ">کرپ</option>
-            <option value="نخی">نخی</option>
-            <option value="استر">استر</option>
-            <option value="ویسکوز">ویسکوز</option>
-            <option value="مانتویی">مانتویی</option>
-            <option value="کت شلواری">کت شلواری</option>
-            <option value="تور">تور</option>
-            <option value="مجلسی">مجلسی</option>
-            <option value="حریر">حریر</option>
-            <option value="مازراتی">مازراتی</option>
-            
-        </select>
-        <br>
-        <input type="text" name="rp" id="mosh3" class="moshakhase" placeholder="رنگ پارچه را وارد کنید :" required>
-        <br>
-        <input type="text" name="zp" id="mosh4" class="moshakhase" placeholder="میزان ضخامت پارچه را وارد کنید :" required>
-        <br>
-        <select name="vahed_andazeh" id="selist" required>
-            <option value="" disabled selected>واحد اندازه گیری پارچه خود را وارد کنید :</option>
-            <option value="یارد">یارد</option>
-            <option value="متر">متر</option>
-        </select>
-       
-        <br>
-        <input type="text" placeholder="میزان طول هر طاقه را وارد کنید :" class="moshakhase" name="mzh" required>
-        <br>
-        <input type="text" name="gp" id="mosh5" class="moshakhase" placeholder="قیمت هر متر یا یارد پارچه را وارد کنید :" required inputmode="numeric">
-        <br>
-        <input type="tel" placeholder="شماره تلفن همراه (*********09)"  required class="moshakhase" dir="ltr" name="th">
-        <br>
-        <input type="tel" placeholder="شماره تلفن دفتر: (مثلا: ******55)"class="moshakhase" name="to" >
-        <br>
-        <input type="text" placeholder="آدرس دفتر:" class="moshakhase" lang="fa" required name="address">
-        <br>
-        <input type="text" name="tozihat" placeholder="لطفا توضیحاتی را ارائه دهید : حداقل 10 کلمه" minlength="10" maxlength="70">
+<body>
 
-            <input type="file" name="image" id="mosh1" class="moshakhase" placeholder="نمونه عکس پارچه خود را وارد کنید :" accept="image/*" required>
-        <button type="submit" name="submit">ثبت آگهی </button>
-        <br>
-        <br>
-        <br>
-    </form>
-    <br>
-    <br>
-  
-</center>
-
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Lalezar&family=Noto+Naskh+Arabic:wght@500&family=Ubuntu:wght@300&family=Vazirmatn:wght@200;400&display=swap');
-  *{
-    margin: 0px;
-    direction: rtl;
-    font-family: 'vazirmatn';
-  }
-
-      #tapbar{
-    width: 100%;
-    float: center;
-    bottom: 0px;
-    font-size: 12px;
-    background-color: orange;
-    position: fixed;
-    height: 60px;
-  }
-  #tapbar a{
-      text-decoration: none;
-      color: black;
-      margin-left: 15px;
-      margin-right: 15px;
-  }
-  .matex{
-      position: absolute;
-      bottom: 2.5px;
-      cursor: pointer;
-      text-align: center;
-      margin-right: -42.5px;
-  }
-  #phoak{
-      width: 40px;
-      height: 40px;
-      cursor: pointer;
-      display: inline-block;
-  }   
-  #ndaid{
-      margin-right: -47.5px;
-  }
-  #ahmid{
-      margin-right: -55px;
-  }
-  /* اندازه، رنگ و شکل ایندیکاتور */
-.indicator {
-width: 70px;
-height: 60px;
-background-image: linear-gradient(90deg,rgb(30, 43, 165),rgb(199, 38, 164));
-border: none;
-border-radius: 7.5px;
-position:absolute;
-}
-</style>
-
-  <center>
-<footer id="tapbar">
-  <a href="Gallery.php" id="bazarid" class="kiln">
-  <span id="bazar">
-    <img src="images/homeicon.png" alt=""  id="phoak">
-    <span class="matex" id="bazar">
-      بازار قائم
-    </span>
-  </span>
-</a>
-  <a href="account-menager.php" id="storesid" class="kiln">
-  <span id="stores">
-    <img src="images/4781827_ecommerce_home_market_mart_shop_icon.png" alt=""  id="phoak">
-    <span class="matex">
-      مغازه ها
-    </span>
-  </span>    
-</a> 
-<a href="Send Page.html" id="new-adsid" class="kiln">
-    <span class="indicator">
-  <span id="new-ads">
-    <img src="images/plus.png" alt="" id="phoak">
-    <span class="matex" id="ndaid">
-    آگهی جدید
-  </span>
-  </span> 
-  </span>
-</a>      
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-<a href="my-ads.php" id="my-adsid" class="kiln">
-   <span id="my-ads">
-    <img src="images/2123889_list_check_app_essential_icon.png" alt="" id="phoak">
-    <span class="matex" id="ahmid">
-      آگهی های من
-    </span>
-      </span>    
-</a>
-<a href="my-profile.php" id="my-accountid" class="kiln">
-  <span id="my-account">
-    <img src="images/profileicon.png" alt=""  id="phoak">
-    <span class="matex">
-      حساب من
-    </span>
-  </span>
-</a>
-
-
-
-
-
-
+    <header><h1>جناب پوریا علیپور</h1></header><div id='bakhsh'><span id='matn'>شماره کد: 5<br>نام صاحب مغازه: پوریا علیپور<br>تلفن مغازه: 55692685-021<br>شماره موبایل: 09127684554<br>کد ملّی: 9849424577<br>کد پستی مغازه: 3982309972<br>آدرس:   طبقه مثبت ,  دالان چهارم , پلاک 712<br>مغازه دور میدان <span id='hani'>هست</span><br>متراژ مغازه: 37متر<span></div>
+<footer>
+    <h1>
+        www.bazar-ghaem.ir
+    </h1>
 </footer>
-</center>
-
     
 </body>
 </html>
