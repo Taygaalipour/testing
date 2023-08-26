@@ -6,14 +6,12 @@
     <link rel="shortcut icon" href="images/logo.png">
     <link rel="apple-touch-icon" href="images/logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+
     <title>
-        Searching page
+        informations
     </title>
     <style>
-
-      @import url('https://fonts.googleapis.com/css2?family=Lalezar&family=Noto+Naskh+Arabic:wght@500&family=Ubuntu:wght@300&family=Vazirmatn:wght@200;400&display=swap');
-
+        @import url('https://fonts.googleapis.com/css2?family=Lalezar&family=Noto+Naskh+Arabic:wght@500&family=Ubuntu:wght@300&family=Vazirmatn:wght@200;400&display=swap');
         *{
             margin: 0px;
             direction: rtl;
@@ -24,142 +22,89 @@
           color: purple;
           
         }
-
         @media screen and (min-width:750px) {
-            header{
-                width: 100%;
-                height: 70px;
-                background-color: black;
-            }
-            header h1{
-                color: white;
-                position: relative;
-                top: 10px;
-            }
-            form{
-                width: 690px;
-                height: 60px;
-                background-color: whitesmoke;
-                margin-top: 200px;
-                border-radius: 25px;
-
-            }
-            input[type='search']{
-                width: 500px;
-                height: 40px;
-                border-radius: 25px;
-                border: 0.5px solid rgb(226, 226, 226);
-                margin-top: 10px;
-                padding: 10px 20px;
-            }
-            input:focus{
-                outline: 0px;
-                border: 1px solid orange;
-
-            }
-            #find{
-                width: 100px;
-                height: 35px;
-                background-color: aquamarine;
-                border: none;
-                border-radius: 10px;
-                margin-right: 25px;
-                cursor: pointer;
-            }
-            #find:focus{
-                background-color: rgb(0, 179, 119);
-                border: 0.5px solid rgb(185, 185, 185);
-
-
-            }
-            #ghablipage{
-                border: none;
-                position: relative;
-                width: 40px;
-                height: 40px;
-                background-color: white;
-                float: left;
-                left: 5px;
-                top: -35px;
-                border-radius: 50%;
-                border: 2px solid rgb(189, 189, 189);
-            }
-            #ghablipage a{
-                text-decoration: none;
-                color:blue;
-                float: right;
-                font-size: 20px;
-                position: relative;
-                left: 13px;
-            }
-            #ghablipage i{
-                font-size: 25px;
-                position: relative;
-                top: 4px;
-                right: 15px;
-            }
-            footer{
-                width: 100%;
-                height: 70px;
-                background-color: black;
-                position: fixed;
-                bottom: 0px;
-            }
-            footer h1{
-                color: white;
-                position: relative;
-                top: 10px;
-            }
-
-
+            
+        body{
+            background-color: white;
         }
-
-        @media screen and (max-width:750px) {
-            form{
-                width: 450px;
-                height: 60px;
-                background-color: whitesmoke;
+        a{
+            text-decoration: none;
+        }   
+        #bakhsh{
+                width: 80%;
+                margin-left: 10%;
+                margin-right: 10%;
+                height: 100px;
                 margin-top: 20px;
-                border-radius: 25px;
-
-            }
-            input[type='search']{
-                width: 70%;
-                margin-left: 25%;
-                margin-right: 5%;
-                height: 40px;
-                border-radius: 25px;
-                border: 0.5px solid rgb(226, 226, 226);
-                margin-top: 10px;
-                padding: 10px 20px;
-                float: right;
-            }
-            input:focus{
-                outline: 0px;
-                border: 1px solid orange;
-
-            }
-            #find{
-                width: 65px;
-                height: 40px;
-                background-color: aquamarine;
-                border: none;
-                border-radius: 10px;
-                float: left;
+                font-size: 15px;
                 position: relative;
-                top: -40px;
-                margin-left: 20px;
-                right: 10px;
-                color: black;
-
-    
+                color: blue;
+                border: 1px solid rgb(189, 189, 189);
+                border-radius: 5px;
             }
-            #find:focus{
-                background-color: rgb(0, 179, 119);
-                border: 0.5px solid rgb(185, 185, 185)د;
-
-            }
-            #ghablipage{
+        #bakhsh:hover{
+            box-shadow: 0px 0px 10px black;
+            transition: 0.365s;
+            color: #fc007e;
+        }
+        #matn{
+            position: relative;
+            top: 37.5px;
+            text-align: center;
+        }
+        header{
+            width: 100%;
+            height: 70px;
+            background-color: black;
+        }
+        header h1{
+            color: white;
+            text-align: center;
+            position: relative;
+            top: 10px;
+        }
+        footer{
+            width: 100%;
+            height: 70px;
+            background-color: black;
+            position: fixed;
+                bottom: 0px;
+        }
+        footer h1{
+            color: white;
+            text-align: center;
+            margin-top: 10px;
+        }
+        #notfound{
+            width: 1000px;
+            height: 440px;
+            background-image: linear-gradient(90deg,rgb(50, 184, 139),aquamarine);
+            border-radius: 10px;
+            position: relative;
+            top: 20px;
+        }
+        #aks1{
+            width: 400px;
+            height: 400px;
+            float: left;
+        }
+        #aks2{
+            width: 200px;
+            height: 200px;
+            position: relative;
+            float: left;
+            left: -244px;
+            top: 152.5px;
+        }
+        #notfound p{
+            float: right;
+            margin-top: 170px;
+            margin-right: 20px;
+            font-size: 50px;
+            color: #fc007e;
+            box-shadow: 0px 0px 10px black;
+        }
+        #ghablipage{
                 border: none;
                 position: relative;
                 width: 40px;
@@ -184,7 +129,38 @@
                 position: relative;
                 top: 4px;
                 right: 15px;
-            }         
+            } 
+        }   
+        @media screen and (max-width:750px) {
+            
+            body{
+                background-color: white;
+            }
+            a{
+                text-decoration: none;
+            }   
+            #bakhsh{
+                width: 90%;
+                margin-left: 5%;
+                margin-right: 5%;
+                height: 100px;
+                margin-top: 20px;
+                font-size: 15px;
+                position: relative;
+                color: blue;
+                border: 1px solid rgb(189, 189, 189);
+                border-radius: 5px;
+            }
+            #bakhsh:hover{
+                box-shadow: 0px 0px 10px black;
+                transition: 0.365s;
+                color: #fc007e;
+            }
+            #matn{
+                position: relative;
+                top: 37.5px;
+                text-align: center;
+            }
             header{
                 width: 100%;
                 height: 70px;
@@ -192,8 +168,10 @@
             }
             header h1{
                 color: white;
+                text-align: center;
                 position: relative;
-                top: 10px;
+                top: 15px;
+                font-size: 20px;
             }
             footer{
                 width: 100%;
@@ -207,36 +185,83 @@
                 text-align: center;
                 margin-top: 10px;
             }
-
-        }
+            #notfound{
+                width: 90%;
+                margin-left: 5%;
+                margin-right: 5%;
+                height: 450px;
+                background-image: linear-gradient(90deg,rgb(50, 184, 139),aquamarine);
+                border-radius: 10px;
+                position: relative;
+                top: 10px;
+            }
+            #aks1{
+                width: 250px;
+                height: 250px;
+                position: relative;
+                top: 50px;
+                left: 20px;
+                float: left;
+            }
+            #aks2{
+                width: 125px;
+                height: 125px;
+                position: relative;
+                top: -105px;
+                left: 8.5px;
+            }
+            #notfound p{
+                font-size: 25px;
+                color: #fc007e;
+                box-shadow: 0px 0px 10px black;
+                width: 200px;
+                height: 50px;
+                position: relative;
+                top: 20px;
+            }
+            #ghablipage{
+                position: relative;
+                width: 40px;
+                height: 40px;
+                background-color: white;
+                float: left;
+                left: 5px;
+                top: -18px;
+                border-radius: 50%;
+                border: 2px solid rgb(189, 189, 189);
+                }
+                #ghablipage a{
+                    text-decoration: none;
+                    color:blue;
+                    float: right;
+                    font-size: 20px;
+                    position: relative;
+                    left: 13px;
+                }
+                #ghablipage i{
+                    font-size: 25px;
+                    position: relative;
+                    top: 4px;
+                    right: 15px;
+                } 
+            }
     </style>
 </head>
 <body>
-
     <center>
-
-    <header>
-        <h1>
-            صفحه استعلام مغازه ها
-        </h1>
-        <button id="ghablipage"><a href="account-menager.php"><i class="fa fa-arrow-circle-left"></i></a></button>
-    </header>
-
-   
-
-    <form action="emd.php" method="post" enctype="multipart/form-data">
-        <input type="search" placeholder="لطفا نام و نام خانوادگی صاحب مغازه را وارد کنید:" name="lname">
-        <button type="submit" id="find">پیدا کن</button>
-    </form>
-    <br>
-
-
-    <footer>
-        <h1>
-            www.bazar-ghaem.ir
-        </h1>
-    </footer>
+<br />
+<font size='1'><table class='xdebug-error xe-warning' dir='ltr' border='1' cellspacing='0' cellpadding='1'>
+<tr><th align='left' bgcolor='#f57900' colspan="5"><span style='background-color: #cc0000; color: #fce94f; font-size: x-large;'>( ! )</span> Warning: Undefined array key "lname" in C:\wamp64\www\Bazar-ghaem.ir\emd.php on line <i>254</i></th></tr>
+<tr><th align='left' bgcolor='#e9b96e' colspan='5'>Call Stack</th></tr>
+<tr><th align='center' bgcolor='#eeeeec'>#</th><th align='left' bgcolor='#eeeeec'>Time</th><th align='left' bgcolor='#eeeeec'>Memory</th><th align='left' bgcolor='#eeeeec'>Function</th><th align='left' bgcolor='#eeeeec'>Location</th></tr>
+<tr><td bgcolor='#eeeeec' align='center'>1</td><td bgcolor='#eeeeec' align='center'>0.0010</td><td bgcolor='#eeeeec' align='right'>361216</td><td bgcolor='#eeeeec'>{main}(  )</td><td title='C:\wamp64\www\Bazar-ghaem.ir\emd.php' bgcolor='#eeeeec'>...\emd.php<b>:</b>0</td></tr>
+</table></font>
+<header><h1>استعلام مغازه های </h1><button id='ghablipage'><a href='javascript:history.back()'><i class='fa fa-arrow-circle-left'></i></a></button></header><center><div id='notfound'><p>مورد شما پیدا نشد!</p><div><img src='images/4575058_earth_globe_internet_magnifier_search_icon.png' id='aks1'><img src='images/8148020_emoji_pensive_icon.png' id='aks2'></div></div></center>
+<footer>
+    <h1>
+        www.bazar-ghaem.ir
+    </h1>
+</footer>
 </center>
-    
 </body>
 </html>
