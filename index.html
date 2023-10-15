@@ -1,467 +1,665 @@
+
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="shortcut icon" href="images/logo.png">
+      <link rel="apple-touch-icon" href="images/logo.png">
+
+      <title>
+        بخش بازار اصلی
+      </title>
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lalezar&family=Noto+Naskh+Arabic:wght@500&family=Ubuntu:wght@300&family=Vazirmatn:wght@200;400&display=swap');
+          *{
+              margin: 0px;
+              font-family: 'vazirmatn';
+              direction: rtl;
+              padding: 0px;
+
+          }
+          ::selection{
+            background-color: orange;
+            color: purple;
+            
+          }
+
+
+          @media screen and (min-width:750px) {
+              #dayere{
+                  border-radius: 5px;
+                  width: 50%;
+                  height: 100px;
+                  margin-top: 20px;
+                  margin-right: 25%;
+                  margin-left: 25%;
+                  font-size: 20px;
+                  cursor: pointer;
+                  border: 1px solid rgb(202, 202, 202);
+                  color: #007bff;
+                  position: relative;
+
+              }
+              #aksphoto{
+                  width: 100px;
+                  height: 100px;
+                  float: left;
+                  position: relative;
+                  border-radius: 5px;
+                  background-color: transparent;
+              }
+              a{
+                text-decoration: none;
+                  color: black;
+              }
+              #vma{
+                position: relative;
+                right: 27.5px;
+                float: right;
+                top: 0px;
+              }
+              #myNav{
+                  display: none;
+              }
+              #hamburger{
+                  display: none;
+              }
+              #kamalsaz{
+                  display: none;
+              }
+              .container {
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+ 
+  .icon-container {
+    display: flex;
+    justify-content: center;
+  }
+ 
+
+  
+  .icon-container a {
+    margin: 0 10px;
+    color: #333;
+    font-size: 20px;
+    text-decoration: none;
+  }
+
+  p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #777;
+  }
+  #myImage1:active{
+    background-color: white;
+    transition: 0.15s;
+  }
+  #myImage2:active{
+    background-color: white;
+    transition: 0.15s;
+  }
+  #myImage3:active{
+    background-color: white;
+    transition: 0.15s;
+  }
+  #kmbvpabb{
+    text-align: center;
+    margin-top: 29px;
+  }
+  
+
+  }
+
+          @media screen and (max-width:750px) {
+
+              #myDiv{
+                  display: none;
+              }
+              #dayere{
+                background-color: white;
+                  border-radius: 7.5px;
+                  width: 90%;
+                  height: 125px;
+                  margin-top: 20px;
+                  margin-right: 5%;
+                  margin-left: 5%;
+                  cursor: pointer;
+                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                  border: 1px solid #007bff;
+                  color: #007bff
+
+          }
+              #aksphoto{
+                  width: 125px;
+                  height: 125px;
+                  float: left;
+                  border-radius: 7.5px;
+                  position: relative;
+                  top: -50px;
+          }
+              a{
+                  text-decoration: none;
+                  color:orange;
+              }
+              #vma{
+                position: relative;
+                right: 27.5px;
+                font-size: 15px;
+                top: 22px;
+              }
+
+          
+     
+          }
+        
+      </style>
+
+
+
+
+
+      <script>
+
+  function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+  }
+
+  function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+  }
+
+
+
+        // فراخوانی سرویس ip-api.com برای دریافت اطلاعات مکان جغرافیایی کاربر
+  function getGeoLocation(callback) {
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', 'http://ip-api.com/json');
+      xhr.onreadystatechange = function() {
+          if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+              var response = JSON.parse(xhr.responseText);
+              callback(response);
+          }
+      };
+      xhr.send();
+  }
+
+  // بررسی آیا مکان جغرافیایی کاربر داخل ایران است یا خیر
+  function isUserInIran(callback) {
+      getGeoLocation(function(response) {
+          var country = response.countryCode;
+          callback(country === 'IR');
+      });
+  }
+
+  // اجرای تابع بررسی برای تصمیم‌گیری درباره دسترسی کاربر به وبسایت
+  isUserInIran(function(isInIran) {
+      if (!isInIran) {
+          // اگر کاربر خارج از ایران است، اقدام به محدود کردن دسترسی کنید
+
+          alert("تنها کاربرانی که در داخل ایران حضور دارند میتوانند اقدام به ورود به سایت کنند! لطفا اگر فیلترشکن شما فعال است آن را غیر فعال کنید" , "color: red;");
+          window.location.href = "filtering.html"; // آدرس صفحه دسترسی ممنوع
+      } else {
+          // اگر کاربر در داخل ایران است، به وبسایت اجازه ورود بدهید
+      }
+  });
+
+
+
+
+      </script>
+  </head>
+  <body>
+
+  
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="images/2303137_bright_brightness_light_monitor_more_icon.png">
-    <link rel="apple-touch-icon" href="images/2303137_bright_brightness_light_monitor_more_icon.png">
+<title>
+    header
+</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Lalezar&family=Noto+Naskh+Arabic:wght@500&family=Ubuntu:wght@300&family=Vazirmatn:wght@200;400&display=swap');
 
-    <title>
-        About Page
-    </title>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Lalezar&family=Noto+Naskh+Arabic:wght@500&family=Ubuntu:wght@300&family=Vazirmatn:wght@200;400&display=swap');
-        *{
-            margin: 0px;
-            font-family: 'vazirmatn';
-            direction: rtl;
-        }
-        ::selection{
-          background-color: orange;
-          color: purple;
-          
-        }
-
-        @media screen and (min-width:1310px) {
-                header{
-                    width: 100%;
-                    background-color: black;
-                    height: 70px;
-                }
-                nav a{
-                    text-decoration: none;
-                    color: white;
-                    margin: 20px;
-                    position: relative;
-                    top: 20px;
-                }
-                nav a:hover{
-                    color: blue;
-                    transition: 0.365s;
-                }
-                #dayere{
-                    background-image: linear-gradient(90deg,lightblue,darkblue);
-                    border-radius: 7.55px;
-                    width: 70%;
-                    height: 100px;
-                    margin-top: 20px;
-                    margin-right: 15%;
-                    margin-left: 15%;
-                    font-size: 20px;
-                    cursor: pointer;
-
-                }
-                #dayere img{
-                    width: 100px;
-                    height: 100px;
-                    float: left;
-                    margin-top: 0px;
-                    border-radius: 7.5px;
-                }
-                a{
-                text-decoration: none;
-                    color:orange;
-                }
-                #vma{
-                position: relative;
-                top: 27.5px;
-                right: 27.5px;
-                }
-                #myNav{
-                    display: none;
-                }
-                #hamburger{
-                    display: none;
-                }
-                #rs{
-                    color: white;
-                    width: 50px;
-                    height: 50px;
-                    background-color: white;
-                }
-                .container {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    *{
+        margin: 0px;
+        direction: rtl;
+        font-family: 'vazirmatn';
     }
+    @media screen and (min-width:750px) {
 
-    p {
-    margin-top: 10px;
-    font-size: 14px;
-    color: #777;
-    }
-    #myImage1:active{
-    background-color: white;
-    transition: 0.15s;
-    }
-    #myImage3:active{
-    background-color: white;
-    transition: 0.15s;
-    }
-    #kmbvpabb{
-    text-align: center;
-    margin-top: 29px;
-    }
-            #mnfe{
-                margin-left: 20%;
-                margin-right: 20%;
-                width: 60%;
-                height: 430px;
-                margin-top: 10px;
-                background-color: aquamarine;
-                float: right;
-                border-radius: 25px;
-            }
-            #aks{
-                width: 55%;
-                height: 55%;
-                float: left;
-                border-radius: 25px;
-                max-width: 300px;
-                max-height: 300px;
-                cursor: pointer;
-
-            }
-            h3{
-                margin-right: 25px;
-                margin-top: 13px;
-                color: black;
-                cursor: pointer;
-
-            }
-            #kamalsaz{
-                display: none;
-            }
-            #fasele{
-                display: none;
-            }
+        .page-container {
+            position: fixed;
+            overflow: hidden;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%; /* Full width */
+            z-index: 999; /* Ensure it's on top of other content */
         }
 
-        @media screen and (max-width:1310px) {
-            header{
-                background-color: black;
-                width: 100%;
-                height: 70px;
-                color: white;
-            }
-            #myDiv{
-                display: none;
-            }
-            #dayere img{
-                background-image: linear-gradient(90deg,lightblue,darkblue);
-                border-radius: 7.5px;
-                width: 90%;
-                height: 100px;
-                margin-top: 20px;
-                margin-right: 5%;
-                margin-left: 5%;
-                font-size: 12.5px;
-                cursor: pointer;
-        }
-
-            a{
-                text-decoration: none;
-                color:orange;
-            }
-            #vma{
-              position: relative;
-              top: 37.5px;
-              right: 27.5px;
-              font-size: 90%;
-            }
-            nav a{
-                display: none;
-            }
-        
-      .overlay {
-                height: 100%;
-                width: 0;
-                position: fixed;
-                z-index: 1;
-                top: 0;
-                left: 0;
-                background-color: rgb(0,0,0);
-                background-color: rgba(0,0,0, 0.9);
-                overflow-x: hidden;
-                transition: 0.5s;
-}
-
-.overlay-content {
-                position: relative;
-                top: 25%;
-                width: 100%;
-                text-align: center;
-                margin-top: 10px;
-}
-
-.overlay a {
-                padding: 10px;
-                text-decoration: none;
-                font-size: 20px;
-                color: #818181;
-                display: block;
-                transition: 0.3s;
-}
-
-.overlay a:hover, .overlay a:focus {
-                color: blue;
-}
-
-.overlay .closebtn {
-  position: absolute;
-  top: 10px;
-  right: 45px;
-  font-size: 60px;
-}
-@media screen and (max-height: 450px) {
-  .overlay a {font-size: 20px}
-  .overlay .closebtn {
-  font-size: 40px;
-  top: 15px;
-  right: 35px;
-  }
-}
-
-#hamburger{
-  float: left;
-  font-size:50px;
-  cursor:pointer;
-  margin-left: 10px;
-}
-
-#kmbvpabb{
-  text-align: center;
-  font-size: 20px;
-  margin-top: 35px;
-}
-#mnfe{
-                margin-left: 5%;
-                margin-right: 5%;
-                width: 90%;
-                height: 850px;
-                background-color: aquamarine;
-                border-radius: 20px;
-                max-width: 100%;
-            }
-
-            h3{
-                margin-right: 10px;
-                margin-top: 17.5px;
-                color: black;
-                font-size: 15px;
-                margin-left: 10px;
-                top: 20px;
-                position: relative;
-                cursor: pointer;
-            }
-            #bl{
-                position: relative;
-                float: left;
-                top: 175px;
-                left: -140px;
-                color: rgb(173, 173, 173);
-                
-            }
-            #aks{
-                width: 90%;
-                height: 90%;
-                margin-right: 5%;
-                margin-left: 5%;
-                float: left;
-                border-radius: 15px;
-                background-color: black;
-                margin-top: 20px;
-                max-width: 400px;
-                max-height: 400px;
-
-            }
-            #modaks{
-                background-color: black;
-            }
-            #kamalsaz{
-    float: right;
-    position: relative;
-    top: 15px;
-    left: -15px;
-}
-
-        }
-    </style>
-
-
-
-
-
-    <script>
-
-function openNav() {
-  document.getElementById("myNav").style.width = "100%";
-}
-
-function closeNav() {
-  document.getElementById("myNav").style.width = "0%";
-}
-
-
-
-      // فراخوانی سرویس ip-api.com برای دریافت اطلاعات مکان جغرافیایی کاربر
-function getGeoLocation(callback) {
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'http://ip-api.com/json');
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-            var response = JSON.parse(xhr.responseText);
-            callback(response);
-        }
-    };
-    xhr.send();
-}
-
-// بررسی آیا مکان جغرافیایی کاربر داخل ایران است یا خیر
-function isUserInIran(callback) {
-    getGeoLocation(function(response) {
-        var country = response.countryCode;
-        callback(country === 'IR');
-    });
-}
-
-// اجرای تابع بررسی برای تصمیم‌گیری درباره دسترسی کاربر به وبسایت
-isUserInIran(function(isInIran) {
-    if (!isInIran) {
-        // اگر کاربر خارج از ایران است، اقدام به محدود کردن دسترسی کنید
-
-        alert("تنها کاربرانی که در داخل ایران حضور دارند میتوانند اقدام به ورود به سایت کنند! لطفا اگر فیلترشکن شما فعال است آن را غیر فعال کنید" , "color: red;");
-        window.location.href = "filtering.html"; // آدرس صفحه دسترسی ممنوع
-    } else {
-        // اگر کاربر در داخل ایران است، به وبسایت اجازه ورود بدهید
+    header {
+        position: relative;
+        width: 100%;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0px 0px 25px 25px;
     }
-});
 
+    .semicircle-header {
+        width: 100%;
+        height: 70px;
+        background-color: black;
+        position: relative;
+        overflow: hidden;
+        border-radius: 0 0 100px 100px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transform: translateY(0%);
+        transition: transform 0.3s ease-in-out, height 0.3s ease-in-out;
+        transition: transform 0.3s ease-in-out, height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 1; /* Initially visible */
+    }
+.semicircle-header.hide-header {
+    transform: translateY(-100%);
+    height: 0;
+    opacity: 0; /* Hidden */
+}
 
+    .semicircle-header.show-header {
+        transform: translateY(0);
+        height: 200px;
+    }
 
+    .semicircle-header h1 {
+        margin: 0;
+        text-align:center;
+        font-size: 20px;
+        color: #191919;
+    }
+    .semicircle-header a {
+        text-decoration: none;
+        color: black;
+        padding: 10px;
+        background-image: linear-gradient(90deg,#b88746,#fdf5a6);
+        border-radius: 5px;
+    }
+    .semicircle-header a:hover{
+        background-image: linear-gradient(90deg,#976e39,#e2da94);
+        transition: all 0.365s;
+    }
 
-    </script>
+    .content {
+        margin-top: 150px;
+        padding: 20px;
+    }
+
+    button {
+        position: absolute;
+        margin-top: 200px;
+        transform: translateX(-50%);
+    }
+
+    #search{
+        border: none;
+        width: 500px;
+        height: 35px;
+        padding: 10px 20px;
+        border-radius: 15px;
+        position: relative;
+        top: 15px;
+        cursor: pointer;
+        color: white;
+        text-align: center;
+    }
+    #sarbarg{
+        text-align: center;
+        color: white;
+    }
+    table tr a{
+        text-decoration: none;
+        color: white;
+    }
+    
+    #butaks{
+        width: 35px;
+        height: 35px;
+        color: white;
+        float: left;
+        position: relative;
+        top: -40px;
+        left: 30px;
+    }
+
+}
+@media screen and (max-width:750px) {
+    .page-container {
+            position: fixed;
+            overflow: hidden;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%; /* Full width */
+            z-index: 999; /* Ensure it's on top of other content */
+        }
+
+    header {
+        position: relative;
+        width: 100%;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0px 0px 25px 25px;
+    }
+
+    .semicircle-header {
+        width: 100%;
+        height: 70px;
+        background-color: black;
+        position: relative;
+        overflow: hidden;
+        border-radius: 0 0 100px 100px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transform: translateY(0%);
+        transition: transform 0.3s ease-in-out, height 0.3s ease-in-out;
+        transition: transform 0.3s ease-in-out, height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 1; /* Initially visible */
+    }
+.semicircle-header.hide-header {
+    transform: translateY(-100%);
+    height: 0;
+    opacity: 0; /* Hidden */
+}
+
+    .semicircle-header.show-header {
+        transform: translateY(0);
+        height: 200px;
+    }
+
+    .semicircle-header h1 {
+        margin: 0;
+        text-align:center;
+        font-size: 20px;
+        color: #191919;
+        position: relative;
+    }
+    .semicircle-header a {
+        text-decoration: none;
+        color: black;
+        padding: 10px;
+        background-image: linear-gradient(90deg,#b88746,#fdf5a6);
+        border-radius: 5px;
+    }
+    .semicircle-header a:hover{
+        background-image: linear-gradient(90deg,#976e39,#e2da94);
+        transition: all 0.365s;
+    }
+
+    .content {
+        margin-top: 150px;
+        padding: 20px;
+    }
+
+    button {
+        position: absolute;
+        margin-top: 200px;
+        transform: translateX(-50%);
+    }
+
+    #search{
+        border: none;
+        width: 100%;
+        height: 35px;
+        border-radius: 15px;
+        position: relative;
+        top: 20px;
+        cursor: pointer;
+        color: white;
+        text-align: center;
+    }
+    #sarbarg{
+        text-align: center;
+        color: white;
+    }
+    table tr a{
+        text-decoration: none;
+        color: white;
+    }
+    
+    #butaks{
+        width: 35px;
+        height: 35px;
+        color: white;
+        float: left;
+        position: relative;
+        left: 25px;
+        top: -17.5px;
+    }
+    #click-me{
+        display: none;
+    }
+  
+}
+</style>
 </head>
 <body>
-
 <center>
+<div class="page-container">
+    <header id="toggleButton" >
+        <div class="semicircle-header">
+            <h1 id="search">به دنبال چه پارچه ای هستید؟ <span id="click-me">کلیک کنید!</span></h1>
+            <img src="images/icons8-search-64.png" id="butaks">
 
-<header>
+            <br>
+            <br>
+            <br>
 
+            <a href="zanane.html">لیست پارچه های زنانه</a>
+            <a href="parde.html">لیست پارچه های پرده</a>
 
-<nav>
-
-    <a href="abrobadi.php">ابر و بادی</a>
-    <a href="li.php">لی</a>
-    <a href="katan.php">کتان</a>
-    <a href="nakh_panbeh.php">نخ پنبه</a>
-    <a href="lenin.php">لنین</a>
-    <a href="satan.php">ساتن</a>
-    <a href="kerep.php">کرپ</a>
-    <a href="nakhi.php">نخی</a>
-    <a href="astar.php">استر</a>
-    <a href="viskoz.php">ویسکوز</a>
-    <a href="mantoyi.php">مانتویی</a>
-    <a href="kot_shalvari.php">کت شلواری</a>
-    <a href="toor.php">تور</a>
-    <a href="majlesi.php">مجلسی</a>
-    <a href="harir.php">حریر</a>
-    <a href="mazerati.php">مازراتی</a>
-
-</nav>
-
-    <div id="myNav" class="overlay">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <div class="overlay-content">
-    <a href="abrobadi.php">ابر و بادی</a>
-    <a href="li.php">لی</a>
-    <a href="katan.php">کتان</a>
-    <a href="nakh_panbeh.php">نخ پنبه</a>
-    <a href="lenin.php">لنین</a>
-    <a href="satan.php">ساتن</a>
-    <a href="kerep.php">کرپ</a>
-    <a href="nakhi.php">نخی</a>
-    <a href="astar.php">استر</a>
-    <a href="viskoz.php">ویسکوز</a>
-    <a href="mantoyi.php">مانتویی</a>
-    <a href="kot_shalvari.php">کت شلواری</a>
-    <a href="toor.php">تور</a>
-    <a href="majlesi.php">مجلسی</a>
-    <a href="harir.php">حریر</a>
-    <a href="mazerati.php">مازراتی</a>
-    <br>
-    <br>
-      </div>
-    </div>
-
-    <span id="hamburger" onclick="openNav()">&#9776;</span>
-
-    <div id="kamalsaz">
-    <h1>Bazar-ghaem.ir</h1>
-    </div>
-
-
-</header>
-</center>
-
-
-<?php
-
-    $x = $_GET['id'];
-   
-    include'upfl.php';
-    $link = mysqli_connect("$host_address","$host_username","$hostpassword","$table");
-    $result = mysqli_query($link , "SELECT * FROM `parche` WHERE `parche`.`id` = $x;");
-    if ($result === false) {
-        die("Error: " . mysqli_error($link));}
-    while($data = mysqli_fetch_array($result)){    
-
-
-
-print("<div id='mnfe'>");
-
-print("<div id='modaks'>");
-$upload_dir = 'converted/';
-$image_path = $upload_dir . $data['aks_parche'];
-if (file_exists($image_path)) {
-    echo "<img src='$image_path' alt='عکس' id='aks'>";
-
-}
-print("</div>");
-
-
-
-
-
-print("<h3 id='takh3'>نام پارچه : $data[nam_parche]</h3>");
-print("<h3>رنگ پارچه : $data[rang_parche]</h3>");
-print("<h3>ضخامت پارچه : $data[zekhamat_parche]</h3>");
-print("<h3>متراژ (طول) هر طاقه : $data[metrazh]</h3>");
-print("<h3>قیمت هر  $data[vahed_andazehgiri] : $data[gheymat_parche] تومان</h3>");
-print("<h3> شماره تلفن صاحب جنس : $data[hamrah_tel]</h3>");
-print("<h3>شماره تلفن دفتر :$data[office_tel]-021</h3>");  
-print("<h3>آدرس دفتر : $data[address]</h3>");
-print("<h3>توضیحات : $data[tozihat]</h3>");
-
-print("</div>");
-
-}
-?>
-
-
-<div id="fasele">
-<br><br>
-<br><br>
-<br>
+        </div>
+    </header>
 </div>
 
+</center>
 
-<?php
-include("footer.html");
-?>
-
+<br>
 
 
-    
+<script>
+    const toggleButton = document.getElementById("toggleButton");
+    const semicircleHeader = document.querySelector(".semicircle-header");
+    let offset = window.scrollY;
+
+    toggleButton.addEventListener("click", (event) => {
+        semicircleHeader.classList.toggle("show-header");
+        event.stopPropagation(); // Prevent event propagation to parent elements
+    });
+
+    window.addEventListener("scroll", () => {
+        const currentScroll = window.scrollY;
+        
+        if (currentScroll > offset) {
+            // Scrolling down, hide the header
+            if (!semicircleHeader.classList.contains("hide-header")) {
+                semicircleHeader.classList.add("hide-header");
+            }
+        } else {
+            // Scrolling up, show the header
+            if (semicircleHeader.classList.contains("hide-header")) {
+                semicircleHeader.classList.remove("hide-header");
+            }
+        }
+        
+        offset = currentScroll;
+    });
+</script>
+
+
 </body>
 </html>
+  <br>
+  <br>
+ <main>
+    <center>
+
+    <h1 id="kmbvpabb">
+      لیست پارچه های امروز:
+    </h1>
+    </center> 
+
+  <br>
+
+  <div id='comtsl'><a href ='etelaat.php?id=327' id ='link'><div id='dayere'><span id='vma'>تور مشکی<br>370 گرم<br>متری 20000  تومان</span><img src='converted/Colth1.jpg' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=326' id ='link'><div id='dayere'><span id='vma'>ابر و بادی سفید<br>370 گرم<br>یاردی 59000  تومان</span><img src='converted/Add_Logo.png' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=325' id ='link'><div id='dayere'><span id='vma'>استر مشکی<br>210 گرم<br>یاردی 15000  تومان</span><img src='converted/Colth2.jpg' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=320' id ='link'><div id='dayere'><span id='vma'>لنین قرمز<br>370 گرم<br>متری 15000  تومان</span><img src='converted/notfound_m.png' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=319' id ='link'><div id='dayere'><span id='vma'>ابر و بادی مشکی<br>370 گرم<br>یاردی 75000  تومان</span><img src='converted/eye_closed.png' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=318' id ='link'><div id='dayere'><span id='vma'>ابر و بادی مشکی<br>370 گرم<br>یاردی 75000  تومان</span><img src='converted/eye_closed.png' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=317' id ='link'><div id='dayere'><span id='vma'>ابر و بادی مشکی<br>370 گرم<br>یاردی 75000  تومان</span><img src='converted/eye_closed.png' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=316' id ='link'><div id='dayere'><span id='vma'>کتان مشکی<br>370 گرم<br>متری 27000  تومان</span><img src='converted/9004715_cross_delete_remove_cancel_icon.png' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=315' id ='link'><div id='dayere'><span id='vma'>استر خاکستری<br>280 گرم<br>یاردی 15000  تومان</span><img src='converted/eye_closed.png' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=314' id ='link'><div id='dayere'><span id='vma'>شاین هفت رنگ مشکی<br>370 گرم<br>یاردی 4444  تومان</span><img src='converted/eye_open.png' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=312' id ='link'><div id='dayere'><span id='vma'>حریر سفید<br>370g گرم<br>متری 27000  تومان</span><img src='converted/photo1691145462.jpeg' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=292' id ='link'><div id='dayere'><span id='vma'>کتان 3<br>370g گرم<br>یاردی 27000  تومان</span><img src='converted/plus.png' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=287' id ='link'><div id='dayere'><span id='vma'>ساتن قرمز<br>240گرم گرم<br>متری 41000  تومان</span><img src='converted/logo.png' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=285' id ='link'><div id='dayere'><span id='vma'>استر مشکی<br>210g گرم<br>یاردی 15000  تومان</span><img src='converted/Colth1.jpg' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=284' id ='link'><div id='dayere'><span id='vma'>لنین مشکی<br>370g گرم<br>یاردی sdfgh  تومان</span><img src='converted/ligo.png' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=283' id ='link'><div id='dayere'><span id='vma'>ابر و بادی ابی<br>400گرم گرم<br>یاردی 27000  تومان</span><img src='converted/logo.png' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=282' id ='link'><div id='dayere'><span id='vma'>کتان مشکی<br>370g گرم<br>متری 27000  تومان</span><img src='converted/Abstract.Background.633.EPS_.Thmb_.jpg' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=281' id ='link'><div id='dayere'><span id='vma'>لنین مشکی<br>370g گرم<br>یاردی 27000  تومان</span><img src='converted/1608651604521.jpg' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=280' id ='link'><div id='dayere'><span id='vma'>استر مشکی<br>370g گرم<br>متری 27000  تومان</span><img src='converted/Colth2.jpg' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=278' id ='link'><div id='dayere'><span id='vma'>کتان مشکی<br>210g گرم<br>یاردی 234  تومان</span><img src='converted/16564637-4691-b__2589.jpg' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=277' id ='link'><div id='dayere'><span id='vma'>کتان قرمز<br>4g گرم<br>متری 27000  تومان</span><img src='converted/FABRICS-2.jpg' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=276' id ='link'><div id='dayere'><span id='vma'>نخ پنبه سفید<br>370g گرم<br>یاردی sdfgh  تومان</span></div></a><div><div id='comtsl'><a href ='etelaat.php?id=275' id ='link'><div id='dayere'><span id='vma'>نخ پنبه سفید<br>370g گرم<br>یاردی sdfgh  تومان</span></div></a><div><div id='comtsl'><a href ='etelaat.php?id=274' id ='link'><div id='dayere'><span id='vma'>کتان سفید<br>370g گرم<br>متری sdfgh  تومان</span><img src='converted/4592811-1734-b__2947.jpg' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=273' id ='link'><div id='dayere'><span id='vma'>کت شلواری قرمز<br>210g گرم<br>یاردی 27000  تومان</span><img src='converted/Colth2.jpg' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=272' id ='link'><div id='dayere'><span id='vma'>کت شلواری قرمز<br>210g گرم<br>یاردی 27000  تومان</span><img src='converted/Colth2.jpg' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=271' id ='link'><div id='dayere'><span id='vma'>کت شلواری قرمز<br>210g گرم<br>یاردی 27000  تومان</span><img src='converted/Colth2.jpg' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=270' id ='link'><div id='dayere'><span id='vma'>کت شلواری قرمز<br>210g گرم<br>یاردی 27000  تومان</span><img src='converted/Colth2.jpg' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=269' id ='link'><div id='dayere'><span id='vma'>استر مشکی<br>370g گرم<br>یاردی 27000  تومان</span><img src='converted/BGS.jpg' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=268' id ='link'><div id='dayere'><span id='vma'>استر مشکی<br>370g گرم<br>یاردی 27000  تومان</span><img src='converted/BGS.jpg' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=267' id ='link'><div id='dayere'><span id='vma'>استر مشکی<br>370g گرم<br>یاردی 27000  تومان</span><img src='converted/BGS.jpg' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=266' id ='link'><div id='dayere'><span id='vma'>استر مشکی<br>370g گرم<br>یاردی 27000  تومان</span><img src='converted/BGS.jpg' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=265' id ='link'><div id='dayere'><span id='vma'>استر مشکی<br>370g گرم<br>یاردی 27000  تومان</span><img src='converted/BGS.jpg' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=264' id ='link'><div id='dayere'><span id='vma'>استر مشکی<br>370g گرم<br>یاردی 27000  تومان</span><img src='converted/BGS.jpg' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=263' id ='link'><div id='dayere'><span id='vma'>استر مشکی<br>370g گرم<br>یاردی 27000  تومان</span><img src='converted/BGS.jpg' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=262' id ='link'><div id='dayere'><span id='vma'>استر مشکی<br>370g گرم<br>یاردی 27000  تومان</span><img src='converted/BGS.jpg' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=261' id ='link'><div id='dayere'><span id='vma'>ساتن سفید<br>4g گرم<br>یاردی 27000  تومان</span><img src='converted/Capan.PNG' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=260' id ='link'><div id='dayere'><span id='vma'>مجلسی قرمز<br>4g گرم<br>یاردی 5t  تومان</span><img src='converted/Colth2.jpg' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=259' id ='link'><div id='dayere'><span id='vma'>ساتن سفید<br>370g گرم<br>متری sdfgh  تومان</span><img src='converted/BGS.jpg' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=258' id ='link'><div id='dayere'><span id='vma'>نخی مشکی<br>370g گرم<br>متری 59000  تومان</span><img src='converted/FABRICS-2.jpg' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=257' id ='link'><div id='dayere'><span id='vma'>نخی مشکی<br>370g گرم<br>متری 59000  تومان</span><img src='converted/FABRICS-2.jpg' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=256' id ='link'><div id='dayere'><span id='vma'>حریر بنفش<br>210g گرم<br>یاردی 27000  تومان</span><img src='converted/2009_hyundai_genesis_100025911_l (1).jpg' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=255' id ='link'><div id='dayere'><span id='vma'>حریر بنفش<br>210g گرم<br>یاردی 27000  تومان</span><img src='converted/2009_hyundai_genesis_100025911_l (1).jpg' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=254' id ='link'><div id='dayere'><span id='vma'>کتان 3<br>4g گرم<br>یاردی 27000  تومان</span><img src='converted/BG1004609www.tiktarh.com_ (1).jpg' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=253' id ='link'><div id='dayere'><span id='vma'>لی مشکی<br>370g گرم<br>متری 27000  تومان</span><img src='converted/Add_Logo.png' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=252' id ='link'><div id='dayere'><span id='vma'>نخی سفید<br>4g گرم<br>متری 27000  تومان</span><img src='converted/Colth1.jpg' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=251' id ='link'><div id='dayere'><span id='vma'>نخی سفید<br>4g گرم<br>متری 27000  تومان</span><img src='converted/Colth1.jpg' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=250' id ='link'><div id='dayere'><span id='vma'>تور سفید<br>370g گرم<br>یاردی 27000  تومان</span><img src='converted/Abstract.Background.633.EPS_.Thmb_.jpg' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=249' id ='link'><div id='dayere'><span id='vma'>کتان مشکی<br>44 گرم<br>متری 27000  تومان</span><img src='converted/Capan.PNG' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=248' id ='link'><div id='dayere'><span id='vma'>کتان مشکی<br>44 گرم<br>متری 27000  تومان</span><img src='converted/Capan.PNG' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=247' id ='link'><div id='dayere'><span id='vma'>کتان مشکی<br>44 گرم<br>متری 27000  تومان</span><img src='converted/Capan.PNG' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=246' id ='link'><div id='dayere'><span id='vma'>کتان مشکی<br>44 گرم<br>متری 27000  تومان</span><img src='converted/Capan.PNG' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=245' id ='link'><div id='dayere'><span id='vma'>کتان مشکی<br>44 گرم<br>متری 27000  تومان</span><img src='converted/Capan.PNG' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=244' id ='link'><div id='dayere'><span id='vma'>کتان مشکی<br>44 گرم<br>متری 27000  تومان</span><img src='converted/Capan.PNG' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=243' id ='link'><div id='dayere'><span id='vma'>کتان مشکی<br>44 گرم<br>متری 27000  تومان</span><img src='converted/Capan.PNG' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=242' id ='link'><div id='dayere'><span id='vma'>کتان مشکی<br>44 گرم<br>متری 27000  تومان</span></div></a><div><div id='comtsl'><a href ='etelaat.php?id=241' id ='link'><div id='dayere'><span id='vma'>کتان مشکی<br>44 گرم<br>متری 27000  تومان</span></div></a><div><div id='comtsl'><a href ='etelaat.php?id=240' id ='link'><div id='dayere'><span id='vma'>کتان مشکی<br>44 گرم<br>متری 27000  تومان</span></div></a><div><div id='comtsl'><a href ='etelaat.php?id=239' id ='link'><div id='dayere'><span id='vma'>کت شلواری مشکی<br>210g گرم<br>متری 27000  تومان</span><img src='converted/Abstract.Background.633.EPS_.Thmb_.jpg' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=238' id ='link'><div id='dayere'><span id='vma'>کت شلواری مشکی<br>210g گرم<br>متری 27000  تومان</span><img src='converted/Abstract.Background.633.EPS_.Thmb_.jpg' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=237' id ='link'><div id='dayere'><span id='vma'>کت شلواری مشکی<br>210g گرم<br>متری 27000  تومان</span><img src='converted/logo.png' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=236' id ='link'><div id='dayere'><span id='vma'>کت شلواری مشکی<br>210g گرم<br>متری 27000  تومان</span><img src='converted/logo.png' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=235' id ='link'><div id='dayere'><span id='vma'>کت شلواری مشکی<br>210g گرم<br>متری 27000  تومان</span><img src='converted/logo.png' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=234' id ='link'><div id='dayere'><span id='vma'>کت شلواری مشکی<br>210g گرم<br>متری 27000  تومان</span><img src='converted/logo.png' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=233' id ='link'><div id='dayere'><span id='vma'>کت شلواری مشکی<br>210g گرم<br>متری 27000  تومان</span><img src='converted/logo.png' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=232' id ='link'><div id='dayere'><span id='vma'>کت شلواری مشکی<br>210g گرم<br>متری 27000  تومان</span><img src='converted/logo.png' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=231' id ='link'><div id='dayere'><span id='vma'>کت شلواری مشکی<br>210g گرم<br>متری 27000  تومان</span><img src='converted/logo.png' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=230' id ='link'><div id='dayere'><span id='vma'>کت شلواری مشکی<br>210g گرم<br>متری 27000  تومان</span><img src='converted/logo.png' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=229' id ='link'><div id='dayere'><span id='vma'>کت شلواری مشکی<br>210g گرم<br>متری 27000  تومان</span><img src='converted/logo.png' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=228' id ='link'><div id='dayere'><span id='vma'>کت شلواری مشکی<br>210g گرم<br>متری 27000  تومان</span><img src='converted/logo.png' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=227' id ='link'><div id='dayere'><span id='vma'>کت شلواری مشکی<br>210g گرم<br>متری 27000  تومان</span><img src='converted/logo.png' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=226' id ='link'><div id='dayere'><span id='vma'>کت شلواری مشکی<br>210g گرم<br>متری 27000  تومان</span><img src='converted/logo.png' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=225' id ='link'><div id='dayere'><span id='vma'>کت شلواری مشکی<br>210g گرم<br>متری 27000  تومان</span><img src='converted/logo.png' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=224' id ='link'><div id='dayere'><span id='vma'>کت شلواری مشکی<br>210g گرم<br>متری 27000  تومان</span><img src='converted/logo.png' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=223' id ='link'><div id='dayere'><span id='vma'>کت شلواری مشکی<br>210g گرم<br>متری 27000  تومان</span><img src='converted/logo.png' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=222' id ='link'><div id='dayere'><span id='vma'>کت شلواری مشکی<br>210g گرم<br>متری 27000  تومان</span><img src='converted/logo.png' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=221' id ='link'><div id='dayere'><span id='vma'>کت شلواری مشکی<br>210g گرم<br>متری 27000  تومان</span><img src='converted/logo.png' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=220' id ='link'><div id='dayere'><span id='vma'>کت شلواری مشکی<br>210g گرم<br>متری 27000  تومان</span><img src='converted/logo.png' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=219' id ='link'><div id='dayere'><span id='vma'>مازراتی کرمی<br>370g گرم<br>یاردی 27000  تومان</span><img src='converted/BPFS.jpg' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=218' id ='link'><div id='dayere'><span id='vma'>مازراتی کرمی<br>370g گرم<br>یاردی 27000  تومان</span><img src='converted/BPFS.jpg' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=217' id ='link'><div id='dayere'><span id='vma'>مازراتی کرمی<br>370g گرم<br>یاردی 27000  تومان</span><img src='converted/BPFS.jpg' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=216' id ='link'><div id='dayere'><span id='vma'>مازراتی کرمی<br>370g گرم<br>یاردی 27000  تومان</span><img src='converted/BPFS.jpg' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=215' id ='link'><div id='dayere'><span id='vma'>مازراتی کرمی<br>370g گرم<br>یاردی 27000  تومان</span><img src='converted/BPFS.jpg' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=214' id ='link'><div id='dayere'><span id='vma'>مازراتی کرمی<br>370g گرم<br>یاردی 27000  تومان</span><img src='converted/BPFS.jpg' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=213' id ='link'><div id='dayere'><span id='vma'>مازراتی کرمی<br>370g گرم<br>یاردی 27000  تومان</span><img src='converted/BPFS.jpg' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=212' id ='link'><div id='dayere'><span id='vma'>مازراتی کرمی<br>370g گرم<br>یاردی 27000  تومان</span><img src='converted/BPFS.jpg' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=211' id ='link'><div id='dayere'><span id='vma'>مازراتی کرمی<br>370g گرم<br>یاردی 27000  تومان</span><img src='converted/BPFS.jpg' alt='عکس' id='aksphoto'></div></a><div><div id='comtsl'><a href ='etelaat.php?id=210' id ='link'><div id='dayere'><span id='vma'>استر سفید<br>210g گرم<br>یاردی 27000  تومان</span><img src='converted/Colth2.jpg' alt='عکس' id='aksphoto'></div></a><div>  
+
+
+
+  
+
+
+  </main>
+  <br><br><br><br><br> 
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My New Footer</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lalezar&family=Noto+Naskh+Arabic:wght@500&family=Ubuntu:wght@300&family=Vazirmatn:wght@200;400&display=swap');
+        
+        *{
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+            font-family: 'vazirmatn';
+        }
+        @media screen and (min-width:750px) {
+           
+        footer{
+            width: 40%;
+            margin-left: 30%;
+            margin-right: 30%;
+            bottom: 10px;
+            height: 90px;
+            background-image: linear-gradient(90deg, rgb(201, 50, 50), rgb(39, 20, 209));
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            
+        }
+        .diba{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 10px;
+            text-align: center;
+            border: none;
+            background-color: rgba(127, 255, 212, 0.527);
+            padding-right: 5px;
+            padding-left: 5px;
+            border-radius: 5px;
+        }
+        .diba:focus{
+            background-color: rgba(0, 255, 170, 0.767);
+            transition: all 0.365s;
+        }
+        .diba h1{
+            font-size: 15px;
+            margin-top: 5px;
+            color: black;
+        }
+        footer a{
+            text-decoration: none;
+            color: black;
+        }
+        .diba img{
+            width: 50px;
+            height: 50px;
+        }
+      }
+      @media screen and (max-width:750px) {
+           
+           footer{
+               width: 100%;
+               height: 90px;
+               background-image: linear-gradient(90deg, rgb(201, 50, 50), rgb(39, 20, 209));
+               position: fixed;
+               bottom: 0;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               
+           }
+           .diba{
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+               margin: 10px;
+               text-align: center;
+               border: none;
+               background-color: rgba(127, 255, 212, 0.527);
+               padding-right: 5px;
+               padding-left: 5px;
+               border-radius: 5px;
+           }
+           .diba:focus{
+               background-color: rgba(0, 255, 170, 0.767);
+               transition: all 0.365s;
+           }
+           .diba h1{
+               font-size: 15px;
+               margin-top: 5px;
+               color: black;
+           }
+           footer a{
+               text-decoration: none;
+               color: black;
+           }
+           .diba img{
+               width: 50px;
+               height: 50px;
+           }
+         }
+    </style>
+</head>
+<body>
+    <footer>
+        <a href="Gallery.php" title="آکهی های امروز" class="diba">
+            <img src="images/homeicon.png" alt="" width="50px" height="50px">
+            <h1>بازار</h1>
+        </a>
+        <a href="account-menager.php" title="استعلام مغازه ها" class="diba">
+            <img src="images/3994420_draw_edit_new_pen_write_icon.png" alt="">
+            <h1>استعلام</h1>
+        </a>
+        <a href="Send Page.php" title="آکهی جدید" class="diba">
+            <img src="images/plus.png" alt="">
+            <h1>آگهی</h1>
+        </a>
+        <a href="#" title="خرید مغازه" class="diba">
+            <img src="images/4781827_ecommerce_home_market_mart_shop_icon.png" alt="">
+            <h1>مغازه ها</h1>
+        </a>
+        <a href="my-profile.php" title="حساب کاربری" class="diba">
+            <img src="images/profileicon.png" alt="">
+            <h1>پروفایل</h1>
+        </a>
+    </footer>
+</body>
+</html>
+
+
+  </body>
+  </html>
