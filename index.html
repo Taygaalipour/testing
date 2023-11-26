@@ -3,277 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="images/setting.png">
-    <link rel="apple-touch-icon" href="images/setting.png">
-    <title>
-        Control Panel
-    </title>
+    <title>My New Footer</title>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Lalezar&family=Noto+Naskh+Arabic:wght@500&family=Ubuntu:wght@300&family=Vazirmatn:wght@200;400&display=swap');
-
+        @import url('https://fonts.googleapis.com/css2?family=Lalezar&family=Noto+Naskh+Arabic:wght@500&family=Ubuntu:wght@300&family=Vazirmatn:wght@200;400&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Lalezar&family=Noto+Naskh+Arabic:wght@500&family=Rubik:wght@300&family=Ubuntu:wght@300&family=Vazirmatn:wght@200;400&display=swap');
         *{
-            margin: 0px;
+            margin: 0;
+            padding: 0;
             direction: rtl;
             font-family: 'vazirmatn';
         }
-        @media screen and (min-width:1100px) {
-        .nds{
-            width: 325px;
-            height: 70px;
-            background-color: aquamarine;
-            border-radius: 5px;
-            float: right;
-            position: relative;
-            top: 1px;
-            right: 5px;
-            margin-top: 5px;
-        }
-        .nds:hover{
-            box-shadow: 0px 0px 10px black;
-            transition: 0.365s;
-            cursor: pointer;
-        }
-        img{
-            width: 65px;
-            height: 65px;
-            cursor: pointer;
-            float: right;
-            margin-top: 2px;
-            position: relative;
-            right: 5px;
-
-        }
-        button{
-            width: 175px;
-            height: 40px;
-            border-radius: 5px;
-            border: 1px solid rgb(184, 184, 184);
-            cursor: pointer;
-            background-color: blue;
-            color: white;
-            margin-top: 15px;
-
-
-        }
-        button:hover{
-            background-color: white ;
-            color: blue;
-            transition: 0.365s;
-        }
-        button a{
-            text-decoration: none;
-        }
-        header h1{
-            text-align: center;
-            color: white;
-            position: relative;
-            top: 12.5px;
-            font-size: 30px;
-        }
-        header{
-            width: 100%;
-            height: 70px;
-            background-color: black;
-        }
-        nav{
-            margin-top: 10px;
-            margin-right: 10px;
-            border-radius: 5px;
-            position: relative;
-            width: 335px;
-            height: 530px;
-            background-image: linear-gradient(180deg,rgb(255, 123, 0),rgb(139, 0, 109));
-            float: right;
-        }
-            h1 a{
-                text-align: center;
-                text-decoration: none;
-                color: white;
-                position: relative;
-                top: 10px;
-            }
-    }
-    @media screen and (max-width:1100px) {
-        .nds{
-            width: 95%;
-            margin-left: 2.5%;
-            margin-right: 2.5%;
-            margin-top: 5px;
-            height: 70px;
-            background-color: aquamarine;
-            border-radius: 5px;
-            float: right;
-            position: relative;
-            top: 5px;
-        }
-        .nds:hover{
-            box-shadow: 0px 0px 10px black;
-            transition: 0.365s;
-        }
-        img{
-            width: 65px;
-            height: 65px;
-            cursor: pointer;
-            float: right;
-            margin-top: 2px;
-            position: relative;
-            right: 15px;
-
-        }
-        button{
-            width: 175px;
-            height: 40px;
-            border-radius: 5px;
-            border: 1px solid rgb(184, 184, 184);
-            cursor: pointer;
-            background-color: blue;
-            color: white;
-            margin-top: 15px;
-
-
-        }
-        button:hover{
-            background-color: white ;
-            color: blue;
-            transition: 0.365s;
-        }
-        button a{
-            text-decoration: none;
-        }
-        header h1{
-            text-align: center;
-            color: white;
-            position: relative;
-            top: 12.5px;
-            font-size: 30px;
-        }
-        header{
-            width: 100%;
-            height: 70px;
-            background-color: black;
-        }
-        nav{
-            margin-top: 25px;
-            margin-right: 5%;
-            margin-left: 5%;
-            border-radius: 5px;
-            position: fixed;
-            width: 90%;
-            background-image: linear-gradient(180deg,rgb(255, 123, 0),rgb(139, 0, 109));
+        @media screen and (min-width:750px) {
+           
+        footer{
+            width: 40%;
+            margin-left: 30%;
+            margin-right: 30%;
             bottom: 10px;
-            top: 90px;
+            height: 90px;
+            background-image: linear-gradient(90deg, rgb(201, 50, 50), rgb(39, 20, 209));
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            
         }
-            h1 a{
-                text-align: center;
-                text-decoration: none;
-                color: white;
-                position: relative;
-                top: 10px;
-            }
-
-        
-    }
-
+        .diba{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 10px;
+            text-align: center;
+            border: none;
+            background-color: rgba(127, 255, 212, 0.527);
+            padding-right: 5px;
+            padding-left: 5px;
+            border-radius: 5px;
+        }
+        .diba:focus{
+            background-color: rgba(0, 255, 170, 0.767);
+            transition: all 0.365s;
+        }
+        .diba h1{
+               font-size: 12.5px;
+               margin-top: 5px;
+               color: black;
+               font-family: 'rubik';  
+        }
+        footer a{
+            text-decoration: none;
+            color: black;
+        }
+        .diba img{
+            width: 50px;
+            height: 50px;
+        }
+      }
+      @media screen and (max-width:750px) {
+           
+           footer{
+               width: 100%;
+               height: 90px;
+               background-image: linear-gradient(90deg, rgb(201, 50, 50), rgb(39, 20, 209));
+               position: fixed;
+               bottom: 0;
+               display: flex;
+               justify-content: center;
+               align-items: center;            
+           }
+           .diba{
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+               margin: 10px;
+               text-align: center;
+               border: none;
+               background-color: rgba(127, 255, 212, 0.527);
+               padding-right: 6.5px;
+               padding-left: 6.5px;
+               border-radius: 5px;
+               
+           }
+           .diba:focus{
+               background-color: rgba(0, 255, 170, 0.767);
+               transition: all 0.365s;
+           }
+           .diba h1{
+               font-size: 12.5px;
+               margin-top: 5px;
+               color: black;
+               font-family: 'rubik';
+           }
+           footer a{
+               text-decoration: none;
+               color: black;
+           }
+           .diba img{
+               width: 50px;
+               height: 50px;
+           }
+           #diba-khas-font{
+            font-size: 10px;
+           }
+         }
     </style>
 </head>
 <body>
-
-    <header>
-    <h1>
-        CONTROL PANEL
-    </h1>
-</header>
-
-    <center>
-        <nav>
-        <div id="dfwd" class="nds">
-            <img src="images/6358082_browser_earth_global_globe_internet_icon.png" alt="">
-            <a href="http://bazar-ghaem.ir"/>
-            <button>
-                برو به خود سایت
-            </button>
+    <footer>
+        <a href="Gallery.php" title="آکهی های امروز" class="diba">
+            <img src="images/homeicon.png" alt="" width="50px" height="50px">
+            <h1>بازار</h1>
         </a>
-        </div>
-        <br>
-        <br>
-        <br>
-    <div id="nmb" class="nds">
-        <img src="images/8541829_eye_vision_view_icon.png" alt="">
-        <a href="views.php"/>
-        <button>
-            برو به میزان بازدید
-        </button>
-    </a>
-    </div>
-    <br>
-    <br>
-    <br>
-    <div id="delete" class="nds">
-        <img src="images/3643729_bin_delete_garbage_rubbish_trash_icon.png" alt="">
-        <a href="delete-ads.php">
-        <button>
-        برو به حذف آگهی ها    
-        </button>
+        <a href="account-menager.php" title="استعلام مغازه ها" class="diba">
+            <img src="images/3994420_draw_edit_new_pen_write_icon.png" alt="">
+            <h1>استعلام</h1>
         </a>
-
-    </div>
-<br>
-<br>
-<br>
-    <div id="sb" class="nds">
-        <img src="images/4781827_ecommerce_home_market_mart_shop_icon.png" alt="">
-        <a href="verfy-store.php">
-        <button>
-            برو به احراز هویت مغازه ها
-        </button>
+        <a href="Send Page.php" title="آکهی جدید" class="diba">
+            <img src="images/plus.png" alt="">
+            <h1>آگهی</h1>
         </a>
-
-
-    </div>
-    <br>
-<br>
-<br>
-    <div id="sb" class="nds">
-        <img src="images/326571_check_circle_icon.png" alt="">
-        <a href="verfyed-store.php">
-        <button>
-            برو به مغازه های تایید شده
-        </button>
+        <a href="bassh.php" title="خرید مغازه" class="diba">
+            <img src="images/4781827_ecommerce_home_market_mart_shop_icon.png" alt="">
+            <h1 id="diba-khas-font">مغازه ها</h1>
         </a>
-
-
-    </div>
-    <br>
-<br>
-<br>
-    <div id="sb" class="nds">
-        <img src="images/1564535_customer_user_userphoto_account_person_icon.png" alt="">
-        <a href="accounts.php">
-        <button>
-            برو به حساب های کاربری
-        </button>
+        <a href="my-profile.php" title="حساب کاربری" class="diba">
+            <img src="images/profileicon.png" alt="">
+            <h1>پروفایل</h1>
         </a>
-
-
-    </div>
-    <br>
-    <br>
-    <br>
-        <div id="sb" class="nds">
-            <img src="images/3005767_account_door_enter_login_icon.png" alt="">
-            <a href="nup.php">
-            <button>
-                تغیر یوزرنیم و پسوورد ورود
-            </button>
-            </a>
-    
-    
-        </div>
-
-</center>
-</nav>
-
-
-    
+    </footer>
 </body>
 </html>
