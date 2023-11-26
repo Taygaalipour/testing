@@ -13,6 +13,223 @@
             direction: rtl;
             font-family: 'vazirmatn';
         }
+    @media screen and (min-width:750px) {
+
+        .page-container {
+            position: fixed;
+            overflow: hidden;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%; /* Full width */
+            z-index: 999; /* Ensure it's on top of other content */
+        }
+
+    header {
+        position: relative;
+        width: 100%;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0px 0px 25px 25px;
+    }
+
+    .semicircle-header {
+        width: 100%;
+        height: 70px;
+        background-color: black;
+        position: relative;
+        overflow: hidden;
+        border-radius: 0 0 100px 100px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transform: translateY(0%);
+        transition: transform 0.3s ease-in-out, height 0.3s ease-in-out;
+        transition: transform 0.3s ease-in-out, height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 1; /* Initially visible */
+    }
+.semicircle-header.hide-header {
+    transform: translateY(-100%);
+    height: 0;
+    opacity: 0; /* Hidden */
+}
+
+    .semicircle-header.show-header {
+        transform: translateY(0);
+        height: 200px;
+    }
+
+    .semicircle-header h1 {
+        margin: 0;
+        text-align:center;
+        font-size: 20px;
+        color: #191919;
+    }
+    .semicircle-header a {
+        text-decoration: none;
+        color: black;
+        padding: 10px;
+        background-image: linear-gradient(90deg,#b88746,#fdf5a6);
+        border-radius: 5px;
+    }
+    .semicircle-header a:hover{
+        background-image: linear-gradient(90deg,#976e39,#e2da94);
+        transition: all 0.365s;
+    }
+
+    .content {
+        margin-top: 150px;
+        padding: 20px;
+    }
+
+    button {
+        position: absolute;
+        margin-top: 200px;
+        transform: translateX(-50%);
+    }
+
+    #search{
+        border: none;
+        width: 500px;
+        height: 35px;
+        padding: 10px 20px;
+        border-radius: 15px;
+        position: relative;
+        top: 15px;
+        cursor: pointer;
+        color: white;
+        text-align: center;
+    }
+    #sarbarg{
+        text-align: center;
+        color: white;
+    }
+    table tr a{
+        text-decoration: none;
+        color: white;
+    }
+    
+    #butaks{
+        width: 35px;
+        height: 35px;
+        color: white;
+        float: left;
+        position: relative;
+        top: -40px;
+        left: 30px;
+    }
+
+}
+@media screen and (max-width:750px) {
+    .page-container {
+            position: fixed;
+            overflow: hidden;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%; /* Full width */
+            z-index: 999; /* Ensure it's on top of other content */
+        }
+
+    header {
+        position: relative;
+        width: 100%;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0px 0px 25px 25px;
+    }
+
+    .semicircle-header {
+        width: 100%;
+        height: 70px;
+        background-color: black;
+        position: relative;
+        overflow: hidden;
+        border-radius: 0 0 20px 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transform: translateY(0%);
+        transition: transform 0.3s ease-in-out, height 0.3s ease-in-out;
+        transition: transform 0.3s ease-in-out, height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 1; /* Initially visible */
+    }
+.semicircle-header.hide-header {
+    transform: translateY(-100%);
+    height: 0;
+    opacity: 0; /* Hidden */
+}
+
+    .semicircle-header.show-header {
+        transform: translateY(0);
+        height: 200px;
+    }
+
+    .semicircle-header h1 {
+        margin: 0;
+        text-align:center;
+        font-size: 20px;
+        color: #191919;
+        position: relative;
+    }
+    .semicircle-header a {
+        text-decoration: none;
+        color: black;
+        padding: 10px;
+        background-image: linear-gradient(90deg,#b88746,#fdf5a6);
+        border-radius: 5px;
+    }
+    .semicircle-header a:hover{
+        background-image: linear-gradient(90deg,#976e39,#e2da94);
+        transition: all 0.365s;
+    }
+
+    .content {
+        margin-top: 150px;
+        padding: 20px;
+    }
+
+    button {
+        position: absolute;
+        margin-top: 200px;
+        transform: translateX(-50%);
+    }
+
+    #search{
+        border: none;
+        width: 100%;
+        height: 35px;
+        border-radius: 15px;
+        position: relative;
+        top: 20px;
+        cursor: pointer;
+        color: white;
+        text-align: center;
+    }
+    #sarbarg{
+        text-align: center;
+        color: white;
+    }
+    table tr a{
+        text-decoration: none;
+        color: white;
+    }
+    
+    #butaks{
+        width: 35px;
+        height: 35px;
+        color: white;
+        float: left;
+        position: relative;
+        left: 25px;
+        top: -17.5px;
+
+    }
+    #click-me{
+        display: none;
+    }
+  
+}        
         @media screen and (min-width:750px) {
            
         footer{
@@ -110,6 +327,58 @@
     </style>
 </head>
 <body>
+    <center>
+
+    <div class="page-container">
+    <header id="toggleButton" >
+        <div class="semicircle-header">
+            <h1 id="search">به دنبال چه پارچه ای هستید؟ <span id="click-me">کلیک کنید!</span></h1>
+            <img src="images/icons8-search-64.png" id="butaks">
+
+            <br>
+            <br>
+            <br>
+
+            <a href="zanane.html">لیست پارچه های لباسی</a>
+            <a href="parde.html">لیست پارچه های پرده ای</a>
+
+        </div>
+    </header>
+</div>
+
+</center>
+
+<br>
+
+
+<script>
+    const toggleButton = document.getElementById("toggleButton");
+    const semicircleHeader = document.querySelector(".semicircle-header");
+    let offset = window.scrollY;
+
+    toggleButton.addEventListener("click", (event) => {
+        semicircleHeader.classList.toggle("show-header");
+        event.stopPropagation(); // Prevent event propagation to parent elements
+    });
+
+    window.addEventListener("scroll", () => {
+        const currentScroll = window.scrollY;
+        
+        if (currentScroll > offset) {
+            // Scrolling down, hide the header
+            if (!semicircleHeader.classList.contains("hide-header")) {
+                semicircleHeader.classList.add("hide-header");
+            }
+        } else {
+            // Scrolling up, show the header
+            if (semicircleHeader.classList.contains("hide-header")) {
+                semicircleHeader.classList.remove("hide-header");
+            }
+        }
+        
+        offset = currentScroll;
+    });
+</script>
     <footer>
         <a href="Gallery.php" title="آکهی های امروز" class="diba">
             <img src="images/homeicon.png" alt="" width="50px" height="50px">
